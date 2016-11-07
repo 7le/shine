@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+    <!-- 子系统rmi调用 -->
+    <!--<bean id="systemService_1" class="org.springframework.remoting.rmi.RmiProxyFactoryBean">-->
+        <!--<property name="serviceUrl" value="${serviceUrl}" />-->
+        <!--<property name="serviceInterface"-->
+                  <!--value="com.xidian.neptune.smsplatform.rmi.SystemService" />-->
+    <!--</bean>-->
+    <!--<bean id="systemService_1" class="java.rmi.Naming" factory-method="lookup">-->
+        <!--<constructor-arg value="rmi://127.0.0.1:6600/SystemService" type="java.lang.String"/>-->
+    <!--</bean>-->
+<!--    <bean id="systemServiceFactory" class="com.shine.bean.rmi.SystemServiceFactory">
+        <property name="serviceUrls" >
+            <list value-type="java.lang.String">
+                <value>${rmi_serviceUrl}</value>
+            </list>
+        </property>
+    </bean>-->
+</beans>

@@ -1,0 +1,981 @@
+@charset "utf-8";
+/*----------------------我的账户界面------------------------------*/
+.contentLeft{
+	width: 608px;
+}
+.contentLeft div.firstDiv{height: 85px;box-sizing: border-box;padding: 25px 43px;background-color: white;}
+.contentLeft div.firstDiv h4 a{
+    background-color: #e95604;
+    border: 1px solid #e95604;
+    color: white;
+    display: inline-block;
+    height: 25px;
+    line-height: 25px;
+    width: 45px;
+    text-align: center;
+}
+.bacInform{
+    background-color: white;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing:border-box;
+    -o-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 38px 123px 172px 46px;
+    margin-top: 7px;
+
+}
+.btnAccount{height: 23px;width: 78px;color: white;border-radius: 2px;border: 1px solid #e95604;line-height: 23px;text-align: center;}
+.contentRight{width: 310px;float: right;}
+.contentRight>div{background-color: white;box-sizing: border-box;padding: 0 13px 37px 13px;}
+.contentRight h4{line-height: 40px; border-bottom: 1px solid #dcdddd;}
+.contentRight>div>ul>li{font-size: 12px; color: #898989;line-height: 27px;}
+.recordAll{height: 600px;}
+.record{margin-top: 22px;width: 284px;}
+.record tr th:first-child{width: 48%;}
+.record tr th{text-align: center;border: 1px solid #dcdddd;height: 46px;vertical-align: middle;color: #727171;}
+.record tr td{text-align: center;border: 1px solid #dcdddd;height: 44px;vertical-align: middle;color: #727171;}
+.record tr:first-child{background-color: #F9F9F9;}
+/*修改界面弹出栏*/
+/*修改密码*/
+.showResetPass{
+    background:url(/member/img/resetPass_bgG.png) no-repeat;
+    background-size: 510px auto;
+    background-position: 0 0px;
+    height: 270px;
+    width: 520px;
+    display: none;
+    margin-top: 30px;
+    *background-position: 0 0;
+}
+.showResetPass ul{box-sizing: border-box;padding: 28px 45px 10px 45px;}
+.showResetPass ul li{
+	height: 35px;
+	line-height: 35px;
+	padding-bottom: 15px;
+}
+.showResetPass ul li span{width: 20%; display: inline-block;font-size: 16px;}
+.showResetPass ul li input{
+	color: #b5b5b6;
+	width: 310px;
+	height: 35px;
+	line-height: 35px;
+	border: 1px solid #595757;
+	padding-left: 15px;
+}
+
+
+/*修改手机号*/
+.showResetTel{
+    background: url(/member/img/resetTel_bgG.png) no-repeat;
+    background-size: 510px auto;
+    background-position: 0 0px;
+    height: 270px;
+    width: 520px;
+    display: none;
+    margin-top: 30px;
+    *background-position: 0 0;
+}
+.showResetTel ul{box-sizing: border-box;padding: 50px 45px 10px 45px;}
+.showResetTel ul li{height: 35px;line-height: 35px;padding-bottom: 20px;}
+.showResetTel ul li span{width: 20%; display: inline-block;font-size: 16px;}
+.showResetTel ul li input{
+    color: #b5b5b6;
+    height: 35px;
+    line-height: 35px;
+    border: 1px solid #595757;
+    padding-left: 15px;
+}
+/*-----------------------流量分发界面-----------------------------------------*/
+.numCount_B{position: relative;}
+.numCount_B div.numCount_B_right{width: 87%;position: absolute;right: 0;}
+.numCount_B ul li{color: #b5b5b6;width: 104px;float: left;font-size: 13px;}
+.numCount_B ul li.specialLi{width: 140px;}
+.numCount_B ul li.btnMl{width: 80px; color: white;margin-left: 30px;}
+.numCount_B ul li span{font-size: 13px;}
+.numCount_B ul li p{font-size: 13px;}
+
+
+
+.inputNum{
+	/*height: 73px;*/
+	width: 283px;
+	border: 1px solid #ea5514;
+	margin-left: 20px;
+}
+.inputNum input{
+	background-color: white;
+	height: 21px;
+	line-height: 21px;
+	width: 250px;
+	border: none;
+	color: #b5b5b6;
+	padding-left: 12px;
+	font-size: 13px;
+}
+dl.phone_type{
+    width:90px;
+}
+dl.phone_type dd{
+    min-height:23px;
+    line-height: 23px;
+}
+dl.phone_type,.flowSelect,.unitPrice{
+    margin-top:1px;
+}
+
+.selectFlow option{width: 90px; height: 20px;color: #b5b5b6;}
+.btnClick{
+	background: #e95604;
+    border: 2px solid #e95604;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 1px;
+}
+.btnClickA{
+	background: white;
+    border: 1px solid #e95604;
+    color: #e95604;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 2px;
+}
+.toOrange a:hover{background-color: #F96806;border: 1px solid #F96806;}
+
+.btnClick_selected{
+	background: #e95604;
+    color: white; 
+    text-align: center;
+    cursor: pointer;
+    border-radius: 1px;
+}
+.monthW{height: 18px; width: 40px;line-height: 18px;}
+.btnSumbitW{height: 25px; width: 80px;line-height: 25px;}
+/*流量券分发导入+模板下载+充值成功短信告知*/
+.setFlow{box-sizing: border-box;}
+.setFlowM{ margin: 0 40px 28px;}
+.setFlow ul.setFlowA:first-child{border-bottom: 1px solid #b5b5b6;}
+/*.setFlow ul:first-child li{box-sizing: border-box;padding: 0 16%;width: 50%;text-align: center;line-height: 40px;}
+.setFlow ul:first-child li.selectBorder a{border-bottom: 3px solid #ea5514;color: #e95604;margin-bottom: -1px;}*/
+.setFlow ul.setFlowA li{width: 33%;text-align: center;line-height: 40px;}
+.selectBorder a{border-bottom: 3px solid #ea5514;color: #e95604;margin-bottom: -1px;margin-left: 25%;margin-right: 25%;}
+/*.selectBorderB{*margin-top: -40px;}*/
+.inputLoad{height: 115px;}
+.inputLoadAll{width: 700px;height:115px;overflow: auto;}
+
+.inputLoad ul li{line-height: 30px;float: left;width: 25%;text-align: center;}
+.inputLoad ul.inputLoadA li{color: #595757;}
+.inputLoad ul.inputLoadB li{color: #9FA0A0;font-size: 13px;}
+#radioB{margin-top: 3px;margin-top: 0px \9;}
+#radioB_B{margin-top: 3px;margin-top: 0px \9;}
+/*----------------------------+流量券分发界面---------------------------------------------*/
+.inputLoad ul.input_ticket li{width: 24%;}
+
+
+
+.numCount ul li.numCountLi_one{width: 110px;margin-left: 25px;color: #b5b5b6;}
+.numCount ul li.numCountLi_one:last-child{width: 80px; color: white;margin-left: 30px;}
+.numCount ul li span{font-size: 13px;}
+.numCount ul li p{font-size: 13px;}
+/*----------------------------+流量分发界面------------------------------------------------------*/
+.numCount_B{position: relative;}
+.numCount_B ul{width: 60%;position: absolute;right: 25%;}
+.numCount_B ul li{color: #b5b5b6;width: 104px;float: left;font-size: 13px;}
+.numCount_B ul li.specialLi{width: 140px;}
+.numCount_B ul li.btnMl{width: 80px; color: white;margin-left: 30px;}
+.numCount_B .summerAll{width: 15%;position: absolute;right:20%;}
+.numCount_B .summerAll p{line-height: 20px;}
+.numCount_B .btnSumbitB{
+    height: 25px;
+    line-height: 25px;
+    position: absolute;
+    right: 50px;
+    top: -10px;
+    width: 80px;
+}
+
+
+
+/*充值成功短信告知*/
+.resetMes{border: 1px solid #dcdddd;box-sizing: border-box;padding: 27px 0 27px 40px;}
+.btnMes{width: 110px; height: 25px;line-height: 25px;}
+.conserve{width: 80px; height: 25px;line-height: 25px;}
+/*--单价样式----*/
+.unitPrice li{
+ 	border: 1px solid #b5b5b6;
+ 	display: block;
+ 	text-align: center;
+ 	font-size: 12px;
+ 	height: 21px;
+ 	line-height: 21px;
+ 	width: 70px;
+ 	margin-bottom: 5px;
+}
+/*充值成功+充值失败+等待充值+正在充值*/
+/*等待充值*/
+#Rec_wait{font-size: 12px;color: #61C481;}
+/*正在充值*/
+#rec_ing{font-size: 12px;color: #c53432;}
+/*已经充值*/
+#rec_sucess{font-size: 12px;color: #ef8200;}
+/*充值失败*/
+#rec_fail{font-size: 12px;color: #ea5414;}
+/*输入的错误的手机号*/
+#rec_wrongTel{font-size: 12px;color: #c9c9ca;}
+/*遮罩层代码开始*/
+.zenDialog_pay{
+	margin-left: -170px;
+	margin-top: -100px;
+	width: 350px;
+	height: 224px;
+	border-radius: 5px;
+}
+.zenDialog_pay h3{
+	height: 46px;
+	line-height: 46px;
+	background-color: #f08519;
+	color: white;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	padding-left: 30px;
+}
+.zenDialog_pay ul{
+	margin: 25px 30px 15px;
+}
+.zenDialog_pay ul li{
+	padding-bottom: 10px;
+	letter-spacing: 2px;
+}
+.zenDialog_pay p{
+	border-top:1px solid #f08519;
+}
+.zenDialog_pay p span{
+	width: 49%;
+	text-align: center;
+	height: 50px;
+	line-height: 50px;
+	font-size: 16px;
+}
+.zenDialog_pay p span.payConfirm{
+	border-right: 1px solid #f08519;
+	color: #f08519;
+	cursor: pointer;
+}
+/*-------------------------------数据统计界面----------------------------------------------*/
+
+
+
+.numCount_B{position: relative;}
+.numCount_B ul{width: 60%;position: absolute;right: 25%;}
+.numCount_B ul li{color: #b5b5b6;width: 104px;float: left;font-size: 13px;}
+.numCount_B ul li.specialLi{width: 140px;}
+.numCount_B ul li.btnMl{width: 80px; color: white;margin-left: 30px;}
+.numCount_B .summerAll{width: 15%;position: absolute;right:20%;}
+.numCount_B .summerAll p{line-height: 20px;}
+.numCount_B .btnSumbitB{
+	height: 25px;
+	line-height: 25px;
+	position: absolute;
+	right: 50px;
+	top: -10px;
+	width: 80px;
+}
+
+.detailM{padding: 30px 20px 200px 20px;}
+.timeContent{height: 30px;box-sizing: border-box;padding: 3px 0px;}
+.timeContent p{line-height: 21px;}
+.timeContent p input{height: 21px; width: 130px;background-color: #f7f8f8;border: 1px solid #b5b5b6;}
+.timeContent p i{font-size: 13px; color: #595757;}
+.ml-1{margin-left: -1px;}
+.ml6{margin-left: 6px;}
+.ml7{margin-left: 7px;}
+.w54{width: 54px;}
+.w55{width: 55px;}
+.w66{width: 66px;}
+.w70{width: 70px;}
+.w78{width: 78px;}
+.w80{width: 80px;}
+.w82{width: 82px;}
+.w84{width: 84px;*width: 82px;}
+
+.rechargeDel{height: 450px;}
+.rechargeDel ul{border-bottom: 1px solid #dcdddd;}
+.rechargeDel ul li{width: 120px;float: left;text-align: center;}
+.rechargeDel ul.rechargeA li{color: #595757;height: 35px;line-height: 35px;}
+.rechargeDel ul.rechargeB li{font-size: 12px;color: #9fa0a0;height: 35px;line-height: 35px;}
+/*----------特殊下拉框样式-------*/
+.pData{padding: 30px 50px 45px;}
+/*.selectAll{padding: 0 15px 30px;}*/
+.selectAll{margin-bottom: 30px;margin-left: 73px;}
+.selectCondition{
+	background: url(/member/img/selectMore_tableP2.png) no-repeat;
+	background-size: 138px 28px;
+	height: 30px;
+	width: 138px;
+}
+.selectCondition tr td{
+	text-align: center;
+	line-height: 30px;
+	font-size: 12px;
+	color: #898989;
+	cursor: pointer;
+}
+.selectCondition tr td:first-child{padding-right: 0;}
+.divselect ul{width:93px;border:1px solid #b5b5b6;border-top: none; background-color:#ffffff; position:absolute; z-index:20000; display:none;}
+.divselect ul li{height:24px; line-height:24px;}
+.divselect ul li a{display:block; height:24px; color:#b5b5b6; text-decoration:none; padding-left:10px;}
+.divselect ul li a:hover{background-color:#CCC;color: #ea5514;}
+
+.ml-5{margin-left: -5px;}
+.w70{width: 70px;}
+.w75{width: 75px;}
+.tableSelectO ul{border:1px solid #FB9126;border-top: none; background-color:#ffffff; position:absolute; z-index:20000; display:none;}
+.tableSelectO ul li{height: 24px;line-height: 24px;}
+.tableSelectO ul li a{display:block; height:24px; color:#b5b5b6; text-decoration:none;}
+.tableSelectO ul li a:hover{background-color: #ccc;color: #ea5514;}
+.tableSelectO1 ul{margin-left: 7px;width: 76px;*margin-left: -36px;}
+.tableSelectO2 ul{margin-left: 0px;width: 76px;*margin-left: -41px;}
+.tableSelectO3 ul{margin-left: -5px;width: 70px;*margin-left: -38px;}
+
+
+
+/*-------------------------------我的订单界面------------------------------------------------------*/
+.detailOrder{margin: 30px 0 0 24px;height: 570px;}
+.orderParent li{cursor: pointer;}
+.OrderTit{border-bottom: 1px solid #b5b5b6;}
+.OrderTit li{width:20%;text-align: center;line-height: 50px;}
+.OrderDet{border-bottom: 1px solid #dcdddd;}
+.OrderDet li{font-size: 13px;line-height: 50px;text-align: center;width:20%;color: #9fa0a0;}
+.OrderAll{border-left: 1px solid #dcdddd;border-right: 1px solid #dcdddd;z-index: 100;position: absolute;background-color:#F8F8F8;}
+.orderScan_size{height: 25px;line-height: 25px;width: 70px;}
+.OrderTit2 li{width:107px;text-align: center;line-height: 50px;}
+.OrderDet2 li{font-size: 13px;line-height: 50px;text-align: center;width: 107px;color: #9fa0a0;}
+.OrderTit3 li{width:12.5%;text-align: center;line-height: 50px;}
+.OrderDet3 li{font-size: 13px;line-height: 50px;text-align: center;width: 12.5%;color: #9fa0a0;}
+.OrderTit4 li{width:16.6%;text-align: center;line-height: 50px;}
+.OrderDet4 li{font-size: 13px;line-height: 50px;text-align: center;width: 16.6%;color: #9fa0a0;}
+/*-------------------------------商户管理界面---------------------------------------------------------*/
+.busManager {height: 510px;}
+.busManager ul{width: 850px;margin-left: auto;margin-right: auto;border-bottom: 1px solid #dcdddd;}
+.busManager ul li{text-align: center;width: 14%;height: 40px;line-height: 40px;}
+.busManager ul.managerTh li{color: #595757;float: left;}
+.busManager ul.managerTr li{font-size: 12px; color: #9fa0a0;line-height: 40px;float: left;}
+.btnQuit{height: 20px;line-height: 20px;width: 45px;font-size: 13px;}
+/*-------------------------------登录界面-------------------------------------------------------------------*/
+.login_block{
+	background: url("/member/img/login_block.png") no-repeat;
+	 background-size: 500px 450px;
+	width: 510px;
+	height: 460px;
+	/*-moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box; */
+	/* padding: 40px 38px;*/
+}
+.login_block li{height: 80px;line-height: 80px;padding-left: 40px;}
+.login_block li span.loginFont{font-size: 20px; padding-right: 15px;}
+.login_block li input{color: #b5b5b6;}
+.login_block li input.inputA{
+	border: 1px solid #3e3a39;
+	height: 45px;
+	line-height: 45px;
+	padding-left: 10px;
+	width: 320px;
+}
+.login_block li input.inputB{
+	border: 1px solid #3e3a39;
+	height: 45px;
+	line-height: 45px;
+	padding-left: 10px;
+	width: 200px;
+}
+.codeSpan{
+	height: 30px;
+	width: 95px;
+	display: inline-block;
+	border: 1px solid #3e3a39;
+	margin-left: 14px;
+	vertical-align: middle;
+}
+/*.login_block tr{height: 40px \9;}
+
+.login_block td{border: none;padding-top: 30px;}
+.login_block tr td.inputA{font-size: 20px; color: black;width: 25%;text-align: center;}
+.login_block tr td.inputB input{width: 320px;border: 1px solid #3e3a39;padding-left: 10px;line-height: 50px; line-height: 45px \9;height: 45px \9;}
+.login_block tr.codeTr td.codeInp input{height: 50px; width: 205px;border: 1px solid #3e3a39;padding-left: 10px;height: 45px \9;line-height: 45px \9;}
+.login_block tr.codeTr td.codeInp span{
+	height: 30px;
+	width: 95px;
+	display: inline-block;
+	border: 1px solid #3e3a39;
+	margin-left: 14px;
+	vertical-align: middle;
+}*/
+.login_logo{
+	background: url(/member/img/logo.png) no-repeat;
+	height: 85px;
+}
+.loginLogo{height: 427px;width: auto;}
+.btnLogin{
+	height: 42px;
+	line-height: 42px;
+	border: 1px solid #ea5514;
+	width: 130px;
+	background-color: #ea5514;
+	border-radius: 5px;
+	color: white;
+	font-size: 20px;
+	cursor: pointer;
+	text-align: center;
+}
+/*------------------------------------------忘记密码界面------------------------------------------------------------*/
+.forgetUl{background: url(/member/img/forget_block.png) no-repeat;height: 470px;width: 510px;}
+.forgetUl li.forgetLi{height: 75px;padding-left: 20px;}
+.forgetUl li.forgetLi span.loginFont{font-size: 17px;padding-right:0px;display: inline-block;width: 22%;font-weight: bold;}
+.forgetUl li.forgetLi input{color: #B5B5B6;}
+.forgetUl li.forgetLi em a{
+	background-color: #ea5514;
+	color: white;
+	display: inline-block;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	width: 90px;
+	margin-left: 15px;
+	border-radius: 5px;
+
+}
+.forgetUl li.forgetLi input.inputA{
+	border: 1px solid #3e3a39;
+	height: 45px;
+	line-height: 45px;
+	padding-left: 10px;
+	width: 320px;
+}
+.forgetUl li.forgetLi input.inputB{
+	border: 1px solid #3e3a39;
+	height: 45px;
+	line-height: 45px;
+	padding-left: 10px;
+	width: 200px;
+}
+
+
+
+
+/*--------------------------------------------注册界面----------------------------------------------------*/
+.registerAll{
+	margin: 30px 170px;
+	background-color: white;
+}
+.registerAll li{height: 80px;}
+.registerAll li em{
+	font-size: 16px;
+	width: 15%;
+	display: inline-block;
+}
+.registerAll li input{border: 1px solid #8e8786;padding-left: 30px;color: #b5b5b6;}
+.registerInp{height: 40px;width: 452px;padding-left: 30px;line-height: 40px;}
+.registerCodeInp{height: 35px;width: 190px;line-height: 35px;}
+.registerCode{
+	border: 1px solid #8e8786;
+    display: inline-block;
+    height: 30px;
+    margin-left: 30px;
+    vertical-align: middle;
+    width: 95px;
+}
+.btnregister{
+	background-color: #ea5514;
+	color: white;
+	cursor: pointer;
+	text-align: center;
+	border: 1px solid #ea5514;
+	vertical-align: middle;
+}
+.receiveCode{height: 30px;width: 95px;border-radius: 5px;line-height: 30px;font-size: 12px;}
+.rightRegister{width: 540px;height: 43px;border-radius: 5px;line-height: 43px; font-size: 20px;}
+/*----------------------------------余额充值界面-------------------------------------------------------*/
+.divselectF cite{
+	background: url("/member/img/triangleSelect_IconG.png") no-repeat;
+	background-position: 125px 8px;
+	background-size: 10px 9px;
+    border: 1px solid #b5b5b6;
+    color: #b5b5b6;
+    cursor: pointer;
+    display: block;
+    height: 25px;
+    line-height: 25px;
+    width: 140px;
+    text-align: center;
+}
+.divselectF ul{
+	border: 1px solid #b5b5b6;
+	display: none;
+	border-top: none;
+	background-color:#ffffff;
+	position:absolute; 
+	z-index:20000; 
+	width: 140px;
+}
+.divselectF ul li{
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+}
+.divselectF ul li a{color: #b5b5b6;display: block;}
+.divselectF ul li a:hover{background-color:#CCC;color: #ea5514;}
+.remainBottom{box-sizing: border-box; padding: 10px 45px;}
+.remainBottom ul{border: 1px solid #dcdddd;box-sizing: border-box;padding: 15px 15px;}
+.remainBottom ul li{height: 35px;line-height: 35px;}
+
+.weChatPay i{
+	background: url(/member/img/remainWeixin_IconG.png) no-repeat;
+	background-size: 30px auto;
+	height: 30px;
+	line-height: 30px;
+	width: 40px; 
+}
+.weChatPay span:last-child{
+	color: #CCCCCC;
+	font-size: 12px;
+	padding-left: 15px;
+	display: inline-block;
+	line-height: 30px;
+	vertical-align: top;
+}
+.pleaseCode{
+	background: url("/member/img/codePay.png") no-repeat;
+/*    background-position:10px 0;*/
+    background-size: 200px auto;
+    height: 200px;
+    width: 200px;
+}
+.pleaseCode_Bottom{
+	background: url(/member/img/pleaseScanCode.png) no-repeat;
+	background-size: 200px auto;
+	height: 80px;
+	width: 200px;
+}
+
+/*支付成功弹出框具体样式*/
+.hadPay_pop{
+	height: 100px;
+	width: 250px;
+	box-sizing: border-box;
+	padding:40px 40px;
+	font-size: 20px;
+	color: red;
+	margin-left: -60px;
+	*margin-left: -180px;
+	*height: 70px;
+	*line-height: 70px;
+	*text-align: center;
+}
+
+
+/*弹出框按钮样式*/
+.popBtnSize{height: 34px;width: 120px;line-height: 34px;text-align: center;border-radius: 2px}
+/*----------------------管理员界面-----------------------------------------*/
+.managerLogin{
+    background:url(/member/img/login_block.png) no-repeat;
+    background-size: 500px 350px;
+    box-sizing: border-box;
+    height: 450px;
+    padding: 50px 50px;
+    padding: 50px 40px \9;
+    width: 510px;
+    margin-left: 300px;
+}
+.managerLogin li{padding-bottom: 15px;padding-bottom: 12px \9;}
+.managerLogin li input{border: 1px solid #3e3a39;padding-left: 20px;color: #b5b5b6;}
+.managerLogin li>span{width: 15%;*width: 12%;display: inline-block;font-size: 18px;height: 40px;line-height: 40px;}
+.w150{width: 150px;}
+.w300{width: 300px;}
+.managerCode{width: 100px;height: 30px;border: 1px solid #595757; margin-left: 47px;margin-top: 5px}
+.btnLoginA{
+	height: 40px;
+	line-height: 40px;
+	border: 1px solid #ea5514;
+	width: 130px;
+	background-color: #ea5514;
+	border-radius: 5px;
+	color: white;
+	font-size: 20px;
+	cursor: pointer;
+	text-align: center;
+	*margin-left: 170px;
+	margin-left: 165px \0;
+	margin-top: 10px \9 \0;
+}
+/*-----------------------404错误界面-------------------------------------------------*/
+.wrongNum i.wrongTop{
+	background: url(/member/img/wrong404.png) no-repeat;
+	background-size: 240px auto;
+	height: 330px;
+	width: 250px;
+	display: block;
+}
+.wrongNum i.wrongFoot{
+	background: url(/member/img/wrong404_footFont.png) no-repeat;
+	background-size: 340px auto;
+	height: 80px;
+	width: 340px;
+	display: block;
+	margin-top: 30px;
+}
+.wrongReason{
+	width: 300px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 20px;
+	padding-bottom: 20px;
+
+}
+.wrongReason li{padding-bottom: 15px;}
+.wrongReason li span:first-child{width: 30%;font-size: 30px;display: inline-block;}
+.ml_s4{*margin-left: 4px;}
+
+
+/*--------------------------------弹出框内容层1-成交查询----------------------------------------------------*/
+/*.popContent_one{margin: 10px 10px;}
+.topLeft{width: 100%;}
+.entrustDir{
+	background: url(/member/img/popContent_OneIcon.png) no-repeat;
+	background-position: 185px 10px;
+	background-size: 13px 103px;
+    border: 1px solid #b5b5b6;
+    color: #b5b5b6;
+    cursor: pointer;
+    display: block;
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+    width: 208px;
+
+}
+.entrustSelect ul{
+	width: 208px;
+	border-left: 1px solid #b5b5b6;
+	border-right:1px solid #b5b5b6;
+	border-bottom: 1px solid #b5b5b6;
+	display: none;
+}
+.entrustSelect ul li{height: 25px;line-height: 25px;width: 208px;}
+.entrustSelect ul li a{
+	color: #b5b5b6;
+    display: block;
+    height: 25px;
+    text-align: center;
+    text-decoration: none;
+}
+/*增减框样式*/
+/*.entrustPrice i{
+	height: 25px;
+	width: 35px;
+	background: url(/member/img/popContent_OneIcon.png) no-repeat;
+	background-color: #B81D18;
+	display: inline-block;
+}
+.entrustPrice i.addIcon{background-position: center -52px;}
+.entrustPrice i.reduceIcon{background-position: center -105px;}
+.entrustPrice input{height: 21px;width: 137px;border: 1px solid #b5b5b6;text-align: center;}
+.marketPrice i{
+	height: 15px;
+	width: 16px;
+	background-color: #292B2F;
+	display: inline-block;
+}
+.marketPrice i.priceSelect{
+	background-image: url(/member/img/popContent_OneIcon.png);
+}*/
+
+
+/*----------------------------------------弹出框流量分发--------------------------------------------------*/
+.popAttributeAll{margin: 20px 40px;}
+.popAttributeList{border: 1px solid #D6D6D6; padding-bottom: 10px;height: 360px;overflow-y: scroll;}
+.popAttributeAll ul.popTitle li{float: left;width: 20%;*width: 15.7%;text-align: center;}
+.popAttributeAll ul.firUl,.popTitle{height: 50px;line-height: 50px;}
+.popAttributeList ul li{float: left;width: 20%;text-align: center;}
+/*字体颜色改变*/
+/*一般未被选中时的字体颜色*/
+.popAttributeList ul.attribute_usual li{color: #868485;}
+.popAttributeList ul.attribute_usual li a{color: #868485;}
+.popAttributeList ul.attribute_usual li input{color: #868485;}
+/*被选中时的字体颜色和边框样式*/
+.popAttributeList ul.attribute_Selected{background-color: #EC6B00;}
+.popAttributeList ul.attribute_Selected li{color: white;}
+.popAttributeList ul.attribute_Selected li>input{color: white;border: 1px solid white;}
+.popAttributeList ul.attribute_Selected>li>a{color: white; border: 1px solid white;}
+.popAttributeList ul.attribute_Selected li div.popFlow cite{
+    color: white;
+    border: 1px solid white;
+    background: url(/member/img/triangleSelect_IconW.png) no-repeat;
+    background-position: 75px center;
+    background-size: 15px 13px;
+}
+.popAttributeList ul.attribute_Selected li div ul li a{color: #868485;}
+.popAttributeList ul.attribute_Selected li div.popFlow{display: inline-block;position: relative;}
+
+/****************************  20 ***********************************/
+.popAttributeList20{border: 1px solid #D6D6D6; padding-bottom: 10px;height: 360px;overflow-y: scroll;}
+.popAttributeList20 ul li{float: left;width: 20%;text-align: center;}
+/*字体颜色改变*/
+/*一般未被选中时的字体颜色*/
+.popAttributeList20 ul.attribute_usual li{color: #868485;}
+.popAttributeList20 ul.attribute_usual li a{color: #868485;}
+.popAttributeList20 ul.attribute_usual li input{color: #868485;}
+/*被选中时的字体颜色和边框样式*/
+.popAttributeList20 ul.attribute_Selected{background-color: #EC6B00;}
+.popAttributeList20 ul.attribute_Selected li{color: white;}
+.popAttributeList20 ul.attribute_Selected li>input{color: white;border:1px solid white;}
+.popAttributeList20 ul.attribute_Selected>li>a{color: white; border: 1px solid white;}
+.popAttributeList20 ul.attribute_Selected li div.popFlow cite{
+    color: white;
+    border: 1px solid white;
+    background: url(/member/img/triangleSelect_IconW.png) no-repeat;
+    background-position: 75px center;
+    background-size: 15px 13px;
+}
+.popAttributeList20 ul.attribute_Selected li div ul li a{color: #868485;}
+.popAttributeList20 ul.attribute_Selected li div.popFlow{display: inline-block;position: relative;}
+
+/*下拉框样式*/
+.popFlow{display: inline-block;/*position: relative;*/}
+.popFlow cite{
+    background: url("/member/img/triangleSelect_IconG.png") no-repeat;
+    background-position: 75px center;
+    background-size: 15px 13px;
+    border: 1px solid #868485;
+    color: #868485;
+    cursor: pointer;
+    display: block;
+    height: 20px;
+    line-height: 20px;
+    padding-left: 10px;
+    width: 83px;
+    margin: 0 auto;
+    text-align: left;
+    *margin-top:15px;
+
+}
+.popFlow ul{
+    background-color: #ffffff;
+    margin: 0 auto;
+    border-left:1px solid #868485;
+    border-right: 1px solid #868485;
+    border-bottom: 1px solid #868485;
+    z-index: 999;
+    position:absolute;
+    display: none;
+    *margin-left: -47px;
+}
+.popFlow ul li{height: 25px;line-height: 25px;float: none;}
+.popFlow ul li a{
+    color: #b5b5b6;
+    display: block;
+    height: 25px;
+    text-decoration: none;
+    width: 83px;
+    text-align: left;
+    padding-left: 10px;
+}
+.popFlow ul li a:hover{background-color:#CCC;color: #ea5514;}
+.telBoder{
+    height: 27px;
+    line-height: 27px;
+    width: 130px;
+    border: 1px solid #868485;
+    display: inline-block;
+    background-color: transparent;
+    text-align: center;
+}
+.quitBorder{height: 27px;line-height: 27px;width: 80px; border: 1px solid #868485;display: inline-block;}
+/*ul的三种颜色形式*/
+.bcOrangeE{background-color:#EC6B00 ;}
+.bcGreyE6{background-color: #E6E6E6;}
+.orderDeal_size{height: 33px;line-height: 33px; width: 100px;}
+.popTitle_position{position: fixed;width: 96.9%}
+.selectGray{background: #e6e6e6; border:1px solid #727171;width: 100px;}
+.selectWhite{background: #FFF; border:1px solid #727171;width: 100px;}
+
+.selectGray{background: #e6e6e6; border:1px solid #727171;width: 100px;}
+.selectWhite{background: #FFF; border:1px solid #727171;width: 100px;}
+
+.orderDeal_size{height: 33px;line-height: 33px; width: 80px;}
+
+
+/*向左*/
+.triangle_border_left{
+    width:0;
+    height:0;
+    border-width:15px 15px 15px 0;
+    border-style:solid;
+    border-color:transparent #e6e6e6 transparent transparent;/*透明 灰 透明 透明 */
+    margin:10px 0 0px 10px;
+    position:relative;
+}
+.triangle_border_left span{
+    display:block;
+    width:0;
+    height:0;
+    border-width:28px 28px 28px 0;
+    border-color:transparent #fc0 transparent transparent;/*透明 黄 透明 透明 */
+    position:absolute;
+    top:0px;
+    left:0px;
+}
+
+/*--------------------------------------公告界面--------------------------------------------------*/
+.signContent{border-top: 1px solid #ccc;min-height: 500px;position: relative;}
+.signContent h1,h6{text-align: center;}
+.signContent h1{font-weight: bold;margin-top: 25px;}
+.signContent h6{color: #999999;padding-top: 5px;}
+.signContent p.mainContent{text-indent: 2em;line-height: 200%;padding-top: 25px;color: #4d4d4d;}
+.signContent p.btnBack a{width: 70px;height: 25px;line-height: 25px;text-align: center;display: block;border-radius: 2px;}
+.signContent p.btnBack{position: absolute;top: 25px;}
+
+.signContent {
+	border-top: 1px solid #ccc;
+	min-height: 500px;
+	position: relative;
+}
+
+.signContent h1, h6 {
+	text-align: center;
+}
+
+.signContent h1 {
+	font-weight: bold;
+	margin-top: 25px;
+}
+
+.signContent h6 {
+	color: #999999;
+	padding-top: 5px;
+}
+
+.signContent p.mainContent {
+	text-indent: 2em;
+	line-height: 200%;
+	padding-top: 25px;
+	color: #4d4d4d;
+}
+
+.signContent p.btnBack a {
+	width: 70px;
+	height: 25px;
+	line-height: 25px;
+	text-align: center;
+	display: block;
+	border-radius: 2px;
+}
+
+.signContent p.btnBack {
+	position: absolute;
+	top: 25px;
+}
+
+
+/*
+*    CandyQian Add
+*/
+/*流量普通分发导航*/
+.line{
+    background-color:#CCCCCC;
+    height:1px;
+    margin:0 45px;
+}
+
+/*充值成功后是否以短信告知*/
+.btnA_type{
+    height:27px;
+    line-height: 27px;
+}
+.mesTemplate_apply{
+    padding:20px 30px;
+}
+.mes_content{
+    border:1px solid #C1BFC0;
+    padding:10px 20px;
+}
+.mes_content textarea{
+    border:none;
+    width:80%;
+}
+.ml-8{margin-left:-8px;}
+
+/*---------------------------------------短信模板界面----------------------------------------------*/
+/*tab内容*/
+dl.mes_tab{border-bottom: 1px solid #C6C6C7;}
+dl.mes_tab dd{
+    float: left;
+    text-align: center;
+    width:33.3%;
+}
+dl.mes_tab dd a{
+    color:#615E5F;
+    display: block;
+    margin:0 auto -1px;
+    padding-top:8px;
+    padding-bottom: 8px;
+    width:105px;
+}
+dl.mes_tab dd.selected a{
+    border-bottom: 2px solid #DE551A;
+    color:#DE551A;
+}
+/*表格*/
+.mes_table thead,.mes_table tbody tr{
+    background-color: #121926;
+    color:#FFFFFF;
+    height:50px;
+    line-height:50px;
+}
+.mes_table tbody tr{
+    background-color:#FFFFFF;
+    color:#615E5F;
+}
+.mes_table tbody tr a{color:#615E5F;}
+.mes_table tbody tr.odLine{background-color:#E6E6E6;}
+.mes_table tbody tr.trLine{
+    background-color:#EC6B00;
+    color:#FFFFFF;
+}
+.mes_table tbody tr.trLine a{color:#FFFFFF;}
+.mes_table tbody tr td a>i{
+    background: url("/member/img/narrow_topBottom.png") no-repeat;
+    background-position: 0 -75px;
+    display: inline-block;
+    height:19px;
+    width:14px;
+}
+.mes_table .mes_detail{
+    border:1px solid #B8B8B9;
+    color:#000000;
+    cursor: pointer;
+    line-height: 25px;
+    position:absolute;
+    padding:10px 10%;
+    text-align: left;
+    top:0;
+    width:90%;
+    z-index: 99;
+}
+.mes_table .mes_detail i.bt_narrow{
+    background-position:0 0;
+    position: absolute;
+    bottom:5px;
+    right:25px;
+}
+
+
+
+
+
+
+
+

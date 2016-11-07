@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://java.sun.com/xml/ns/javaee"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+		  http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+           version="3.0">
+
+
+    <display-name>shine</display-name>
+
+    <servlet-mapping>
+        <!--对客户端请求的静态资源如图片、JS文件等的请求交由默认的servlet卧槽，千万别把jsp放到这里否则java代码不会被执行，他只会把他看作静态的，按理说jsp应该被执行jsp的servlet所拦截
+        而默认的执行jsp的servlet是不需要我们配置的-->
+        <servlet-name>default</servlet-name>
+        <url-pattern>*.png</url-pattern>
+        <url-pattern>*.jpg</url-pattern>
+        <url-pattern>*.gif</url-pattern>
+        <url-pattern>*.js</url-pattern>
+        <url-pattern>*.css</url-pattern>
+        <url-pattern>*.ico</url-pattern>
+        <url-pattern>*.woff</url-pattern>
+        <url-pattern>*.woff2</url-pattern>
+        <url-pattern>*.ttf</url-pattern>
+        <url-pattern>*.html</url-pattern>
+        <url-pattern>*.swf</url-pattern>
+        <url-pattern>*.xls</url-pattern>
+        <url-pattern>*.json</url-pattern>
+    </servlet-mapping>
+
+    <!--  Spring 容器启动监听器 -->
+    <listener>
+        <description>spring监听器</description>
+        <listener-class>com.shine.listen.ContextLoaderListener</listener-class>
+    </listener>
+
+    <!--  Spring 服务层的配置文件 -->
+    <context-param>
+        <param-name>contextConfigLocation</param-name>
+        <param-value>
+            classpath:spring.xml
+        </param-value>
+    </context-param>
+
+    <!--编码过滤-->
+    <filter>
+        <filter-name>encodingFilter</filter-name>
+        <filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
+        <init-param>
+            <param-name>encoding</param-name>
+            <param-value>UTF-8</param-value>
+        </init-param>
+        <init-param>
+            <param-name>forceEncoding</param-name>
+            <param-value>true</param-value>
+        </init-param>
+    </filter>
+    <filter-mapping>
+        <filter-name>encodingFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
+    <!-- spring mvc servlet -->
+    <servlet>
+        <servlet-name>shine</servlet-name>
+        <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+        <init-param>
+            <param-name>contextConfigLocation</param-name>
+            <param-value>classpath:spring-mvc.xml</param-value>
+        </init-param>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>shine</servlet-name>
+        <!-- 由SpringMVC拦截所有请求 -->
+        <url-pattern>/</url-pattern>
+    </servlet-mapping>
+
+    <error-page>
+        <error-code>404</error-code>
+        <location>/WEB-INF/views/404.html</location>
+    </error-page>
+    <error-page>
+        <error-code>500</error-code>
+        <location>/WEB-INF/views/404.html</location>
+    </error-page>
+</web-app>

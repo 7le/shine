@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+    <bean id="quartzFactory" class="com.shine.quartz.QuartzFactory">
+        <property name="scheduler" ref="schedulerFactoryBean"/>
+    </bean>
+    <!-- quartz配置  动态配置所以我们将 Factory 作为一个service一样的接口 QuartzJobFactory.java-->
+    <!-- 调度工厂 -->
+    <bean id="schedulerFactoryBean" class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
+        <!--   <property name="dataSource">
+         <ref bean="ddlibserveDataSource" />
+     </property>   -->
+        <!--  <property name="schedulerName" value="Mscheduler" />   -->
+        <property name="configLocation" value="classpath:properties/quartz.properties" />
+        <property name="applicationContextSchedulerContextKey"
+                  value="applicationContextKey" />
+        <property name="autoStartup" value="true" />
+
+        <property name="dataSource" ref="dataSource" />
+        <property name="schedulerContextAsMap">
+            <map>
+                <!-- spring 管理的service需要放到这里，才能够注入成功 -->
+                <description>schedulerContextAsMap</description>
+                <entry key="quartzFactory" value-ref="quartzFactory"/>
+<!--                <entry key="smsService" value-ref="smsServiceImpl"/>-->
+            </map>
+        </property>
+    </bean>
+
+
+</beans>

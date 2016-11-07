@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ehcache updateCheck="false" monitoring="autodetect"
+         dynamicConfig="true">
+
+    <diskStore path="java.io.tmpdir"/>
+
+    <!--默认缓存单元-->
+    <defaultCache maxEntriesLocalHeap="10000" eternal="false"
+                  overflowToDisk="true" timeToIdleSeconds="120" timeToLiveSeconds="120"/>
+
+
+    <!--session-->
+    <cache name="session" maxEntriesLocalHeap="10000"
+           maxEntriesLocalDisk="1000" eternal="false" overflowToDisk="true"
+           diskSpoolBufferSizeMB="20" timeToIdleSeconds="7200"
+           memoryStoreEvictionPolicy="LFU"/>
+
+    <!--手机验证码-->
+    <cache name="verify_code_phone" maxEntriesLocalHeap="1000"
+           maxEntriesLocalDisk="1000" eternal="false" overflowToDisk="true"
+           diskSpoolBufferSizeMB="20" timeToLiveSeconds="1800"
+           memoryStoreEvictionPolicy="LFU"/>
+
+
+    <!--登录会员-->
+    <cache name="loginMember" maxEntriesLocalHeap="10000"
+           maxEntriesLocalDisk="10000" eternal="false" overflowToDisk="true"
+           diskSpoolBufferSizeMB="50" timeToIdleSeconds="3600"
+           memoryStoreEvictionPolicy="LFU"/>
+
+    <!--登录管理员-->
+    <cache name="loginAdmin" maxEntriesLocalHeap="10000"
+           maxEntriesLocalDisk="10000" eternal="false" overflowToDisk="true"
+           diskSpoolBufferSizeMB="50" timeToIdleSeconds="1800"
+           memoryStoreEvictionPolicy="LFU"/>
+
+
+    <!--登录代理商-->
+    <cache name="loginAgent" maxEntriesLocalHeap="10000"
+           maxEntriesLocalDisk="10000" eternal="false" overflowToDisk="true"
+           diskSpoolBufferSizeMB="50" timeToIdleSeconds="1800"
+           memoryStoreEvictionPolicy="LFU"/>
+
+
+</ehcache>
