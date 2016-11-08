@@ -15,4 +15,7 @@
     <bean id="mmsMongoKit" class="net.sedion.mongodb.mongo.Mongokit" init-method="init"
           p:host = "${mongo_host}" p:port = "${mongo_port}" p:databaseName = "mms${mongo_db}" />-->
 
+    <bean id="resMongoKit" class="net.shine.mongodb.mongo.Mongokit" init-method="init"
+          p:host="${mongo_host}" p:port="${mongo_port}" p:databaseName="${mongo_db}"  />
+
 </beans>

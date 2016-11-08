@@ -8,7 +8,7 @@ import com.shine.j2cache.LoginAgentCache;
 import com.shine.j2cache.LoginMemberCache;
 import com.shine.j2cache.VerifyCodePhoneCache;
 import com.shine.mq.ConnectDataSource;
-import net.sedion.mongodb.mongo.Mongokit;
+import net.shine.mongodb.mongo.Mongokit;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -45,9 +45,8 @@ public class BaseServiceImpl {
     protected SystemServiceFactory systemServiceFactory;
 */
 
-/*
-    @Resource(name = "smsMongoKit")
-    protected Mongokit mongokit  ;*/
+    @Resource(name = "resMongoKit")
+    protected Mongokit mongokit  ;
 
 
     /**

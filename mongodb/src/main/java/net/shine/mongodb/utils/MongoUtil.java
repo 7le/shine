@@ -1,10 +1,10 @@
-package net.sedion.mongodb.utils;
+package net.shine.mongodb.utils;
 
-import net.sedion.mongodb.BeanHelper;
-import net.sedion.mongodb.config.DatabaseConfig;
-import net.sedion.mongodb.entity.DeliverMsg;
-import net.sedion.mongodb.mongo.Mongo;
-import net.sedion.mongodb.mongo.Mongokit;
+import net.shine.mongodb.BeanHelper;
+import net.shine.mongodb.config.DatabaseConfig;
+import net.shine.mongodb.entity.DeliverMsg;
+import net.shine.mongodb.mongo.Mongo;
+import net.shine.mongodb.mongo.Mongokit;
 import org.bson.Document;
 import org.bson.types.ObjectId;
 

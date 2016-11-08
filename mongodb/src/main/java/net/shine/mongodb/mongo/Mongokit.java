@@ -67,7 +67,7 @@ public class Mongokit {
     /**
      * 默认数据库
      */
-    private static final String DEFAULT_DATABASE = "sms";
+    private static final String DEFAULT_DATABASE = "shine";
 
     private MongoClient client;
     private MongoDatabase defaultDb;

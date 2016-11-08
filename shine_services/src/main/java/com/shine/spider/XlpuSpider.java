@@ -1,7 +1,8 @@
 package com.shine.spider;
 
-import net.sedion.mongodb.BeanHelper;
-import net.sedion.mongodb.entity.InfoBean;
+
+import net.shine.mongodb.BeanHelper;
+import net.shine.mongodb.entity.InfoBean;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
