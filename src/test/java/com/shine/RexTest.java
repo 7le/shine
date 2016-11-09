@@ -14,13 +14,33 @@ public class RexTest {
         Pattern p = Pattern.compile("[\\u4e00-\\u9fa5\\（\\）\\《\\》\\——\\；\\，\\。\\“\\”\\<\\>]");
         System.out.println(p.matcher("hello你好吗,我很好thank you").find());
 
-        String str = "hello你好吗,我很好 thank you";
-        String reg="[\\u4e00-\\u9fa5\\（\\）\\《\\》\\——\\；\\，\\。\\“\\”\\<\\>]";
+        String str = "hello你好吗,我很好 thank you……a…a,a.";
+        String reg="[\\u4e00-\\u9fa5\\（\\）\\《\\》\\——\\；\\，\\。\\“\\”\\<\\>\\…\\……\\,\\.]";
   //      String reg = "[\u2E80-\u9FFF]";
         Pattern pat = Pattern.compile(reg);
         Matcher mat = pat.matcher(str);
         String repickStr = mat.replaceAll("");
         System.out.println("过滤中文后: "+repickStr);
+
+
+        //验证是否为邮箱地址
+        String str1="ceponline@yahoo.com.cn";
+
+        Pattern pattern =Pattern.compile("[\\w\\.\\-]+@([\\w\\-]+\\.)+[\\w\\-]+",Pattern.CASE_INSENSITIVE);
+
+        Matcher matcher = pattern.matcher(str);
+
+        System.out.println(matcher.matches());
+
+        //去除html标记
+
+        Pattern pattern1 = Pattern.compile("<.+?>",Pattern.DOTALL);
+
+        Matcher matcher1 = pattern1.matcher("<ahref=\"index.html\">主页</a>");
+
+        String string = matcher1.replaceAll("");
+
+        System.out.println(string);
 
 
     }
