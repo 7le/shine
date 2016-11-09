@@ -18,16 +18,16 @@ import java.util.regex.Pattern;
 public class XlpuSpider {
     private final static String baseUrl = "http://www.xlpu.cc/html/";
 
-    public static InfoBean getData() throws IOException {
+    public static InfoBean getData(int i) throws IOException {
         InfoBean infoBean=new InfoBean();
-        Document doc = Jsoup.connect(baseUrl + "41253.html").header("User-Agent", "Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10.4; en-US; rv:1.9.2.2) Gecko/20100316 Firefox/3.6.2").timeout(5000).get();
+        Document doc = Jsoup.connect(baseUrl + i +".html").header("User-Agent", "Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10.4; en-US; rv:1.9.2.2) Gecko/20100316 Firefox/3.6.2").timeout(5000).get();
 
         infoBean.setTitle(doc.title());
 
         Element search = doc.select("#classpage6").get(2);
         //拿到图片
         Elements photos = search.select("img[src]");
-        List photoList =new ArrayList();
+        ArrayList photoList =new ArrayList();
         for (Element element : photos) {
             String photo = element.attr("src");
             photoList.add(photo);
@@ -36,7 +36,7 @@ public class XlpuSpider {
 
         //拿到资源内容
         String e=search.toString();
-        e = e.replace(" ", "");
+        e =e.replace(" ", "");
         e =e.replace("　","");
         e =e.replace("\n", "");
         if (e.indexOf("译名") > 0) {
@@ -83,18 +83,21 @@ public class XlpuSpider {
 
         //拿到下载地址
         Elements download = search.select("a[href]");
-        Map map=new HashMap();
+        List urlInfoList=new ArrayList();
         for (Element element : download) {
+            InfoBean.UrlInfo urlInfo=new InfoBean.UrlInfo();
             if ("".equals(element.text()) || element.text() != null){
+                urlInfo.setName(element.text());
                 if (element.attr("href") == null || element.attr("href").equals("#") || element.attr("href").equals("")) {
                     String url = element.toString();
-                    map.put(element.text(),url.substring(url.indexOf("thunder:"), url.indexOf("thunderpid") - 2));
+                    urlInfo.setUrl(url.substring(url.indexOf("thunder:"), url.indexOf("thunderpid") - 2));
                 } else {
-                    map.put(element.text(),element.attr("href"));
+                    urlInfo.setUrl(element.attr("href"));
                 }
+                urlInfoList.add(urlInfo);
             }
         }
-        infoBean.setUrl(map);
+        infoBean.setUrlInfo(urlInfoList);
         return infoBean;
     }
 
@@ -113,7 +116,7 @@ public class XlpuSpider {
     }
 
     public static void main(String[] args) throws IOException {
-        InfoBean infoBean = getData();
+        InfoBean infoBean = getData(1);
         org.bson.Document document = BeanHelper.bean2Document(infoBean);
 
 

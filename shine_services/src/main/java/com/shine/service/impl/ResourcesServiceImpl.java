@@ -17,7 +17,7 @@ public class ResourcesServiceImpl extends BaseServiceImpl implements ResourcesSe
     public int saveRes(InfoBean infoBean) {
         Document document = BeanHelper.bean2Document(infoBean);
 
-        String collectName = "Resources";
+        String collectName = "Resources1";
 
         mongokit.save(collectName, document);
         if (document.get("_id") != null) {

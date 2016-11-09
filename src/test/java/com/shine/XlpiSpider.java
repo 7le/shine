@@ -9,6 +9,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
+import java.io.IOException;
+
 /**
  * Created by hq on 2016/11/8.
  */
@@ -22,11 +24,22 @@ public class XlpiSpider {
     @Test
     public void spider1() throws Exception {
         XlpuSpider xlpuSpider =null;
-        InfoBean infoBean = xlpuSpider.getData();
+/*12447*/
+        for (int i = 1; i <= 44467; i++) {
+            try {
+                InfoBean infoBean = xlpuSpider.getData(i);
 
-        resourcesService.saveRes(infoBean);
+                resourcesService.saveRes(infoBean);
 
-        System.out.print(infoBean.getSid());
+                System.out.println(i + ": " + infoBean.getSid());
+            } catch (Exception e) {
+                e.printStackTrace();
+                continue;
+            }
+        }
+
+
+
 /*        FileWriter writer;
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyyMMddHHmmss");
         String id = simpleDateFormat.format(new Date());

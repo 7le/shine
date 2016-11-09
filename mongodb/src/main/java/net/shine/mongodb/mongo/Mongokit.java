@@ -161,7 +161,11 @@ public class Mongokit {
     public void init() {
         ServerAddress serverAddress = new ServerAddress(host, port);
         try {
-            this.client = new MongoClient(serverAddress);
+            this.client = new MongoClient(serverAddress,new MongoClientOptions.Builder()
+                    .socketKeepAlive(true) // 是否保持长链接
+                    .connectionsPerHost(200) // 最大连接数
+                    .minConnectionsPerHost(20)// 最小连接数
+                    .build());
             defaultDb = this.client.getDatabase(databaseName);
             //用于统计查询
             mongo = new com.mongodb.Mongo(serverAddress);
