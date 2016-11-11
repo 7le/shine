@@ -36,12 +36,20 @@ public class RexTest {
 
         Pattern pattern1 = Pattern.compile("<.+?>",Pattern.DOTALL);
 
-        Matcher matcher1 = pattern1.matcher("<ahref=\"index.html\">主页</a>");
+        Matcher matcher1 = pattern1.matcher("<a href=\"index.html\">主页<br><br/></a>");
 
         String string = matcher1.replaceAll("");
 
         System.out.println(string);
+           //去除html标记
 
+           Pattern pattern2 = Pattern.compile("[\\[\\]\\【\\】\\&nbsp;\\ \\\n\\　]");
+
+           Matcher matcher2 = pattern2.matcher("[][dasd] asda sds【dsadas】d as　d　&nb　sp;&nbsp;&nbsp;231\n\n\ndd");
+
+           String string2 = matcher2.replaceAll("");
+
+           System.out.println(string2);
 
     }
 

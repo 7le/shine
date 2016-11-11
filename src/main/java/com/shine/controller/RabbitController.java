@@ -22,7 +22,7 @@ public class RabbitController {
 
     @RequestMapping(value ="/producerView")
     public ModelAndView producerView(){
-        ModelAndView modelAndView = new ModelAndView("producerView");
+        ModelAndView modelAndView = new ModelAndView("producerView.jsp");
 
         return modelAndView;
     }
