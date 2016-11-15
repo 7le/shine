@@ -11,7 +11,7 @@
     <title>迅雷铺爬虫</title>
 </head>
 <body>
-  <form action="/spider/xlpOpenr" method="post" >
+  <form action="/spider/xlpOpen" method="post" >
     <input type="submit" value="迅雷铺爬虫">
   </form>
 </body>
