@@ -1,9 +1,11 @@
 package com.shine.service.impl;
 
 import com.shine.bean.ResultBean;
+import com.shine.service.ResourcesService;
 import com.shine.service.SpiderService;
 import com.shine.spider.XlpuSpider;
 import net.shine.mongodb.entity.InfoBean;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 /**
@@ -12,6 +14,8 @@ import org.springframework.stereotype.Service;
 @Service
 public class SpiderServiceImpl extends BaseServiceImpl implements SpiderService {
 
+    @Autowired
+    ResourcesService resourcesService;
 
     @Override
     public ResultBean xlpspider() {

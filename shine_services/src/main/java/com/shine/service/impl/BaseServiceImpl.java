@@ -46,9 +46,6 @@ public class BaseServiceImpl {
     @Autowired
     protected SystemServiceFactory systemServiceFactory;
 */
-    @Autowired
-    ResourcesService resourcesService;
-
     @Resource(name = "resMongoKit")
     protected Mongokit mongokit  ;
 
