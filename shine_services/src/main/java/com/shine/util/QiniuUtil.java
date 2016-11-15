@@ -1,10 +1,9 @@
-package com.xidian.neptune.smsplatform.util;
+package com.shine.util;
 
 import com.qiniu.common.QiniuException;
 import com.qiniu.http.Response;
 import com.qiniu.storage.UploadManager;
 import com.qiniu.util.Auth;
-import com.shine.util.BaseConstant;
 
 import java.io.*;
 

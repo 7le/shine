@@ -8,6 +8,7 @@ import com.shine.j2cache.LoginAgentCache;
 import com.shine.j2cache.LoginMemberCache;
 import com.shine.j2cache.VerifyCodePhoneCache;
 import com.shine.mq.ConnectDataSource;
+import com.shine.service.ResourcesService;
 import net.shine.mongodb.mongo.Mongokit;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,10 +20,11 @@ import javax.annotation.Resource;
  */
 public class BaseServiceImpl {
 
-    protected static final Logger webLogger = Logger.getLogger("web");                    // WARN remind in llmao-web.log
+    protected static final Logger webLogger = Logger.getLogger("web");
     //
-    protected static final Logger memberLogger = Logger.getLogger("member");                    // WARN remind in llmao-member.log
+    protected static final Logger memberLogger = Logger.getLogger("member");
 
+    protected static final Logger spiderLogger = Logger.getLogger("spider");
     /**
      * 缓存器
      */
@@ -44,6 +46,8 @@ public class BaseServiceImpl {
     @Autowired
     protected SystemServiceFactory systemServiceFactory;
 */
+    @Autowired
+    ResourcesService resourcesService;
 
     @Resource(name = "resMongoKit")
     protected Mongokit mongokit  ;

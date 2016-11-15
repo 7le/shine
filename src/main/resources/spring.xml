@@ -9,9 +9,9 @@
         <property name="locations">
             <list>
                 <value>classpath:properties/jdbc.properties</value>
-                <value>classpath:properties/redis.properties</value>
+<!--                <value>classpath:properties/redis.properties</value>-->
                 <value>classpath:properties/rabbitmq.properties</value>
-                <value>classpath:properties/rmi.properties</value>
+<!--                <value>classpath:properties/rmi.properties</value>-->
                 <value>classpath*:mongodb.properties</value>
             </list>
         </property>
@@ -28,16 +28,16 @@
 
     <import resource="classpath*:spring-mybatis.xml"/>
     <!--j2cache两级缓存spring配置-->
-    <import resource="spring-j2cache.xml"/>
+   <!-- <import resource="spring-j2cache.xml"/>-->
     <!--redis spring配置-->
-    <import resource="spring-redis.xml"/>
+  <!--  <import resource="spring-redis.xml"/>-->
     <!-- quartz-->
-    <import resource="spring-quartz.xml"/>
+   <!-- <import resource="spring-quartz.xml"/>-->
     <!--rmi配置-->
-    <import resource="spring-rmi-client.xml"/>
+<!--    <import resource="spring-rmi-client.xml"/>-->
     <!--mongo 模块-->
     <import resource="classpath*:spring-mongodb.xml"/>
 
-    <bean class="com.shine.init.RabbitListenerInit" init-method="init"/>
+   <!-- <bean class="com.shine.init.RabbitListenerInit" init-method="init"/>-->
 
 </beans>
