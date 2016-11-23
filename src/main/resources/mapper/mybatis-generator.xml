@@ -15,33 +15,55 @@
             <property name="suppressDate" value="false" /> <!-- 是否生成注释代时间戳-->
         </commentGenerator>
 
-        <jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://127.0.0.1:3306/smsp_merge"
-                        userId="root" password="123456"/>
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://114.215.122.158:3306/shine"
+                        userId="ly" password="ly@19960301"/>
 
         <javaTypeResolver>
             <property name="forceBigDecimals" value="false"/>
         </javaTypeResolver>
 
-        <javaModelGenerator targetPackage="com.xidian.neptune.smsplatform.dao.model"
+        <javaModelGenerator targetPackage="com.shine.dao.model"
                             targetProject="THIS_CONFIGURATION_IS_NOT_REQUIRED">
             <property name="enableSubPackages" value="false"/>
             <property name="trimStrings" value="true"/>
         </javaModelGenerator>
 
-        <sqlMapGenerator targetPackage="com.xidian.neptune.smsplatform.dao.mapping"
+        <sqlMapGenerator targetPackage="com.shine.dao.mapping"
                          targetProject="THIS_CONFIGURATION_IS_NOT_REQUIRED">
             <property name="enableSubPackages" value="false"/>
         </sqlMapGenerator>
 
-        <javaClientGenerator targetPackage="com.xidian.neptune.smsplatform.dao"
+        <javaClientGenerator targetPackage="com.shine.dao"
                              targetProject="THIS_CONFIGURATION_IS_NOT_REQUIRED" type="XMLMAPPER">
             <property name="enableSubPackages" value="false"/>
         </javaClientGenerator>
 
 
-        <table tableName="admin" domainObjectName="Admin" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false"
+        <table tableName="user" domainObjectName="User" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false"
                enableUpdateByExample="false">
-            <generatedKey column="admin_id" sqlStatement="MySql" identity="true"/>
+            <generatedKey column="id" sqlStatement="MySql" identity="true"/>
         </table>
+        <table tableName="user_role" domainObjectName="UserRole" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false"
+               enableUpdateByExample="false">
+            <generatedKey column="id" sqlStatement="MySql" identity="true"/>
+        </table>
+        <table tableName="role" domainObjectName="Role" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false"
+               enableUpdateByExample="false">
+            <generatedKey column="id" sqlStatement="MySql" identity="true"/>
+        </table>
+        <table tableName="role_permission" domainObjectName="RolePermission" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false"
+               enableUpdateByExample="false">
+            <generatedKey column="id" sqlStatement="MySql" identity="true"/>
+        </table>
+        <table tableName="permission" domainObjectName="Permission" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false"
+               enableUpdateByExample="false">
+            <generatedKey column="id" sqlStatement="MySql" identity="true"/>
+        </table>
+        <table tableName="sys_log" domainObjectName="SysLog" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false"
+               enableUpdateByExample="false">
+            <generatedKey column="id" sqlStatement="MySql" identity="true"/>
+        </table>
+
+
     </context>
 </generatorConfiguration>

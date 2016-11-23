@@ -1,4 +1,5 @@
-package net.sedion.mongodb.utils;
+package net.shine.mongodb.utils;
+
 
 import com.jfinal.kit.PathKit;
 

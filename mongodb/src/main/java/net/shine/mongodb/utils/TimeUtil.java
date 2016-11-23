@@ -1,4 +1,4 @@
-package net.sedion.mongodb.utils;
+package net.shine.mongodb.utils;
 
 import java.text.DateFormat;
 import java.text.ParseException;

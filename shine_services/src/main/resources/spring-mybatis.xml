@@ -10,13 +10,15 @@
                        	http://www.springframework.org/schema/aop
 						http://www.springframework.org/schema/aop/spring-aop-3.0.xsd">
 
-    <!--<bean id="propertyConfigurer" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">-->
-        <!--<property name="locations">-->
-            <!--<list>-->
-                <!--<value>classpath*:properties/jdbc.properties</value>-->
-            <!--</list>-->
-        <!--</property>-->
-    <!--</bean>-->
+<!--
+    <bean id="propertyConfigurer" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+        <property name="locations">
+            <list>
+                <value>classpath*:properties/jdbc.properties</value>
+            </list>
+        </property>
+    </bean>
+-->
 
     <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"
         destroy-method="close">  
@@ -42,11 +44,11 @@
     </bean>
   
     <!-- spring和MyBatis完美整合，不需要mybatis的配置映射文件 -->
-<!--    <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
-        <property name="dataSource" ref="dataSource" />  -->
+    <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+        <property name="dataSource" ref="dataSource" />
         <!-- 自动扫描mapping.xml文件 -->
-<!--        <property name="mapperLocations" value="classpath*:com/shine/dao/mapping/*.xml"/>
-        <property name="plugins">
+        <property name="mapperLocations" value="classpath*:com/shine/dao/mapping/*.xml"/>
+       <!-- <property name="plugins">
             <array>
                 <bean class="com.shine.interceptor.PerformanceInterceptor">
                     <property name="properties">
@@ -56,14 +58,14 @@
                     </property>
                 </bean>
             </array>
-        </property>
-    </bean>-->
+        </property>-->
+    </bean>
 
     <!-- DAO接口所在包名，Spring会自动查找其下的类 ,并生成Mappper接口的实现类的Bean-->
-    <!--<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">  -->
-        <!--<property name="basePackage" value="com.shine.dao" />-->
-        <!--<property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"/>-->
-    <!--</bean>-->
+    <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+        <property name="basePackage" value="com.shine.dao" />
+        <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"/>
+    </bean>
 
     <!-- 自动扫描 service层 -->
     <context:component-scan base-package="com.shine.service.impl" />

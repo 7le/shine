@@ -1,4 +1,5 @@
-package net.sedion.mongodb.utils;
+package net.shine.mongodb.utils;
+
 
 import java.math.RoundingMode;
 import java.text.DecimalFormat;
