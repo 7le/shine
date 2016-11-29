@@ -3,6 +3,7 @@ package com.shine.controller;
 import com.shine.j2cache.LoginAdminCache;
 import com.shine.j2cache.LoginMemberCache;
 import com.shine.j2cache.VerifyCodePhoneCache;
+import com.shine.service.ResourcesService;
 import net.sf.json.JSONObject;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -34,6 +35,8 @@ public class BaseController {
     /**
      * 业务层
      */
+    @Autowired
+    protected ResourcesService resourcesService;
 
     //dao
 

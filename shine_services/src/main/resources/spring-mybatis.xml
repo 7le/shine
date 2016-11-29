@@ -123,8 +123,8 @@
 	</bean>
 	
 	<aop:config>
-		<aop:pointcut id="transactionPointcut" expression="execution(* com.shine.service.impl.*Impl.*(..)) "/>
-<!--		and !execution(* com.xidian.neptune.smsplatform.service.impl.MMSRecordServiceImpl.*(..))" />-->
+		<aop:pointcut id="transactionPointcut" expression="execution(* com.shine.service.impl.*Impl.*(..))
+		and !execution(* com.shine.service.impl.ResourcesServiceImpl.*(..)) "/>
 		<aop:advisor pointcut-ref="transactionPointcut" advice-ref="transactionInterceptor" /> 
 	</aop:config>
 

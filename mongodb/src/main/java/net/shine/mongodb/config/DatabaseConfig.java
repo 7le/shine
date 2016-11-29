@@ -17,16 +17,16 @@ public interface DatabaseConfig {
 
 
     /**
-     * 数据库3
+     * 数据库
      */
 
-    interface DATABASE_3{
+    interface DATABASE{
         //数据库
-        String DATABASE_3 = "";
+        String DATABASE_SHINE = "shine";
 
         /**
          * 集合
          */
-        String COLLECTION_MATERIAL = "";
+        String COLLECTION_RES = "Resources";
     }
 }
