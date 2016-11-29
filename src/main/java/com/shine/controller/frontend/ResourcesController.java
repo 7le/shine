@@ -1,7 +1,6 @@
 package com.shine.controller.frontend;
 
 import com.shine.controller.BaseController;
-import com.shine.dao.Product;
 import net.shine.mongodb.entity.InfoBean;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
