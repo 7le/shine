@@ -15,12 +15,12 @@ import org.springframework.stereotype.Service;
 public class SpiderServiceImpl extends BaseServiceImpl implements SpiderService {
 
     @Autowired
-    ResourcesService resourcesService;
+    private ResourcesService resourcesService;
 
     @Override
-    public ResultBean xlpspider() {
+    public ResultBean xlpSpider(int num) {
 
-        for (int i = 1; i <= 44467; i++) {
+        for (int i = 1; i <= num; i++) {
             try {
                 InfoBean infoBean = XlpuSpider.getData(i);
 

@@ -31,7 +31,7 @@ public class SpiderController {
     @RequestMapping(value ="/xlpOpen")
     @ResponseBody
     public ResultBean xlpSpiderOpen(){
-        ResultBean resultBean=spiderService.xlpspider();
+        ResultBean resultBean=spiderService.xlpSpider(44467);
         return resultBean;
     }
 }

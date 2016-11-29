@@ -18,6 +18,7 @@ import javax.annotation.Resource;
 /**
  * Created by hq on 2016/10/19
  */
+
 public class BaseServiceImpl {
 
     protected static final Logger webLogger = Logger.getLogger("web");

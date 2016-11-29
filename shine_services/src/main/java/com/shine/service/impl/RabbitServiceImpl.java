@@ -17,13 +17,10 @@ import java.io.IOException;
  * Created by hq on 2016/10/7.
  */
 @Service
-public class RabbitServiceImpl implements RabbitService {
+public class RabbitServiceImpl extends BaseServiceImpl implements RabbitService {
 
     protected static final Logger rabbitmq = Logger.getLogger("rabbitmq");
-
-    @Autowired
-    protected ConnectDataSource connectDataSource;
-
+    
     @Override
     public ResultBean producer() {
         try {
