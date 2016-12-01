@@ -25,12 +25,12 @@ public class BaseController {
     /**
      * 缓存器
      */
-    @Autowired
-    protected VerifyCodePhoneCache verifyCodePhoneCache;
-    @Autowired
-    protected LoginMemberCache loginMemberCache;
-    @Autowired
-    protected LoginAdminCache loginAdminCache;
+//    @Autowired
+//    protected VerifyCodePhoneCache verifyCodePhoneCache;
+//    @Autowired
+//    protected LoginMemberCache loginMemberCache;
+//    @Autowired
+//    protected LoginAdminCache loginAdminCache;
 
     /**
      * 业务层

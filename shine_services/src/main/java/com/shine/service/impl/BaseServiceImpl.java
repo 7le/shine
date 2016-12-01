@@ -29,14 +29,14 @@ public class BaseServiceImpl {
     /**
      * 缓存器
      */
-    @Autowired
+/*    @Autowired
     protected VerifyCodePhoneCache verifyCodePhoneCache;
     @Autowired
     protected LoginMemberCache loginMemberCache;
     @Autowired
     protected LoginAdminCache loginAdminCache;
     @Autowired
-    protected LoginAgentCache loginAgentCache;
+    protected LoginAgentCache loginAgentCache;*/
     @Autowired
     protected ConnectDataSource connectDataSource;
     /**

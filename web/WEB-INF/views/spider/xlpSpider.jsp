@@ -12,6 +12,8 @@
 </head>
 <body>
   <form action="/spider/xlpOpen" method="post" >
+    <input type="text" name="begin">
+    <input type="text" name="end">
     <input type="submit" value="迅雷铺爬虫">
   </form>
 </body>

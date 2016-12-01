@@ -18,9 +18,9 @@ public class SpiderServiceImpl extends BaseServiceImpl implements SpiderService 
     private ResourcesService resourcesService;
 
     @Override
-    public ResultBean xlpSpider(int num) {
+    public ResultBean xlpSpider(Integer begin,Integer end) {
 
-        for (int i = 1; i <= num; i++) {
+        for (int i = begin; i <= end; i++) {
             try {
                 InfoBean infoBean = XlpuSpider.getData(i);
 

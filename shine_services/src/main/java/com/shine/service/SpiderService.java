@@ -11,5 +11,5 @@ public interface SpiderService {
      * 迅雷铺爬虫开始
      * @return
      */
-    ResultBean xlpSpider(int num);
+    ResultBean xlpSpider(Integer begin,Integer end);
 }
