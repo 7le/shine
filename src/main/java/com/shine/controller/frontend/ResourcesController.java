@@ -42,7 +42,8 @@ public class ResourcesController extends BaseController{
     @RequestMapping(value="/info/{sid}",method= RequestMethod.GET)
     @ResponseBody
     public InfoBean getProducts(@PathVariable String sid,HttpServletRequest request,HttpServletResponse response) throws Exception {
-        return resourcesService.getResOne(sid);
+        InfoBean infoBean=resourcesService.getResOne(sid);
+        return infoBean;
     }
 /*
 

@@ -28,7 +28,7 @@ public class SpiderServiceImpl extends BaseServiceImpl implements SpiderService 
 
                 spiderLogger.info(i + ": " + infoBean.getSid());
             } catch (Exception e) {
-                spiderLogger.info(e.getStackTrace());
+                spiderLogger.info(e.getMessage());
                 continue;
             }
         }

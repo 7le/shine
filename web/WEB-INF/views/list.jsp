@@ -14,6 +14,7 @@
 </form>
 <script>
   console.log(${res.records});
+  console.log(${infoBean});
 </script>
 </body>
 </html>
