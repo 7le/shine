@@ -24,7 +24,7 @@ public class XlpuSpider {
         Document doc = Jsoup.connect(baseUrl + i + ".html").header("User-Agent", "Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10.4; en-US; rv:1.9.2.2) Gecko/20100316 Firefox/3.6.2").timeout(5000).get();
 
         if (doc.title() != null) {
-            infoBean.setTitle(doc.title().substring(0, doc.title().toString().indexOf("-")));
+            infoBean.setTitle(removeHtml(doc.title().substring(0, doc.title().toString().indexOf("-"))));
         }
 
         Element search = doc.select("#classpage6").get(2);
