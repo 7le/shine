@@ -1,6 +1,5 @@
 package com.shine.bean;
 
-import java.util.List;
 
 /**
  * 返回json数据
