@@ -45,8 +45,6 @@ public class ResourcesController extends BaseController{
     public AjaxJson getProducts(@PathVariable String sid,HttpServletRequest request,HttpServletResponse response) throws Exception {
         AjaxJson ajaxJson=new AjaxJson();
         ajaxJson.setDate(resourcesService.getResOne(sid));
-        ajaxJson.setStatus(200);
-        ajaxJson.setMessage("成功");
         return ajaxJson;
     }
 /*

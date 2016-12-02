@@ -8,8 +8,8 @@ import java.util.List;
  */
 public class AjaxJson {
 
-    private Integer status;
-    private String  message;
+    private Integer status=200;
+    private String  message="success";
     private Object date;
 
     public Integer getStatus() {
