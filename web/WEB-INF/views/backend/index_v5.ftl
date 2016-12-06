@@ -1,12 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <title>微光 后台 - 主页</title>
+
+    <link rel="shortcut icon" href="favicon.ico">
+    <link href="/static/backend/css/bootstrap.min14ed.css?v=3.3.6" rel="stylesheet">
+    <link href="/static/backend/css/font-awesome.min93e3.css?v=4.4.0" rel="stylesheet">
+    <link href="/static/backend/css/animate.min.css" rel="stylesheet">
+    <link href="/static/backend/css/style.min862f.css?v=4.1.0" rel="stylesheet">
+
+</head>
+
+<body class="gray-bg top-navigation">
+
 <div id="wrapper">
     <div id="page-wrapper" class="gray-bg">
         <div class="row border-bottom white-bg">
             <nav class="navbar navbar-static-top" role="navigation">
                 <div class="navbar-header">
-                    <button aria-controls="navbar" aria-expanded="false" data-target="#navbar" data-toggle="collapse" class="navbar-toggle collapsed" type="button">
+                    <button aria-controls="navbar" aria-expanded="false" data-target="#navbar" data-toggle="collapse"
+                            class="navbar-toggle collapsed" type="button">
                         <i class="fa fa-reorder"></i>
                     </button>
-                    <a href="#" class="navbar-brand">Hplus</a>
+                    <a href="#" class="navbar-brand">Shine</a>
                 </div>
                 <div class="navbar-collapse collapse" id="navbar">
                     <ul class="nav navbar-nav">
@@ -14,7 +36,8 @@
                             <a aria-expanded="false" role="button" href="index-2.html"> 返回首页</a>
                         </li>
                         <li class="dropdown">
-                            <a aria-expanded="false" role="button" href="#" class="dropdown-toggle" data-toggle="dropdown"> 菜单 <span class="caret"></span></a>
+                            <a aria-expanded="false" role="button" href="#" class="dropdown-toggle"
+                               data-toggle="dropdown"> 菜单 <span class="caret"></span></a>
                             <ul role="menu" class="dropdown-menu">
                                 <li><a href="#">菜单列表</a>
                                 </li>
@@ -27,7 +50,8 @@
                             </ul>
                         </li>
                         <li class="dropdown">
-                            <a aria-expanded="false" role="button" href="#" class="dropdown-toggle" data-toggle="dropdown"> 菜单 <span class="caret"></span></a>
+                            <a aria-expanded="false" role="button" href="#" class="dropdown-toggle"
+                               data-toggle="dropdown"> 菜单 <span class="caret"></span></a>
                             <ul role="menu" class="dropdown-menu">
                                 <li><a href="#">菜单列表</a>
                                 </li>
@@ -40,7 +64,8 @@
                             </ul>
                         </li>
                         <li class="dropdown">
-                            <a aria-expanded="false" role="button" href="#" class="dropdown-toggle" data-toggle="dropdown"> 菜单 <span class="caret"></span></a>
+                            <a aria-expanded="false" role="button" href="#" class="dropdown-toggle"
+                               data-toggle="dropdown"> 菜单 <span class="caret"></span></a>
                             <ul role="menu" class="dropdown-menu">
                                 <li><a href="#">菜单列表</a>
                                 </li>
@@ -53,7 +78,8 @@
                             </ul>
                         </li>
                         <li class="dropdown">
-                            <a aria-expanded="false" role="button" href="#" class="dropdown-toggle" data-toggle="dropdown"> 菜单 <span class="caret"></span></a>
+                            <a aria-expanded="false" role="button" href="#" class="dropdown-toggle"
+                               data-toggle="dropdown"> 菜单 <span class="caret"></span></a>
                             <ul role="menu" class="dropdown-menu">
                                 <li><a href="#">菜单列表</a>
                                 </li>
@@ -88,6 +114,7 @@
                             </div>
                             <div class="ibox-content">
                                 <h1 class="no-margins">386,200</h1>
+
                                 <div class="stat-percent font-bold text-success">98% <i class="fa fa-bolt"></i>
                                 </div>
                                 <small>总计浏览量</small>
@@ -102,6 +129,7 @@
                             </div>
                             <div class="ibox-content">
                                 <h1 class="no-margins">80,800</h1>
+
                                 <div class="stat-percent font-bold text-info">20% <i class="fa fa-level-up"></i>
                                 </div>
                                 <small>新订单</small>
@@ -120,12 +148,16 @@
                                 <div class="row">
                                     <div class="col-md-6">
                                         <h1 class="no-margins">&yen; 406,420</h1>
-                                        <div class="font-bold text-navy">44% <i class="fa fa-level-up"></i> <small>增长较快</small>
+
+                                        <div class="font-bold text-navy">44% <i class="fa fa-level-up"></i>
+                                            <small>增长较快</small>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <h1 class="no-margins">206,120</h1>
-                                        <div class="font-bold text-navy">22% <i class="fa fa-level-up"></i> <small>增长较慢</small>
+
+                                        <div class="font-bold text-navy">22% <i class="fa fa-level-up"></i>
+                                            <small>增长较慢</small>
                                         </div>
                                     </div>
                                 </div>
@@ -138,6 +170,7 @@
                         <div class="ibox float-e-margins">
                             <div class="ibox-title">
                                 <h5>月收入</h5>
+
                                 <div class="ibox-tools">
                                     <span class="label label-primary">2015.02 更新</span>
                                 </div>
@@ -161,6 +194,7 @@
                                             <br/>
                                             所有销售： 162,862
                                         </span>
+
                                     <h3 class="font-bold no-margins">
                                         半年收入利润率
                                     </h3>
@@ -277,6 +311,7 @@
                         <div class="ibox float-e-margins">
                             <div class="ibox-title">
                                 <h5>自定义响应表格</h5>
+
                                 <div class="ibox-tools">
                                     <a class="collapse-link">
                                         <i class="fa fa-chevron-up"></i>
@@ -309,7 +344,8 @@
                                     </div>
                                     <div class="col-sm-3">
                                         <div class="input-group">
-                                            <input type="text" placeholder="搜索" class="input-sm form-control"> <span class="input-group-btn">
+                                            <input type="text" placeholder="搜索" class="input-sm form-control"> <span
+                                                class="input-group-btn">
                                         <button type="button" class="btn btn-sm btn-primary">搜索</button> </span>
                                         </div>
                                     </div>
@@ -377,15 +413,79 @@
         </div>
         <div class="footer">
             <div class="pull-right">
-                By：<a href="http://www.zi-han.net/" target="_blank">zihan's blog</a>
+                By：<a href="http://www.zi-han.net/" target="_blank">silk</a>
             </div>
             <div>
-                <strong>Copyright</strong> H+ &copy; 2014
+                <strong>Copyright</strong> shine &copy; 2014
             </div>
         </div>
     </div>
 </div>
 
+<script src="/static/backend/js/jquery.min.js?v=2.1.4"></script>
+<script src="/static/backend/js/bootstrap.min.js?v=3.3.6"></script>
+<script src="/static/backend/js/content.min.js?v=1.0.0"></script>
+<script src="/static/backend/js/plugins/flot/jquery.flot.js"></script>
+<script src="/static/backend/js/plugins/flot/jquery.flot.tooltip.min.js"></script>
+<script src="/static/backend/js/plugins/flot/jquery.flot.resize.js"></script>
+<script src="/static/backend/js/plugins/chartJs/Chart.min.js"></script>
+<script src="/static/backend/js/plugins/peity/jquery.peity.min.js"></script>
+<script src="/static/backend/js/demo/peity-demo.min.js"></script>
 <script>
-    $(document).ready(function(){var d1=[[1262304000000,6],[1264982400000,3057],[1267401600000,20434],[1270080000000,31982],[1272672000000,26602],[1275350400000,27826],[1277942400000,24302],[1280620800000,24237],[1283299200000,21004],[1285891200000,12144],[1288569600000,10577],[1291161600000,10295]];var d2=[[1262304000000,5],[1264982400000,200],[1267401600000,1605],[1270080000000,6129],[1272672000000,11643],[1275350400000,19055],[1277942400000,30062],[1280620800000,39197],[1283299200000,37000],[1285891200000,27000],[1288569600000,21000],[1291161600000,17000]];var data1=[{label:"数据1",data:d1,color:"#17a084"},{label:"数据2",data:d2,color:"#127e68"}];$.plot($("#flot-chart1"),data1,{xaxis:{tickDecimals:0},series:{lines:{show:true,fill:true,fillColor:{colors:[{opacity:1},{opacity:1}]},},points:{width:0.1,show:false},},grid:{show:false,borderWidth:0},legend:{show:false,}});var lineData={labels:["一月","二月","三月","四月","五月","六月","七月"],datasets:[{label:"示例数据",fillColor:"rgba(220,220,220,0.5)",strokeColor:"rgba(220,220,220,1)",pointColor:"rgba(220,220,220,1)",pointStrokeColor:"#fff",pointHighlightFill:"#fff",pointHighlightStroke:"rgba(220,220,220,1)",data:[65,59,40,51,36,25,40]},{label:"示例数据",fillColor:"rgba(26,179,148,0.5)",strokeColor:"rgba(26,179,148,0.7)",pointColor:"rgba(26,179,148,1)",pointStrokeColor:"#fff",pointHighlightFill:"#fff",pointHighlightStroke:"rgba(26,179,148,1)",data:[48,48,60,39,56,37,30]}]};var lineOptions={scaleShowGridLines:true,scaleGridLineColor:"rgba(0,0,0,.05)",scaleGridLineWidth:1,bezierCurve:true,bezierCurveTension:0.4,pointDot:true,pointDotRadius:4,pointDotStrokeWidth:1,pointHitDetectionRadius:20,datasetStroke:true,datasetStrokeWidth:2,datasetFill:true,responsive:true,};var ctx=document.getElementById("lineChart").getContext("2d");var myNewChart=new Chart(ctx).Line(lineData,lineOptions)});
+    $(document).ready(function () {
+        var d1 = [[1262304000000, 6], [1264982400000, 3057], [1267401600000, 20434], [1270080000000, 31982], [1272672000000, 26602], [1275350400000, 27826], [1277942400000, 24302], [1280620800000, 24237], [1283299200000, 21004], [1285891200000, 12144], [1288569600000, 10577], [1291161600000, 10295]];
+        var d2 = [[1262304000000, 5], [1264982400000, 200], [1267401600000, 1605], [1270080000000, 6129], [1272672000000, 11643], [1275350400000, 19055], [1277942400000, 30062], [1280620800000, 39197], [1283299200000, 37000], [1285891200000, 27000], [1288569600000, 21000], [1291161600000, 17000]];
+        var data1 = [{label: "数据1", data: d1, color: "#17a084"}, {label: "数据2", data: d2, color: "#127e68"}];
+        $.plot($("#flot-chart1"), data1, {
+            xaxis: {tickDecimals: 0},
+            series: {
+                lines: {show: true, fill: true, fillColor: {colors: [{opacity: 1}, {opacity: 1}]},},
+                points: {width: 0.1, show: false},
+            },
+            grid: {show: false, borderWidth: 0},
+            legend: {show: false,}
+        });
+        var lineData = {
+            labels: ["一月", "二月", "三月", "四月", "五月", "六月", "七月"],
+            datasets: [{
+                label: "示例数据",
+                fillColor: "rgba(220,220,220,0.5)",
+                strokeColor: "rgba(220,220,220,1)",
+                pointColor: "rgba(220,220,220,1)",
+                pointStrokeColor: "#fff",
+                pointHighlightFill: "#fff",
+                pointHighlightStroke: "rgba(220,220,220,1)",
+                data: [65, 59, 40, 51, 36, 25, 40]
+            }, {
+                label: "示例数据",
+                fillColor: "rgba(26,179,148,0.5)",
+                strokeColor: "rgba(26,179,148,0.7)",
+                pointColor: "rgba(26,179,148,1)",
+                pointStrokeColor: "#fff",
+                pointHighlightFill: "#fff",
+                pointHighlightStroke: "rgba(26,179,148,1)",
+                data: [48, 48, 60, 39, 56, 37, 30]
+            }]
+        };
+        var lineOptions = {
+            scaleShowGridLines: true,
+            scaleGridLineColor: "rgba(0,0,0,.05)",
+            scaleGridLineWidth: 1,
+            bezierCurve: true,
+            bezierCurveTension: 0.4,
+            pointDot: true,
+            pointDotRadius: 4,
+            pointDotStrokeWidth: 1,
+            pointHitDetectionRadius: 20,
+            datasetStroke: true,
+            datasetStrokeWidth: 2,
+            datasetFill: true,
+            responsive: true,
+        };
+        var ctx = document.getElementById("lineChart").getContext("2d");
+        var myNewChart = new Chart(ctx).Line(lineData, lineOptions)
+    });
 </script>
+<script type="text/javascript" src="http://tajs.qq.com/stats?sId=9051096" charset="UTF-8"></script>
+</body>
+</html>

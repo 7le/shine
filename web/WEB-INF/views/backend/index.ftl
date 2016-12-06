@@ -7,7 +7,7 @@
 <#--    <meta http-equiv="Cache-Control" content="no-siteapp" />-->
     <title>微光 后台 - 主页</title>
     <!--[if lt IE 9]>
-    <meta http-equiv="refresh" content="0;ie.html" />
+    <meta http-equiv="refresh" content="0;ie.html"/>
     <![endif]-->
 
     <link rel="shortcut icon" href="favicon.ico">
@@ -27,7 +27,7 @@
             <ul class="nav" id="side-menu">
                 <li class="nav-header">
                     <div class="dropdown profile-element">
-                        <span><img alt="image" class="img-circle" src="/static/backend/img/pikaqiu1.png" /></span>
+                        <span><img alt="image" class="img-circle" src="/static/backend/img/pikaqiu1.png"/></span>
                         <a data-toggle="dropdown" class="dropdown-toggle" href="#">
                                 <span class="clear">
                                <span class="block m-t-xs"><strong class="font-bold">silk</strong></span>
@@ -48,7 +48,7 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="logo-element">H+
+                    <div class="logo-element">Shine
                     </div>
                 </li>
                 <li>
@@ -59,25 +59,26 @@
                     </a>
                     <ul class="nav nav-second-level">
                         <li>
-                            <a class="J_menuItem" href="indx_v5" data-index="0">主页示例一</a>
+                            <a class="J_menuItem" href="/backend/index_v5" data-index="0">主页示例一</a>
                         </li>
-                        <li>
-                            <a class="J_menuItem" href="backend/index_v2.html">主页示例二</a>
-                        </li>
-                        <li>
-                            <a class="J_menuItem" href="backend/index_v3.html">主页示例三</a>
-                        </li>
-                        <li>
-                            <a class="J_menuItem" href="backend/index_v4.html">主页示例四</a>
-                        </li>
-                        <li>
-                            <a href="backend/index_v5.html" target="_blank">主页示例五</a>
-                        </li>
+                    <#--             <li>
+                                     <a class="J_menuItem" href="backend/index_v2.html">主页示例二</a>
+                                 </li>
+                                 <li>
+                                     <a class="J_menuItem" href="backend/index_v3.html">主页示例三</a>
+                                 </li>
+                                 <li>
+                                     <a class="J_menuItem" href="backend/index_v4.html">主页示例四</a>
+                                 </li>
+                                 <li>
+                                     <a href="backend/index_v5.html" target="_blank">主页示例五</a>
+                                 </li>-->
                     </ul>
 
                 </li>
                 <li>
-                    <a class="J_menuItem" href="layouts.html"><i class="fa fa-columns"></i> <span class="nav-label">布局</span></a>
+                    <a class="J_menuItem" href="layouts.html"><i class="fa fa-columns"></i> <span
+                            class="nav-label">布局</span></a>
                 </li>
                 <li>
                     <a href="#">
@@ -111,7 +112,8 @@
                 </li>
 
                 <li>
-                    <a href="mailbox.html"><i class="fa fa-envelope"></i> <span class="nav-label">信箱 </span><span class="label label-warning pull-right">16</span></a>
+                    <a href="mailbox.html"><i class="fa fa-envelope"></i> <span class="nav-label">信箱 </span><span
+                            class="label label-warning pull-right">16</span></a>
                     <ul class="nav nav-second-level">
                         <li><a class="J_menuItem" href="mailbox.html">收件箱</a>
                         </li>
@@ -122,7 +124,8 @@
                     </ul>
                 </li>
                 <li>
-                    <a href="#"><i class="fa fa-edit"></i> <span class="nav-label">表单</span><span class="fa arrow"></span></a>
+                    <a href="#"><i class="fa fa-edit"></i> <span class="nav-label">表单</span><span
+                            class="fa arrow"></span></a>
                     <ul class="nav nav-second-level">
                         <li><a class="J_menuItem" href="form_basic.html">基本表单</a>
                         </li>
@@ -163,7 +166,8 @@
                     </ul>
                 </li>
                 <li>
-                    <a href="#"><i class="fa fa-desktop"></i> <span class="nav-label">页面</span><span class="fa arrow"></span></a>
+                    <a href="#"><i class="fa fa-desktop"></i> <span class="nav-label">页面</span><span
+                            class="fa arrow"></span></a>
                     <ul class="nav nav-second-level">
                         <li><a class="J_menuItem" href="contacts.html">联系人</a>
                         </li>
@@ -254,7 +258,8 @@
                     </ul>
                 </li>
                 <li>
-                    <a href="#"><i class="fa fa-flask"></i> <span class="nav-label">UI元素</span><span class="fa arrow"></span></a>
+                    <a href="#"><i class="fa fa-flask"></i> <span class="nav-label">UI元素</span><span
+                            class="fa arrow"></span></a>
                     <ul class="nav nav-second-level">
                         <li><a class="J_menuItem" href="typography.html">排版</a>
                         </li>
@@ -327,7 +332,8 @@
                     </ul>
                 </li>
                 <li>
-                    <a href="#"><i class="fa fa-table"></i> <span class="nav-label">表格</span><span class="fa arrow"></span></a>
+                    <a href="#"><i class="fa fa-table"></i> <span class="nav-label">表格</span><span
+                            class="fa arrow"></span></a>
                     <ul class="nav nav-second-level">
                         <li><a class="J_menuItem" href="table_basic.html">基本表格</a>
                         </li>
@@ -343,7 +349,8 @@
                     </ul>
                 </li>
                 <li>
-                    <a href="#"><i class="fa fa-picture-o"></i> <span class="nav-label">相册</span><span class="fa arrow"></span></a>
+                    <a href="#"><i class="fa fa-picture-o"></i> <span class="nav-label">相册</span><span
+                            class="fa arrow"></span></a>
                     <ul class="nav nav-second-level">
                         <li><a class="J_menuItem" href="basic_gallery.html">基本图库</a>
                         </li>
@@ -357,7 +364,8 @@
                     <a class="J_menuItem" href="css_animation.html"><i class="fa fa-magic"></i> <span class="nav-label">CSS动画</span></a>
                 </li>
                 <li>
-                    <a href="#"><i class="fa fa-cutlery"></i> <span class="nav-label">工具 </span><span class="fa arrow"></span></a>
+                    <a href="#"><i class="fa fa-cutlery"></i> <span class="nav-label">工具 </span><span
+                            class="fa arrow"></span></a>
                     <ul class="nav nav-second-level">
                         <li><a class="J_menuItem" href="form_builder.html">表单构建器</a>
                         </li>
@@ -372,10 +380,14 @@
     <div id="page-wrapper" class="gray-bg dashbard-1">
         <div class="row border-bottom">
             <nav class="navbar navbar-static-top" role="navigation" style="margin-bottom: 0">
-                <div class="navbar-header"><a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#"><i class="fa fa-bars"></i> </a>
-                    <form role="search" class="navbar-form-custom" method="post" action="http://www.zi-han.net/theme/hplus/search_results.html">
+                <div class="navbar-header"><a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#"><i
+                        class="fa fa-bars"></i> </a>
+
+                    <form role="search" class="navbar-form-custom" method="post"
+                          action="http://www.zi-han.net/theme/hplus/search_results.html">
                         <div class="form-group">
-                            <input type="text" placeholder="请输入您需要查找的内容 …" class="form-control" name="top-search" id="top-search">
+                            <input type="text" placeholder="请输入您需要查找的内容 …" class="form-control" name="top-search"
+                                   id="top-search">
                         </div>
                     </form>
                 </div>
@@ -388,13 +400,14 @@
                             <li class="m-t-xs">
                                 <div class="dropdown-messages-box">
                                     <a href="profile.html" class="pull-left">
-                                        <img alt="image" class="img-circle" src="img/a7.jpg">
+                                        <img alt="image" class="img-circle" src="/static/backend/img/pikaqiu1.png">
                                     </a>
+
                                     <div class="media-body">
                                         <small class="pull-right">46小时前</small>
-                                        <strong>小四</strong> 这个在日本投降书上签字的军官，建国后一定是个不小的干部吧？
+                                        <strong>silk</strong> shine正式启动
                                         <br>
-                                        <small class="text-muted">3天前 2014.11.8</small>
+                                        <small class="text-muted"> 2016.12.4</small>
                                     </div>
                                 </div>
                             </li>
@@ -402,13 +415,14 @@
                             <li>
                                 <div class="dropdown-messages-box">
                                     <a href="profile.html" class="pull-left">
-                                        <img alt="image" class="img-circle" src="img/a4.jpg">
+                                        <img alt="image" class="img-circle" src="/static/backend/img/pikaqiu1.png">
                                     </a>
+
                                     <div class="media-body ">
                                         <small class="pull-right text-navy">25小时前</small>
-                                        <strong>国民岳父</strong> 如何看待“男子不满自己爱犬被称为狗，刺伤路人”？——这人比犬还凶
+                                        <strong>silk</strong>shine 后台界面启动开发
                                         <br>
-                                        <small class="text-muted">昨天</small>
+                                        <small class="text-muted">2016.12.5</small>
                                     </div>
                                 </div>
                             </li>
@@ -455,9 +469,9 @@
                             </li>
                         </ul>
                     </li>
-                   <#-- <li class="hidden-xs">
-                        <a href="index_v1.html" class="J_menuItem" data-index="0"><i class="fa fa-cart-arrow-down"></i> 购买</a>
-                    </li>-->
+                <#-- <li class="hidden-xs">
+                     <a href="index_v1.html" class="J_menuItem" data-index="0"><i class="fa fa-cart-arrow-down"></i> 购买</a>
+                 </li>-->
                     <li class="dropdown hidden-xs">
                         <a class="right-sidebar-toggle" aria-expanded="false">
                             <i class="fa fa-tasks"></i> 主题
@@ -493,10 +507,11 @@
             <a href="login.html" class="roll-nav roll-right J_tabExit"><i class="fa fa fa-sign-out"></i> 退出</a>
         </div>
         <div class="row J_mainContent" id="content-main">
-            <iframe class="J_iframe" name="iframe0" width="100%" height="100%" src="index_v148b2.html?v=4.0" frameborder="0" data-id="index_v1.html" seamless></iframe>
+            <iframe class="J_iframe" name="iframe0" width="100%" height="100%" src="/backend/index_v5" frameborder="0"
+                    data-id="index_v1.html" seamless></iframe>
         </div>
         <div class="footer">
-            <div class="pull-right">&copy; 2014-2015 <a href="http://www.zi-han.net/" target="_blank">zihan's blog</a>
+            <div class="pull-right">&copy; 2016 <a href="http://www.zi-han.net/" target="_blank">shine</a>
             </div>
         </div>
     </div>
@@ -525,16 +540,18 @@
             <div class="tab-content">
                 <div id="tab-1" class="tab-pane active">
                     <div class="sidebar-title">
-                        <h3> <i class="fa fa-comments-o"></i> 主题设置</h3>
+                        <h3><i class="fa fa-comments-o"></i> 主题设置</h3>
                         <small><i class="fa fa-tim"></i> 你可以从这里选择和预览主题的布局和样式，这些设置会被保存在本地，下次打开的时候会直接应用这些设置。</small>
                     </div>
                     <div class="skin-setttings">
                         <div class="title">主题设置</div>
                         <div class="setings-item">
                             <span>收起左侧菜单</span>
+
                             <div class="switch">
                                 <div class="onoffswitch">
-                                    <input type="checkbox" name="collapsemenu" class="onoffswitch-checkbox" id="collapsemenu">
+                                    <input type="checkbox" name="collapsemenu" class="onoffswitch-checkbox"
+                                           id="collapsemenu">
                                     <label class="onoffswitch-label" for="collapsemenu">
                                         <span class="onoffswitch-inner"></span>
                                         <span class="onoffswitch-switch"></span>
@@ -547,7 +564,8 @@
 
                             <div class="switch">
                                 <div class="onoffswitch">
-                                    <input type="checkbox" name="fixednavbar" class="onoffswitch-checkbox" id="fixednavbar">
+                                    <input type="checkbox" name="fixednavbar" class="onoffswitch-checkbox"
+                                           id="fixednavbar">
                                     <label class="onoffswitch-label" for="fixednavbar">
                                         <span class="onoffswitch-inner"></span>
                                         <span class="onoffswitch-switch"></span>
@@ -562,7 +580,8 @@
 
                             <div class="switch">
                                 <div class="onoffswitch">
-                                    <input type="checkbox" name="boxedlayout" class="onoffswitch-checkbox" id="boxedlayout">
+                                    <input type="checkbox" name="boxedlayout" class="onoffswitch-checkbox"
+                                           id="boxedlayout">
                                     <label class="onoffswitch-label" for="boxedlayout">
                                         <span class="onoffswitch-inner"></span>
                                         <span class="onoffswitch-switch"></span>
@@ -597,7 +616,7 @@
                 <div id="tab-2" class="tab-pane">
 
                     <div class="sidebar-title">
-                        <h3> <i class="fa fa-comments-o"></i> 最新通知</h3>
+                        <h3><i class="fa fa-comments-o"></i> 最新通知</h3>
                         <small><i class="fa fa-tim"></i> 您当前有10条未读信息</small>
                     </div>
 
@@ -606,7 +625,7 @@
                         <div class="sidebar-message">
                             <a href="#">
                                 <div class="pull-left text-center">
-                                    <img alt="image" class="img-circle message-avatar" src="img/a1.jpg">
+                                    <img alt="image" class="img-circle message-avatar" src="/static/backend/img/a1.jpg">
 
                                     <div class="m-t-xs">
                                         <i class="fa fa-star text-warning"></i>
@@ -624,7 +643,7 @@
                         <div class="sidebar-message">
                             <a href="#">
                                 <div class="pull-left text-center">
-                                    <img alt="image" class="img-circle message-avatar" src="img/a2.jpg">
+                                    <img alt="image" class="img-circle message-avatar" src="/static/backend/img/a2.jpg">
                                 </div>
                                 <div class="media-body">
                                     HCY48之音乐大魔王会员专属皮肤已上线，快来一键换装拥有他，宣告你对华晨宇的爱吧！
@@ -636,7 +655,7 @@
                         <div class="sidebar-message">
                             <a href="#">
                                 <div class="pull-left text-center">
-                                    <img alt="image" class="img-circle message-avatar" src="img/a3.jpg">
+                                    <img alt="image" class="img-circle message-avatar" src="/static/backend/img/a3.jpg">
 
                                     <div class="m-t-xs">
                                         <i class="fa fa-star text-warning"></i>
@@ -654,7 +673,7 @@
                         <div class="sidebar-message">
                             <a href="#">
                                 <div class="pull-left text-center">
-                                    <img alt="image" class="img-circle message-avatar" src="img/a4.jpg">
+                                    <img alt="image" class="img-circle message-avatar" src="/static/backend/img/a4.jpg">
                                 </div>
 
                                 <div class="media-body">
@@ -667,7 +686,7 @@
                         <div class="sidebar-message">
                             <a href="#">
                                 <div class="pull-left text-center">
-                                    <img alt="image" class="img-circle message-avatar" src="img/a8.jpg">
+                                    <img alt="image" class="img-circle message-avatar" src="/static/backend/img/a8.jpg">
                                 </div>
                                 <div class="media-body">
 
@@ -680,7 +699,7 @@
                         <div class="sidebar-message">
                             <a href="#">
                                 <div class="pull-left text-center">
-                                    <img alt="image" class="img-circle message-avatar" src="img/a7.jpg">
+                                    <img alt="image" class="img-circle message-avatar" src="/static/backend/img/a7.jpg">
                                 </div>
                                 <div class="media-body">
                                     这哥们的新视频又来了，创意杠杠滴，帅炸了！
@@ -692,7 +711,7 @@
                         <div class="sidebar-message">
                             <a href="#">
                                 <div class="pull-left text-center">
-                                    <img alt="image" class="img-circle message-avatar" src="img/a3.jpg">
+                                    <img alt="image" class="img-circle message-avatar" src="/static/backend/img/a3.jpg">
 
                                     <div class="m-t-xs">
                                         <i class="fa fa-star text-warning"></i>
@@ -710,7 +729,7 @@
                         <div class="sidebar-message">
                             <a href="#">
                                 <div class="pull-left text-center">
-                                    <img alt="image" class="img-circle message-avatar" src="img/a4.jpg">
+                                    <img alt="image" class="img-circle message-avatar" src="/static/backend/img/a4.jpg">
                                 </div>
                                 <div class="media-body">
                                     我发起了一个投票 【你认为下午大盘会翻红吗？】
@@ -725,7 +744,7 @@
                 <div id="tab-3" class="tab-pane">
 
                     <div class="sidebar-title">
-                        <h3> <i class="fa fa-cube"></i> 最新任务</h3>
+                        <h3><i class="fa fa-cube"></i> 最新任务</h3>
                         <small><i class="fa fa-tim"></i> 您当前有14个任务，10个已完成</small>
                     </div>
 
@@ -823,16 +842,18 @@
         <div class="heading" draggable="true">
             <small class="chat-date pull-right">
                 2016.12.2
-            </small> 与 silk 聊天中
+            </small>
+            与 silk 聊天中
         </div>
 
         <div class="content">
 
             <div class="left">
                 <div class="author-name">
-                    silk <small class="chat-date">
-                    10:02
-                </small>
+                    silk
+                    <small class="chat-date">
+                        10:02
+                    </small>
                 </div>
                 <div class="chat-message active">
                     你好，欢迎来到微光
@@ -911,13 +932,5 @@
 <script src="/static/backend/js/hplus.min.js?v=4.1.0"></script>
 <script type="text/javascript" src="/static/backend/js/contabs.min.js"></script>
 <script src="/static/backend/js/plugins/pace/pace.min.js"></script>
-<script src="/static/backend/js/content.min.js?v=1.0.0"></script>
-<script src="/static/backend/js/plugins/flot/jquery.flot.js"></script>
-<script src="/static/backend/js/plugins/flot/jquery.flot.tooltip.min.js"></script>
-<script src="/static/backend/js/plugins/flot/jquery.flot.resize.js"></script>
-<script src="/static/backend/js/plugins/chartJs/Chart.min.js"></script>
-<script src="/static/backend/js/plugins/peity/jquery.peity.min.js"></script>
-<script src="/static/backend/js/demo/peity-demo.min.js"></script>
-<script type="text/javascript" src="http://tajs.qq.com/stats?sId=9051096" charset="UTF-8"></script>
 </body>
 </html>
