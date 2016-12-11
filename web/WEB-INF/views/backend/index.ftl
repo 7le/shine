@@ -77,10 +77,6 @@
 
                 </li>
                 <li>
-                    <a class="J_menuItem" href="layouts.html"><i class="fa fa-columns"></i> <span
-                            class="nav-label">布局</span></a>
-                </li>
-                <li>
                     <a href="#">
                         <i class="fa fa fa-bar-chart-o"></i>
                         <span class="nav-label">统计图表</span>
@@ -88,25 +84,25 @@
                     </a>
                     <ul class="nav nav-second-level">
                         <li>
-                            <a class="J_menuItem" href="graph_echarts.html">百度ECharts</a>
+                            <a class="J_menuItem" href="/backend/graph/echarts">百度ECharts</a>
                         </li>
                         <li>
-                            <a class="J_menuItem" href="graph_flot.html">Flot</a>
+                            <a class="J_menuItem" href="/backend/graph/flot">Flot</a>
                         </li>
                         <li>
-                            <a class="J_menuItem" href="graph_morris.html">Morris.js</a>
+                            <a class="J_menuItem" href="/backend/graph/morris">Morris.js</a>
                         </li>
                         <li>
-                            <a class="J_menuItem" href="graph_rickshaw.html">Rickshaw</a>
+                            <a class="J_menuItem" href="/backend/graph/rickshaw">Rickshaw</a>
                         </li>
                         <li>
-                            <a class="J_menuItem" href="graph_peity.html">Peity</a>
+                            <a class="J_menuItem" href="/backend/graph/peity">Peity</a>
                         </li>
                         <li>
-                            <a class="J_menuItem" href="graph_sparkline.html">Sparkline</a>
+                            <a class="J_menuItem" href="/backend/graph/sparkline">Sparkline</a>
                         </li>
                         <li>
-                            <a class="J_menuItem" href="graph_metrics.html">图表组合</a>
+                            <a class="J_menuItem" href="/backend/graph/metrics">图表组合</a>
                         </li>
                     </ul>
                 </li>
@@ -352,11 +348,11 @@
                     <a href="#"><i class="fa fa-picture-o"></i> <span class="nav-label">相册</span><span
                             class="fa arrow"></span></a>
                     <ul class="nav nav-second-level">
-                        <li><a class="J_menuItem" href="basic_gallery.html">基本图库</a>
+                        <li><a class="J_menuItem" href="/backend/basic">基本图库</a>
                         </li>
-                        <li><a class="J_menuItem" href="carousel.html">图片切换</a>
+                        <li><a class="J_menuItem" href="/backend/carousel">图片切换</a>
                         </li>
-                        <li><a class="J_menuItem" href="blueimp.html">Blueimp相册</a>
+                        <li><a class="J_menuItem" href="/backend/blueimp">Blueimp相册</a>
                         </li>
                     </ul>
                 </li>
