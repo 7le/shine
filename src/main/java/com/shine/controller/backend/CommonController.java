@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletRequest;
  * Created by hq on 2016/12/2.
  */
 @Controller
-public class LoginController extends BackendController{
+public class CommonController extends BackendController{
 
     /**
      * 登录页面

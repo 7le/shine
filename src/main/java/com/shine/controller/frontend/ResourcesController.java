@@ -44,7 +44,7 @@ public class ResourcesController extends BaseController{
     @ResponseBody
     public AjaxJson getProducts(@PathVariable String sid,HttpServletRequest request,HttpServletResponse response) throws Exception {
         AjaxJson ajaxJson=new AjaxJson();
-        ajaxJson.setDate(resourcesService.getResOne(sid));
+        ajaxJson.setData(resourcesService.getResOne(sid));
         return ajaxJson;
     }
 /*

@@ -222,11 +222,11 @@
             <version>2.0.2</version>
         </dependency>
 
-        <dependency>
+<!--        <dependency>
             <groupId>com.google.collections</groupId>
             <artifactId>google-collections</artifactId>
             <version>1.0</version>
-        </dependency>
+        </dependency>-->
         <!-- 导入dbcp的jar包，用来在applicationContext.xml中配置数据库 -->
         <dependency>
             <groupId>commons-dbcp</groupId>
@@ -257,11 +257,11 @@
             <artifactId>ehcache-spring-annotations</artifactId>
             <version>1.2.0</version>
         </dependency>
-        <dependency>
+<!--        <dependency>
             <groupId>com.google.guava</groupId>
             <artifactId>guava</artifactId>
             <version>r09</version>
-        </dependency>
+        </dependency>-->
 
         <!--Excel操作-->
         <!--1-->

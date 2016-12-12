@@ -9,7 +9,7 @@ public class AjaxJson {
 
     private Integer status=200;
     private String  message="success";
-    private Object date;
+    private Object data;
 
     public Integer getStatus() {
         return status;
@@ -27,12 +27,12 @@ public class AjaxJson {
         this.message = message;
     }
 
-    public Object getDate() {
-        return date;
+    public Object getData() {
+        return data;
     }
 
-    public void setDate(Object date) {
-        this.date = date;
+    public void setData(Object data) {
+        this.data = data;
     }
 
 }
