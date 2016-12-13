@@ -1,5 +1,6 @@
 package com.shine.controller.backend;
 
+import com.shine.constant.Backend;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
@@ -11,7 +12,7 @@ import javax.servlet.http.HttpServletRequest;
  * Created by hq on 2016/12/11 0011.
  */
 @Controller
-/*@RequestMapping(value = "/photo")*/
+@RequestMapping(Backend.URL.PHOTO.PHOTO)
 public class PhotoController extends BackendController{
 
     /**
@@ -19,9 +20,9 @@ public class PhotoController extends BackendController{
      * @param request
      * @return
      */
-    @RequestMapping(value = "/basic")
+    @RequestMapping(Backend.URL.PHOTO.BASIC)
     public ModelAndView basicGalleryView(HttpServletRequest request) {
-        ModelAndView modelAndView = new ModelAndView("photo/basicGallery");
+        ModelAndView modelAndView = new ModelAndView(Backend.PATH.PHOTO.BASIC);
         return modelAndView;
     }
 
@@ -30,9 +31,9 @@ public class PhotoController extends BackendController{
      * @param request
      * @return
      */
-    @RequestMapping(value = "/carousel")
+    @RequestMapping(Backend.URL.PHOTO.CAROUSEL)
     public ModelAndView carouselView(HttpServletRequest request) {
-        ModelAndView modelAndView = new ModelAndView("photo/carousel");
+        ModelAndView modelAndView = new ModelAndView(Backend.PATH.PHOTO.CAROUSEL);
         return modelAndView;
     }
 
@@ -41,9 +42,9 @@ public class PhotoController extends BackendController{
      * @param request
      * @return
      */
-    @RequestMapping(value = "/blueimp")
+    @RequestMapping(Backend.URL.PHOTO.BLUEIMP)
     public ModelAndView loginView(HttpServletRequest request) {
-        ModelAndView modelAndView = new ModelAndView("photo/blueImp");
+        ModelAndView modelAndView = new ModelAndView(Backend.PATH.PHOTO.BLUEIMP);
         return modelAndView;
     }
 }

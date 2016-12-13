@@ -348,11 +348,11 @@
                     <a href="#"><i class="fa fa-picture-o"></i> <span class="nav-label">相册</span><span
                             class="fa arrow"></span></a>
                     <ul class="nav nav-second-level">
-                        <li><a class="J_menuItem" href="/backend/basic">基本图库</a>
+                        <li><a class="J_menuItem" href="/backend/photo/basic">基本图库</a>
                         </li>
-                        <li><a class="J_menuItem" href="/backend/carousel">图片切换</a>
+                        <li><a class="J_menuItem" href="/backend/photo/carousel">图片切换</a>
                         </li>
-                        <li><a class="J_menuItem" href="/backend/blueimp">Blueimp相册</a>
+                        <li><a class="J_menuItem" href="/backend/photo/blueimp">Blueimp相册</a>
                         </li>
                     </ul>
                 </li>
