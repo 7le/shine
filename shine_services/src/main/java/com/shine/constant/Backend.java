@@ -126,7 +126,7 @@ public interface Backend {
          */
         interface MAIL {
             String MAIL = BASE + "/mail";
-            String MAILBOX = MAIL + "/mailBox";
+            String MAILBOX = MAIL + "/mailBoxs";
             String MAILDETAIL = MAIL + "/mailDetail";
             String MAILCOMPOSE = MAIL + "/mailCompose";
 
