@@ -51,10 +51,21 @@ public interface Backend {
          * 相册
          */
         interface PHOTO {
-            String PHOTO = BASE+"/photo";
+            String PHOTO = BASE + "/photo";
             String BASIC = "/basic";
             String CAROUSEL = "/carousel";
             String BLUEIMP = "/blueimp";
+        }
+
+        /**
+         * 邮箱
+         */
+        interface MAIL {
+            String MAIL = BASE;
+            String MAILBOX = MAIL + "/mailBox";
+            String MAILDETAIL = MAIL + "/mailDetail";
+            String MAILCOMPOSE = MAIL + "/mailCompose";
+
         }
     }
 
@@ -108,6 +119,17 @@ public interface Backend {
             String BASIC = PHOTO + "/basicGallery";
             String CAROUSEL = PHOTO + "/carousel";
             String BLUEIMP = PHOTO + "/blueImp";
+        }
+
+        /**
+         * 邮箱
+         */
+        interface MAIL {
+            String MAIL = BASE + "/mail";
+            String MAILBOX = MAIL + "/mailBox";
+            String MAILDETAIL = MAIL + "/mailDetail";
+            String MAILCOMPOSE = MAIL + "/mailCompose";
+
         }
     }
 }
