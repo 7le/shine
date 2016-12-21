@@ -331,15 +331,15 @@
                     <a href="#"><i class="fa fa-table"></i> <span class="nav-label">表格</span><span
                             class="fa arrow"></span></a>
                     <ul class="nav nav-second-level">
-                        <li><a class="J_menuItem" href="table_basic.html">基本表格</a>
+                        <li><a class="J_menuItem" href="/backend/tableBasic">基本表格</a>
                         </li>
-                        <li><a class="J_menuItem" href="table_data_tables.html">DataTables</a>
+                        <li><a class="J_menuItem" href="/backend/tableDate">DataTables</a>
                         </li>
-                        <li><a class="J_menuItem" href="table_jqgrid.html">jqGrid</a>
+                        <li><a class="J_menuItem" href="/backend/tableJqgrid">jqGrid</a>
                         </li>
-                        <li><a class="J_menuItem" href="table_foo_table.html">Foo Tables</a>
+                        <li><a class="J_menuItem" href="/backend/tableFoo">Foo Tables</a>
                         </li>
-                        <li><a class="J_menuItem" href="table_bootstrap.html">Bootstrap Table
+                        <li><a class="J_menuItem" href="/backend/tableBootstrap">Bootstrap Table
                             <span class="label label-danger pull-right">推荐</span></a>
                         </li>
                     </ul>

@@ -65,7 +65,18 @@ public interface Backend {
             String MAILBOX = MAIL + "/mailBox";
             String MAILDETAIL = MAIL + "/mailDetail";
             String MAILCOMPOSE = MAIL + "/mailCompose";
+        }
 
+        /**
+         * 表格
+         */
+        interface TABLE {
+            String TABLE = BASE;
+            String TABLEBASIC = TABLE + "/tableBasic";
+            String TABLEBOOTSTRAP = TABLE + "/tableBootstrap";
+            String TABLEDATA = TABLE + "/tableDate";
+            String TABLEFOO = TABLE + "/tableFoo";
+            String TABLEJQGRID = TABLE + "/tableJqgrid";
         }
     }
 
@@ -129,7 +140,18 @@ public interface Backend {
             String MAILBOX = MAIL + "/mailBoxs";
             String MAILDETAIL = MAIL + "/mailDetail";
             String MAILCOMPOSE = MAIL + "/mailCompose";
+        }
 
+        /**
+         * 表格
+         */
+        interface TABLE {
+            String TABLE = BASE+"/table";
+            String TABLEBASIC = TABLE + "/tableBasic";
+            String TABLEBOOTSTRAP = TABLE + "/tableBootstrap";
+            String TABLEDATA = TABLE + "/tableData";
+            String TABLEFOO = TABLE + "/tableFoo";
+            String TABLEJQGRID = TABLE + "/tableJqgrid";
         }
     }
 }
