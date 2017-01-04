@@ -84,7 +84,7 @@
                     </a>
                     <ul class="nav nav-second-level">
                         <li>
-                            <a class="J_menuItem" href="/backend/graph/echarts">百度ECharts</a>
+                            <a class="J_menuItem" href="/backend/graph/echarts/backend/graph/echarts">百度ECharts</a>
                         </li>
                         <li>
                             <a class="J_menuItem" href="/backend/graph/flot">Flot</a>
@@ -257,41 +257,41 @@
                     <a href="#"><i class="fa fa-flask"></i> <span class="nav-label">UI元素</span><span
                             class="fa arrow"></span></a>
                     <ul class="nav nav-second-level">
-                        <li><a class="J_menuItem" href="typography.html">排版</a>
+                        <li><a class="J_menuItem" href="/backend/ui/typography">排版</a>
                         </li>
                         <li>
                             <a href="#">字体图标 <span class="fa arrow"></span></a>
                             <ul class="nav nav-third-level">
                                 <li>
-                                    <a class="J_menuItem" href="fontawesome.html">Font Awesome</a>
+                                    <a class="J_menuItem" href="/backend/ui/fontawesome">Font Awesome</a>
                                 </li>
                                 <li>
-                                    <a class="J_menuItem" href="glyphicons.html">Glyphicon</a>
+                                    <a class="J_menuItem" href="/backend/ui/glyphicons">Glyphicon</a>
                                 </li>
                                 <li>
-                                    <a class="J_menuItem" href="iconfont.html">阿里巴巴矢量图标库</a>
+                                    <a class="J_menuItem" href="/backend/ui/iconfont">阿里巴巴矢量图标库</a>
                                 </li>
                             </ul>
                         </li>
                         <li>
                             <a href="#">拖动排序 <span class="fa arrow"></span></a>
                             <ul class="nav nav-third-level">
-                                <li><a class="J_menuItem" href="draggable_panels.html">拖动面板</a>
+                                <li><a class="J_menuItem" href="/backend/ui/draggablePanels">拖动面板</a>
                                 </li>
-                                <li><a class="J_menuItem" href="agile_board.html">任务清单</a>
+                                <li><a class="J_menuItem" href="/backend/ui/agileBoard">任务清单</a>
                                 </li>
                             </ul>
                         </li>
-                        <li><a class="J_menuItem" href="buttons.html">按钮</a>
+                        <li><a class="J_menuItem" href="/backend/ui/buttons">按钮</a>
                         </li>
-                        <li><a class="J_menuItem" href="tabs_panels.html">选项卡 &amp; 面板</a>
+                        <li><a class="J_menuItem" href="/backend/ui/tabsPanels">选项卡 &amp; 面板</a>
                         </li>
-                        <li><a class="J_menuItem" href="notifications.html">通知 &amp; 提示</a>
+                        <li><a class="J_menuItem" href="/backend/ui/notifications">通知 &amp; 提示</a>
                         </li>
-                        <li><a class="J_menuItem" href="badges_labels.html">徽章，标签，进度条</a>
+                        <li><a class="J_menuItem" href="/backend/ui/badgesLabels">徽章，标签，进度条</a>
                         </li>
                         <li>
-                            <a class="J_menuItem" href="grid_options.html">栅格</a>
+                            <a class="J_menuItem" href="/backend/ui/gridOptions">栅格</a>
                         </li>
                         <li><a class="J_menuItem" href="plyr.html">视频、音频</a>
                         </li>
@@ -357,13 +357,17 @@
                     </ul>
                 </li>
                 <li>
-                    <a class="J_menuItem" href="css_animation.html"><i class="fa fa-magic"></i> <span class="nav-label">CSS动画</span></a>
-                </li>
-                <li>
                     <a href="#"><i class="fa fa-cutlery"></i> <span class="nav-label">工具 </span><span
                             class="fa arrow"></span></a>
                     <ul class="nav nav-second-level">
-                        <li><a class="J_menuItem" href="form_builder.html">表单构建器</a>
+                        <li>
+                            <a class="J_menuItem" href="/backend/formBuilder">表单构建器</a>
+                        </li>
+                        <li>
+                            <a class="J_menuItem" href="/backend/cssAnimation">
+                                <i class="fa fa-magic"></i>
+                                <span class="nav-label">CSS动画</span>
+                            </a>
                         </li>
                     </ul>
                 </li>

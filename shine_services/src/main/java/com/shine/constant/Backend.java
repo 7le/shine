@@ -78,6 +78,33 @@ public interface Backend {
             String TABLEFOO = TABLE + "/tableFoo";
             String TABLEJQGRID = TABLE + "/tableJqgrid";
         }
+
+        /**
+         * 工具
+         */
+        interface TOOL {
+            String TOOL = BASE;
+            String CSSVIEW = TOOL + "/cssAnimation";
+            String FORMBUILDERVIEW = TOOL + "/formBuilder";
+        }
+
+        /**
+         * UI
+         */
+        interface UI {
+            String UI = BASE + "/ui";
+            String TYPOGRAPHY = UI + "/typography";
+            String FONTAWESOME = UI + "/fontawesome";
+            String GLYPHICONS = UI + "/glyphicons";
+            String ICONFONT = UI + "/iconfont";
+            String DRAGGABLEPANELS = UI + "/draggablePanels";
+            String AGILEBOARD = UI + "/agileBoard";
+            String BUTTONS = UI + "/buttons";
+            String TABSPANELS = UI + "/tabsPanels";
+            String NOTIFICATIONSS = UI + "/notifications";
+            String BADGESLABELS = UI + "/badgesLabels";
+            String GRIDOPTIONS = UI + "/gridOptions";
+        }
     }
 
     interface PATH {
@@ -146,12 +173,39 @@ public interface Backend {
          * 表格
          */
         interface TABLE {
-            String TABLE = BASE+"/table";
+            String TABLE = BASE + "/table";
             String TABLEBASIC = TABLE + "/tableBasic";
             String TABLEBOOTSTRAP = TABLE + "/tableBootstrap";
             String TABLEDATA = TABLE + "/tableData";
             String TABLEFOO = TABLE + "/tableFoo";
             String TABLEJQGRID = TABLE + "/tableJqgrid";
+        }
+
+        /**
+         * 工具
+         */
+        interface TOOL {
+            String TOOL = BASE;
+            String CSSVIEW = TOOL + "/cssAnimation";
+            String FORMBUILDERVIEW = TOOL + "/formBuilder";
+        }
+
+        /**
+         * UI
+         */
+        interface UI {
+            String UI = BASE + "/ui";
+            String TYPOGRAPHY = UI + "/typography";
+            String FONTAWESOME = UI + "/fontawesome";
+            String GLYPHICONS = UI + "/glyphicons";
+            String ICONFONT = UI + "/iconfont";
+            String DRAGGABLEPANELS = UI + "/draggablePanels";
+            String AGILEBOARD = UI + "/agileBoard";
+            String BUTTONS = UI + "/buttons";
+            String TABSPANELS = UI + "/tabsPanels";
+            String NOTIFICATIONSS = UI + "/notifications";
+            String BADGESLABELS = UI + "/badgesLabels";
+            String GRIDOPTIONS = UI + "/gridOptions";
         }
     }
 }
