@@ -104,6 +104,13 @@ public interface Backend {
             String NOTIFICATIONSS = UI + "/notifications";
             String BADGESLABELS = UI + "/badgesLabels";
             String GRIDOPTIONS = UI + "/gridOptions";
+            String PLYR = UI + "/plyr";
+            String SWEETALERT = UI + "/sweetalert";
+            String NESTABLE = UI + "/nestable";
+            String TOASTER = UI + "/toastr";
+            String DIFF = UI + "/diff";
+            String SPINNERS = UI + "/spinners";
+            String WIDGETS = UI + "/widgets";
         }
     }
 
@@ -206,6 +213,13 @@ public interface Backend {
             String NOTIFICATIONSS = UI + "/notifications";
             String BADGESLABELS = UI + "/badgesLabels";
             String GRIDOPTIONS = UI + "/gridOptions";
+            String PLYR = UI + "/plyr";
+            String SWEETALERT = UI + "/sweetalert";
+            String NESTABLE = UI + "/nestable";
+            String TOASTER = UI + "/toastr";
+            String DIFF = UI + "/diff";
+            String SPINNERS = UI + "/spinners";
+            String WIDGETS = UI + "/widgets";
         }
     }
 }

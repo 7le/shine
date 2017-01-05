@@ -121,4 +121,74 @@ public class UIController {
         ModelAndView modelAndView=new ModelAndView(Backend.PATH.UI.GRIDOPTIONS);
         return modelAndView;
     }
+
+    /**
+     * 视频，音频 plyr
+     * @return
+     */
+    @RequestMapping(value = Backend.URL.UI.PLYR)
+    public ModelAndView plyrView(){
+        ModelAndView modelAndView=new ModelAndView(Backend.PATH.UI.PLYR);
+        return modelAndView;
+    }
+
+    /**
+     * 弹框插件 sweetalert
+     * @return
+     */
+    @RequestMapping(value = Backend.URL.UI.SWEETALERT)
+    public ModelAndView sweetAlertView(){
+        ModelAndView modelAndView=new ModelAndView(Backend.PATH.UI.SWEETALERT);
+        return modelAndView;
+    }
+
+    /**
+     * 树形视图  nestable
+     * @return
+     */
+    @RequestMapping(value = Backend.URL.UI.NESTABLE)
+    public ModelAndView nestableView(){
+        ModelAndView modelAndView=new ModelAndView(Backend.PATH.UI.NESTABLE);
+        return modelAndView;
+    }
+
+    /**
+     *   Toastr通知
+     * @return
+     */
+    @RequestMapping(value = Backend.URL.UI.TOASTER)
+    public ModelAndView toastrView(){
+        ModelAndView modelAndView=new ModelAndView(Backend.PATH.UI.TOASTER);
+        return modelAndView;
+    }
+
+    /**
+     *   diff 文本对比
+     * @return
+     */
+    @RequestMapping(value = Backend.URL.UI.DIFF)
+    public ModelAndView diffView(){
+        ModelAndView modelAndView=new ModelAndView(Backend.PATH.UI.DIFF);
+        return modelAndView;
+    }
+
+    /**
+     *   spinners 加载动画
+     * @return
+     */
+    @RequestMapping(value = Backend.URL.UI.SPINNERS)
+    public ModelAndView spinnersView(){
+        ModelAndView modelAndView=new ModelAndView(Backend.PATH.UI.SPINNERS);
+        return modelAndView;
+    }
+
+    /**
+     *   widgets 加载动画
+     * @return
+     */
+    @RequestMapping(value = Backend.URL.UI.WIDGETS)
+    public ModelAndView widgetsView(){
+        ModelAndView modelAndView=new ModelAndView(Backend.PATH.UI.WIDGETS);
+        return modelAndView;
+    }
 }
