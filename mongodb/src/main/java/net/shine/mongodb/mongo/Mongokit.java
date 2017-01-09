@@ -69,6 +69,10 @@ public class Mongokit {
      */
     private static final String DEFAULT_DATABASE = "shine";
 
+    private static final String DEFAULT_User = "hq_readwrite";
+
+    private static final String DEFAULT_PSW = "5894";
+
     private MongoClient client;
     private MongoDatabase defaultDb;
 
@@ -76,6 +80,9 @@ public class Mongokit {
 
     private String host = DEFAULT_HOST;
     private Integer port = DEFAULT_PORT;
+
+    private String user=DEFAULT_User;
+    private String psw=DEFAULT_PSW;
     private String databaseName = DEFAULT_DATABASE;
 
     public Mongokit() {
@@ -160,8 +167,11 @@ public class Mongokit {
      */
     public void init() {
         ServerAddress serverAddress = new ServerAddress(host, port);
+        List<MongoCredential> credentialsList = new ArrayList<MongoCredential>();
+        MongoCredential credentials = MongoCredential.createScramSha1Credential(user, "admin", psw.toCharArray());
+        credentialsList.add(credentials);
         try {
-            this.client = new MongoClient(serverAddress,new MongoClientOptions.Builder()
+            this.client = new MongoClient(serverAddress,credentialsList,new MongoClientOptions.Builder()
                     .socketKeepAlive(true) // 是否保持长链接
                     .connectionsPerHost(200) // 最大连接数
                     .minConnectionsPerHost(20)// 最小连接数
@@ -679,6 +689,22 @@ public class Mongokit {
         }
         DeleteResult result=getCollection(database,collectionName).deleteOne(condition);
         return result.wasAcknowledged();
+    }
+
+    public String getUser() {
+        return user;
+    }
+
+    public void setUser(String user) {
+        this.user = user;
+    }
+
+    public String getPsw() {
+        return psw;
+    }
+
+    public void setPsw(String psw) {
+        this.psw = psw;
     }
 
     public String getHost() {
