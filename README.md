@@ -1,7 +1,7 @@
 # shine-backend
 
 ## 分支介绍
-``` javascript
+```
 # master -> 主线分支
 
 # shine_develop -> 阿七的分支
