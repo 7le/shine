@@ -40,4 +40,5 @@
 
     <bean class="com.shine.init.RabbitListenerInit" init-method="init"/>
 
+    <bean id="dictionaryService" class="com.shine.service.impl.DictionaryServiceImpl" />
 </beans>

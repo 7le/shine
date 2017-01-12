@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.shine.dao.DictCategoryMapper" >
+  <resultMap id="BaseResultMap" type="com.shine.dao.model.DictCategory" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="dict_name" property="dictName" jdbcType="VARCHAR" />
+    <result column="is_config" property="isConfig" jdbcType="TINYINT" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, dict_name, is_config
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from dict_category
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from dict_category
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.shine.dao.model.DictCategory" >
+    <selectKey resultType="java.lang.Integer" keyProperty="id" order="AFTER" >
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into dict_category (dict_name, is_config)
+    values (#{dictName,jdbcType=VARCHAR}, #{isConfig,jdbcType=TINYINT})
+  </insert>
+  <insert id="insertSelective" parameterType="com.shine.dao.model.DictCategory" >
+    <selectKey resultType="java.lang.Integer" keyProperty="id" order="AFTER" >
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into dict_category
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="dictName != null" >
+        dict_name,
+      </if>
+      <if test="isConfig != null" >
+        is_config,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="dictName != null" >
+        #{dictName,jdbcType=VARCHAR},
+      </if>
+      <if test="isConfig != null" >
+        #{isConfig,jdbcType=TINYINT},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.shine.dao.model.DictCategory" >
+    update dict_category
+    <set >
+      <if test="dictName != null" >
+        dict_name = #{dictName,jdbcType=VARCHAR},
+      </if>
+      <if test="isConfig != null" >
+        is_config = #{isConfig,jdbcType=TINYINT},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.shine.dao.model.DictCategory" >
+    update dict_category
+    set dict_name = #{dictName,jdbcType=VARCHAR},
+      is_config = #{isConfig,jdbcType=TINYINT}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+
+  <select id="getByAllDicts" resultMap="BaseResultMap">
+    select * from dict_category
+  </select>
+</mapper>

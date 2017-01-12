@@ -11,7 +11,7 @@ public class RexTest {
     public static void main(String[] args) {
 
  /*       ([\u4E00-\u9FA5]|[\uFE30-\uFFA0])+  */
-        Pattern p = Pattern.compile("[\\u4e00-\\u9fa5\\（\\）\\《\\》\\——\\；\\，\\。\\“\\”\\<\\>]");
+ /*       Pattern p = Pattern.compile("[\\u4e00-\\u9fa5\\（\\）\\《\\》\\——\\；\\，\\。\\“\\”\\<\\>]");
         System.out.println(p.matcher("hello你好吗,我很好thank you").find());
 
         String str = "hello你好吗,我很好 thank you……a…a,a.";
@@ -50,7 +50,7 @@ public class RexTest {
            String string2 = matcher2.replaceAll("");
 
            System.out.println(string2);
-
+*/
     }
 
 }

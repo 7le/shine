@@ -74,6 +74,9 @@
         <!-- 由SpringMVC拦截所有请求 -->
         <url-pattern>/</url-pattern>
     </servlet-mapping>
+    <listener>
+        <listener-class>com.shine.init.ServletContextListener</listener-class>
+    </listener>
 
     <error-page>
         <error-code>404</error-code>
