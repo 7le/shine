@@ -38,7 +38,7 @@ public class XlpuSpider {
         infoBean.setPhoto(photoList);
 
         //拿到资源内容
-        Pattern pattern1 = Pattern.compile("[\\[\\]\\【\\】\\ \\\n\\　]");
+        Pattern pattern1 = Pattern.compile("[\\ \\[\\]\\【\\\n\\　\\】]");
         Matcher matcher1 = pattern1.matcher(search.toString());
         String e = matcher1.replaceAll("");
         e.replace("&nbsp;","");
