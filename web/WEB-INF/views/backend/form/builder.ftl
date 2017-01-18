@@ -50,13 +50,13 @@
                         <a class="collapse-link">
                             <i class="fa fa-chevron-up"></i>
                         </a>
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="form_editors.html#">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="form_editors.editors.ftl#">
                             <i class="fa fa-wrench"></i>
                         </a>
                         <ul class="dropdown-menu dropdown-user">
-                            <li><a href="form_editors.html#">选项1</a>
+                            <li><a href="form_editors.editors.ftl#">选项1</a>
                             </li>
-                            <li><a href="form_editors.html#">选项2</a>
+                            <li><a href="form_editors.editors.ftl#">选项2</a>
                             </li>
                         </ul>
                         <a class="close-link">
@@ -180,7 +180,7 @@
     </div>
 </div>
 <script src="/static/backend/js/jquery.min.js?v=2.1.4"></script>
-<script src="/static/backend/js/bootstrap.min.js?v=3.3.6"></script>1
+<script src="/static/backend/js/bootstrap.min.js?v=3.3.6"></script>
 <script src="/static/backend/js/content.min.js?v=1.0.0"></script>
 <script src="/static/backend/js/jquery-ui-1.10.4.min.js"></script>
 <script src="/static/backend/js/plugins/beautifyhtml/beautifyhtml.js"></script>

@@ -31,6 +31,7 @@ public interface Backend {
             String LOGIN = BASE;
             String LOGINVIEW = "/login";
             String LOGINVIEWV = "/login_v";
+            String LOCKSCREEN = "/lockscreen";
         }
 
         /**
@@ -80,6 +81,26 @@ public interface Backend {
         }
 
         /**
+         * 表单
+         */
+        interface FORM {
+            String FORM = BASE+"/form";
+            String BASIC = FORM + "/basic";
+            String AVATAR = FORM + "/avatar";
+            String ADVANCED = FORM + "/advanced";
+            String BUILDER = FORM + "/builder";
+            String EDITORS = FORM + "/editors";
+            String FILEUPLOAD = FORM + "/fileUpload";
+            String MARKDOWN = FORM + "/markdown";
+            String SIMDITOR = FORM + "/simditor";
+            String VALIDATE = FORM + "/validate";
+            String WEBUPLOADER = FORM + "/webuploader";
+            String WIZARD = FORM + "/wizard";
+            String SUGGEST = FORM + "/suggest";
+            String LAYERDATE = FORM + "/layerdate";
+        }
+
+        /**
          * 工具
          */
         interface TOOL {
@@ -112,6 +133,34 @@ public interface Backend {
             String SPINNERS = UI + "/spinners";
             String WIDGETS = UI + "/widgets";
         }
+
+        /**
+         * Page
+         */
+        interface PAGE {
+            String PAGE = BASE + "/page";
+            String CONTACTS = PAGE + "/contacts";
+            String ATRICLE = PAGE + "/article";
+            String BLOG = PAGE + "/blog";
+            String CALENDAR = PAGE + "/calendar";
+            String CLIENTS = PAGE + "/clients";
+            String FILEMANAGER = PAGE + "/fileManager";
+            String PROFILE = PAGE + "/profile";
+            String PROJECTDETAIL = PAGE + "/projectDetail";
+            String PROJECTS = PAGE + "/projects";
+            String SOCIALFEED = PAGE + "/socialFeed";
+            String TEAMSBOARD = PAGE + "/teamsBoard";
+            String FAQ = PAGE + "/faq";
+            String TIMELINE = PAGE + "/timeline";
+            String TIMELINE2 = PAGE + "/timeline_v2";
+            String PINBOARD = PAGE + "/pinBoard";
+            String INVOICE = PAGE + "/invoice";
+            String INVOICEPRINT = PAGE + "/invoicePrint";
+            String SEARCHRESULTS = PAGE + "/searchResults";
+            String FORUMMAIN = PAGE + "/forumMain";
+            String CHAT = PAGE + "/chat";
+            String WEBIM = PAGE + "/webim";
+        }
     }
 
     interface PATH {
@@ -140,6 +189,7 @@ public interface Backend {
             String LOGIN = BASE + "/common";
             String LOGINVIEW = LOGIN + "/login";
             String LOGINVIEWV = LOGIN + "/login_v";
+            String LOCKSCREEN=LOGIN+"/lockscreen";
         }
 
         /**
@@ -189,6 +239,26 @@ public interface Backend {
         }
 
         /**
+         * 表单
+         */
+        interface FORM {
+            String FORM = BASE+"/form";
+            String BASIC = FORM + "/basic";
+            String AVATAR = FORM + "/avatar";
+            String ADVANCED = FORM + "/advanced";
+            String BUILDER = FORM + "/builder";
+            String EDITORS = FORM + "/editors";
+            String FILEUPLOAD = FORM + "/fileUpload";
+            String MARKDOWN = FORM + "/markdown";
+            String SIMDITOR = FORM + "/simditor";
+            String VALIDATE = FORM + "/validate";
+            String WEBUPLOADER = FORM + "/webuploader";
+            String WIZARD = FORM + "/wizard";
+            String SUGGEST = FORM + "/suggest";
+            String LAYERDATE = FORM + "/layerdate";
+        }
+
+        /**
          * 工具
          */
         interface TOOL {
@@ -220,6 +290,34 @@ public interface Backend {
             String DIFF = UI + "/diff";
             String SPINNERS = UI + "/spinners";
             String WIDGETS = UI + "/widgets";
+        }
+
+        /**
+         * Page
+         */
+        interface PAGE {
+            String PAGE = BASE + "/page";
+            String CONTACTS = PAGE + "/contacts";
+            String ATRICLE = PAGE + "/article";
+            String BLOG = PAGE + "/blog";
+            String CALENDAR = PAGE + "/calendar";
+            String CLIENTS = PAGE + "/clients";
+            String FILEMANAGER = PAGE + "/fileManager";
+            String PROFILE = PAGE + "/profile";
+            String PROJECTDETAIL = PAGE + "/projectDetail";
+            String PROJECTS = PAGE + "/projects";
+            String SOCIALFEED = PAGE + "/socialFeed";
+            String TEAMSBOARD = PAGE + "/teamsBoard";
+            String FAQ = PAGE + "/faq";
+            String TIMELINE = PAGE + "/timeline";
+            String TIMELINE2 = PAGE + "/timeline_v2";
+            String PINBOARD = PAGE + "/pinBoard";
+            String INVOICE = PAGE + "/invoice";
+            String INVOICEPRINT = PAGE + "/invoicePrint";
+            String SEARCHRESULTS = PAGE + "/searchResults";
+            String FORUMMAIN = PAGE + "/forumMain";
+            String CHAT = PAGE + "/chat";
+            String WEBIM = PAGE + "/webim";
         }
     }
 }

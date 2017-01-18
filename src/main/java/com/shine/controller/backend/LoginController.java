@@ -38,4 +38,16 @@ public class LoginController {
         ModelAndView modelAndView = new ModelAndView(Backend.PATH.LOGIN.LOGINVIEWV);
         return modelAndView;
     }
+
+    /**
+     * 登录页面2
+     *
+     * @param request
+     * @return
+     */
+    @RequestMapping(value = Backend.URL.LOGIN.LOCKSCREEN)
+    public ModelAndView lockscreenView(HttpServletRequest request) {
+        ModelAndView modelAndView = new ModelAndView(Backend.PATH.LOGIN.LOCKSCREEN);
+        return modelAndView;
+    }
 }
