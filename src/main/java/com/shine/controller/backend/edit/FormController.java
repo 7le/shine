@@ -1,6 +1,6 @@
-package com.shine.controller.backend;
+package com.shine.controller.backend.edit;
 
-import com.shine.constant.Backend;
+import com.shine.constant.Template;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
@@ -18,9 +18,9 @@ public class FormController {
      * @param request
      * @return
      */
-    @RequestMapping(value = Backend.URL.FORM.BASIC)
+    @RequestMapping(value = Template.URL.FORM.BASIC)
     public ModelAndView basicView(HttpServletRequest request) {
-        ModelAndView modelAndView = new ModelAndView(Backend.PATH.FORM.BASIC);
+        ModelAndView modelAndView = new ModelAndView(Template.PATH.FORM.BASIC);
         return modelAndView;
     }
 
@@ -29,9 +29,9 @@ public class FormController {
      * @param request
      * @return
      */
-    @RequestMapping(value = Backend.URL.FORM.AVATAR)
+    @RequestMapping(value = Template.URL.FORM.AVATAR)
     public ModelAndView avatarView(HttpServletRequest request) {
-        ModelAndView modelAndView = new ModelAndView(Backend.PATH.FORM.AVATAR);
+        ModelAndView modelAndView = new ModelAndView(Template.PATH.FORM.AVATAR);
         return modelAndView;
     }
 
@@ -40,9 +40,9 @@ public class FormController {
      * @param request
      * @return
      */
-    @RequestMapping(value = Backend.URL.FORM.ADVANCED)
+    @RequestMapping(value = Template.URL.FORM.ADVANCED)
     public ModelAndView advancedView(HttpServletRequest request) {
-        ModelAndView modelAndView = new ModelAndView(Backend.PATH.FORM.ADVANCED);
+        ModelAndView modelAndView = new ModelAndView(Template.PATH.FORM.ADVANCED);
         return modelAndView;
     }
 
@@ -51,9 +51,9 @@ public class FormController {
      * @param request
      * @return
      */
-    @RequestMapping(value = Backend.URL.FORM.BUILDER)
+    @RequestMapping(value = Template.URL.FORM.BUILDER)
     public ModelAndView builderView(HttpServletRequest request) {
-        ModelAndView modelAndView = new ModelAndView(Backend.PATH.FORM.BUILDER);
+        ModelAndView modelAndView = new ModelAndView(Template.PATH.FORM.BUILDER);
         return modelAndView;
     }
 
@@ -62,9 +62,9 @@ public class FormController {
      * @param request
      * @return
      */
-    @RequestMapping(value = Backend.URL.FORM.EDITORS)
+    @RequestMapping(value = Template.URL.FORM.EDITORS)
     public ModelAndView editorsView(HttpServletRequest request) {
-        ModelAndView modelAndView = new ModelAndView(Backend.PATH.FORM.EDITORS);
+        ModelAndView modelAndView = new ModelAndView(Template.PATH.FORM.EDITORS);
         return modelAndView;
     }
 
@@ -73,9 +73,9 @@ public class FormController {
      * @param request
      * @return
      */
-    @RequestMapping(value = Backend.URL.FORM.FILEUPLOAD)
+    @RequestMapping(value = Template.URL.FORM.FILEUPLOAD)
     public ModelAndView fileUploadView(HttpServletRequest request) {
-        ModelAndView modelAndView = new ModelAndView(Backend.PATH.FORM.FILEUPLOAD);
+        ModelAndView modelAndView = new ModelAndView(Template.PATH.FORM.FILEUPLOAD);
         return modelAndView;
     }
 
@@ -84,9 +84,9 @@ public class FormController {
      * @param request
      * @return
      */
-    @RequestMapping(value = Backend.URL.FORM.MARKDOWN)
+    @RequestMapping(value = Template.URL.FORM.MARKDOWN)
     public ModelAndView markdownView(HttpServletRequest request) {
-        ModelAndView modelAndView = new ModelAndView(Backend.PATH.FORM.MARKDOWN);
+        ModelAndView modelAndView = new ModelAndView(Template.PATH.FORM.MARKDOWN);
         return modelAndView;
     }
 
@@ -95,9 +95,9 @@ public class FormController {
      * @param request
      * @return
      */
-    @RequestMapping(value = Backend.URL.FORM.SIMDITOR)
+    @RequestMapping(value = Template.URL.FORM.SIMDITOR)
     public ModelAndView simditorView(HttpServletRequest request) {
-        ModelAndView modelAndView = new ModelAndView(Backend.PATH.FORM.SIMDITOR);
+        ModelAndView modelAndView = new ModelAndView(Template.PATH.FORM.SIMDITOR);
         return modelAndView;
     }
 
@@ -106,9 +106,9 @@ public class FormController {
      * @param request
      * @return
      */
-    @RequestMapping(value = Backend.URL.FORM.VALIDATE)
+    @RequestMapping(value = Template.URL.FORM.VALIDATE)
     public ModelAndView validateView(HttpServletRequest request) {
-        ModelAndView modelAndView = new ModelAndView(Backend.PATH.FORM.VALIDATE);
+        ModelAndView modelAndView = new ModelAndView(Template.PATH.FORM.VALIDATE);
         return modelAndView;
     }
 
@@ -117,9 +117,9 @@ public class FormController {
      * @param request
      * @return
      */
-    @RequestMapping(value = Backend.URL.FORM.WEBUPLOADER)
+    @RequestMapping(value = Template.URL.FORM.WEBUPLOADER)
     public ModelAndView webuploaderView(HttpServletRequest request) {
-        ModelAndView modelAndView = new ModelAndView(Backend.PATH.FORM.WEBUPLOADER);
+        ModelAndView modelAndView = new ModelAndView(Template.PATH.FORM.WEBUPLOADER);
         return modelAndView;
     }
 
@@ -128,9 +128,9 @@ public class FormController {
      * @param request
      * @return
      */
-    @RequestMapping(value = Backend.URL.FORM.WIZARD)
+    @RequestMapping(value = Template.URL.FORM.WIZARD)
     public ModelAndView wizardView(HttpServletRequest request) {
-        ModelAndView modelAndView = new ModelAndView(Backend.PATH.FORM.WIZARD);
+        ModelAndView modelAndView = new ModelAndView(Template.PATH.FORM.WIZARD);
         return modelAndView;
     }
 
@@ -139,9 +139,9 @@ public class FormController {
      * @param request
      * @return
      */
-    @RequestMapping(value = Backend.URL.FORM.SUGGEST)
+    @RequestMapping(value = Template.URL.FORM.SUGGEST)
     public ModelAndView suggestView(HttpServletRequest request) {
-        ModelAndView modelAndView = new ModelAndView(Backend.PATH.FORM.SUGGEST);
+        ModelAndView modelAndView = new ModelAndView(Template.PATH.FORM.SUGGEST);
         return modelAndView;
     }
 
@@ -150,9 +150,9 @@ public class FormController {
      * @param request
      * @return
      */
-    @RequestMapping(value = Backend.URL.FORM.LAYERDATE)
+    @RequestMapping(value = Template.URL.FORM.LAYERDATE)
     public ModelAndView layerdateView(HttpServletRequest request) {
-        ModelAndView modelAndView = new ModelAndView(Backend.PATH.FORM.LAYERDATE);
+        ModelAndView modelAndView = new ModelAndView(Template.PATH.FORM.LAYERDATE);
         return modelAndView;
     }
 

@@ -1,6 +1,6 @@
-package com.shine.controller.backend;
+package com.shine.controller.backend.edit;
 
-import com.shine.constant.Backend;
+import com.shine.constant.Template;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletRequest;
  * Created by hq on 2016/12/13.
  */
 @Controller
-@RequestMapping(value = Backend.URL.LOGIN.LOGIN)
+@RequestMapping(value = Template.URL.LOGIN.LOGIN)
 public class LoginController {
 
     /**
@@ -21,9 +21,9 @@ public class LoginController {
      * @param request
      * @return
      */
-    @RequestMapping(value = Backend.URL.LOGIN.LOGINVIEW)
+    @RequestMapping(value = Template.URL.LOGIN.LOGINVIEW)
     public ModelAndView loginView(HttpServletRequest request) {
-        ModelAndView modelAndView = new ModelAndView(Backend.PATH.LOGIN.LOGINVIEW);
+        ModelAndView modelAndView = new ModelAndView(Template.PATH.LOGIN.LOGINVIEW);
         return modelAndView;
     }
 
@@ -33,9 +33,9 @@ public class LoginController {
      * @param request
      * @return
      */
-    @RequestMapping(value = Backend.URL.LOGIN.LOGINVIEWV)
+    @RequestMapping(value = Template.URL.LOGIN.LOGINVIEWV)
     public ModelAndView loginVView(HttpServletRequest request) {
-        ModelAndView modelAndView = new ModelAndView(Backend.PATH.LOGIN.LOGINVIEWV);
+        ModelAndView modelAndView = new ModelAndView(Template.PATH.LOGIN.LOGINVIEWV);
         return modelAndView;
     }
 
@@ -45,9 +45,9 @@ public class LoginController {
      * @param request
      * @return
      */
-    @RequestMapping(value = Backend.URL.LOGIN.LOCKSCREEN)
+    @RequestMapping(value = Template.URL.LOGIN.LOCKSCREEN)
     public ModelAndView lockscreenView(HttpServletRequest request) {
-        ModelAndView modelAndView = new ModelAndView(Backend.PATH.LOGIN.LOCKSCREEN);
+        ModelAndView modelAndView = new ModelAndView(Template.PATH.LOGIN.LOCKSCREEN);
         return modelAndView;
     }
 }

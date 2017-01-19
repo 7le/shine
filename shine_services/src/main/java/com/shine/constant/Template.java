@@ -3,17 +3,17 @@ package com.shine.constant;
 /**
  * Created by hq on 2016/12/11 0011.
  */
-public interface Backend {
+public interface Template {
     interface URL {
-        String BASE = "/backend";
+        String BASE = "/backend/template";
 
         /**
          * 主页
          */
         interface INDEX {
             String INDEX = BASE;
-            String INDEXVIEW = "/index";
-            String INDEX_V5 = "/index_v5";
+            String INDEXVIEW =INDEX+ "/index";
+            String INDEX_V5 =INDEX+ "/index_v5";
         }
 
         /**
@@ -21,7 +21,7 @@ public interface Backend {
          */
         interface REGISTER {
             String REGISTER = BASE;
-            String REGISTERVIEW = "/register";
+            String REGISTERVIEW = REGISTER+"/register";
         }
 
         /**
@@ -29,9 +29,9 @@ public interface Backend {
          */
         interface LOGIN {
             String LOGIN = BASE;
-            String LOGINVIEW = "/login";
-            String LOGINVIEWV = "/login_v";
-            String LOCKSCREEN = "/lockscreen";
+            String LOGINVIEW = LOGIN+"/login";
+            String LOGINVIEWV =LOGIN+ "/login_v";
+            String LOCKSCREEN =LOGIN+ "/lockscreen";
         }
 
         /**
@@ -39,13 +39,13 @@ public interface Backend {
          */
         interface GRAPH {
             String GRAPH = BASE + "/graph";
-            String ECHARTS = "/echarts";
-            String FLOT = "/flot";
-            String METRICS = "/metrics";
-            String MORRIS = "/morris";
-            String PEITY = "/peity";
-            String RICKSHAW = "/rickshaw";
-            String SPARKLINE = "/sparkline";
+            String ECHARTS =GRAPH+ "/echarts";
+            String FLOT =GRAPH+ "/flot";
+            String METRICS =GRAPH+ "/metrics";
+            String MORRIS =GRAPH+ "/morris";
+            String PEITY = GRAPH+"/peity";
+            String RICKSHAW =GRAPH+ "/rickshaw";
+            String SPARKLINE =GRAPH+ "/sparkline";
         }
 
         /**
@@ -53,9 +53,9 @@ public interface Backend {
          */
         interface PHOTO {
             String PHOTO = BASE + "/photo";
-            String BASIC = "/basic";
-            String CAROUSEL = "/carousel";
-            String BLUEIMP = "/blueimp";
+            String BASIC = PHOTO+"/basic";
+            String CAROUSEL = PHOTO+"/carousel";
+            String BLUEIMP =PHOTO+ "/blueimp";
         }
 
         /**
@@ -164,7 +164,7 @@ public interface Backend {
     }
 
     interface PATH {
-        String BASE = "/backend";
+        String BASE = "/backend/template";
 
         /**
          * 主页
@@ -221,7 +221,7 @@ public interface Backend {
          */
         interface MAIL {
             String MAIL = BASE + "/mail";
-            String MAILBOX = MAIL + "/mailBoxs";
+            String MAILBOX = MAIL + "/mailBox";
             String MAILDETAIL = MAIL + "/mailDetail";
             String MAILCOMPOSE = MAIL + "/mailCompose";
         }

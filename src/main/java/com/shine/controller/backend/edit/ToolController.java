@@ -1,6 +1,6 @@
-package com.shine.controller.backend;
+package com.shine.controller.backend.edit;
 
-import com.shine.constant.Backend;
+import com.shine.constant.Template;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
@@ -16,9 +16,9 @@ public class ToolController {
      * Css动画控制界面
      * @return
      */
-    @RequestMapping(value = Backend.URL.TOOL.CSSVIEW)
+    @RequestMapping(value = Template.URL.TOOL.CSSVIEW)
     public ModelAndView CssView(){
-        ModelAndView modelAndView = new ModelAndView(Backend.PATH.TOOL.CSSVIEW);
+        ModelAndView modelAndView = new ModelAndView(Template.PATH.TOOL.CSSVIEW);
         return modelAndView;
     }
 
@@ -26,9 +26,9 @@ public class ToolController {
      * 表单构建起
      * @return
      */
-    @RequestMapping(value = Backend.URL.TOOL.FORMBUILDERVIEW)
+    @RequestMapping(value = Template.URL.TOOL.FORMBUILDERVIEW)
     public ModelAndView FormBuilderView(){
-        ModelAndView modelAndView = new ModelAndView(Backend.PATH.TOOL.FORMBUILDERVIEW);
+        ModelAndView modelAndView = new ModelAndView(Template.PATH.TOOL.FORMBUILDERVIEW);
         return modelAndView;
     }
 }

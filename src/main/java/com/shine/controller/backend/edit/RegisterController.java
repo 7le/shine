@@ -1,6 +1,6 @@
-package com.shine.controller.backend;
+package com.shine.controller.backend.edit;
 
-import com.shine.constant.Backend;
+import com.shine.constant.Template;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
@@ -12,7 +12,6 @@ import javax.servlet.http.HttpServletRequest;
  * Created by hq on 2016/12/13.
  */
 @Controller
-@RequestMapping(value = Backend.URL.REGISTER.REGISTER)
 public class RegisterController {
 
     /**
@@ -21,9 +20,9 @@ public class RegisterController {
      * @param request
      * @return
      */
-    @RequestMapping(value = Backend.URL.REGISTER.REGISTERVIEW)
+    @RequestMapping(value = Template.URL.REGISTER.REGISTERVIEW)
     public ModelAndView registerView(HttpServletRequest request) {
-        ModelAndView modelAndView = new ModelAndView(Backend.PATH.REGISTER.REGISTERVIEW);
+        ModelAndView modelAndView = new ModelAndView(Template.PATH.REGISTER.REGISTERVIEW);
         return modelAndView;
     }
 }

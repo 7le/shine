@@ -1,6 +1,6 @@
-package com.shine.controller.backend;
+package com.shine.controller.backend.edit;
 
-import com.shine.constant.Backend;
+import com.shine.constant.Template;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
@@ -19,9 +19,9 @@ public class PageController {
      * @param request
      * @return
      */
-    @RequestMapping(value = Backend.URL.PAGE.CONTACTS)
+    @RequestMapping(value = Template.URL.PAGE.CONTACTS)
     public ModelAndView contactsView(HttpServletRequest request) {
-        ModelAndView modelAndView = new ModelAndView(Backend.PATH.PAGE.CONTACTS);
+        ModelAndView modelAndView = new ModelAndView(Template.PATH.PAGE.CONTACTS);
         return modelAndView;
     }
 
@@ -31,9 +31,9 @@ public class PageController {
      * @param request
      * @return
      */
-    @RequestMapping(value = Backend.URL.PAGE.ARTICLE)
+    @RequestMapping(value = Template.URL.PAGE.ARTICLE)
     public ModelAndView articleView(HttpServletRequest request) {
-        ModelAndView modelAndView = new ModelAndView(Backend.PATH.PAGE.ARTICLE);
+        ModelAndView modelAndView = new ModelAndView(Template.PATH.PAGE.ARTICLE);
         return modelAndView;
     }
 
@@ -43,9 +43,9 @@ public class PageController {
      * @param request
      * @return
      */
-    @RequestMapping(value = Backend.URL.PAGE.CALENDAR)
+    @RequestMapping(value = Template.URL.PAGE.CALENDAR)
     public ModelAndView calendarView(HttpServletRequest request) {
-        ModelAndView modelAndView = new ModelAndView(Backend.PATH.PAGE.CALENDAR);
+        ModelAndView modelAndView = new ModelAndView(Template.PATH.PAGE.CALENDAR);
         return modelAndView;
     }
 
@@ -55,9 +55,9 @@ public class PageController {
      * @param request
      * @return
      */
-    @RequestMapping(value = Backend.URL.PAGE.BLOG)
+    @RequestMapping(value = Template.URL.PAGE.BLOG)
     public ModelAndView blogView(HttpServletRequest request) {
-        ModelAndView modelAndView = new ModelAndView(Backend.PATH.PAGE.BLOG);
+        ModelAndView modelAndView = new ModelAndView(Template.PATH.PAGE.BLOG);
         return modelAndView;
     }
 
@@ -67,9 +67,9 @@ public class PageController {
      * @param request
      * @return
      */
-    @RequestMapping(value = Backend.URL.PAGE.CLIENTS)
+    @RequestMapping(value = Template.URL.PAGE.CLIENTS)
     public ModelAndView clientsView(HttpServletRequest request) {
-        ModelAndView modelAndView = new ModelAndView(Backend.PATH.PAGE.CLIENTS);
+        ModelAndView modelAndView = new ModelAndView(Template.PATH.PAGE.CLIENTS);
         return modelAndView;
     }
 
@@ -79,9 +79,9 @@ public class PageController {
      * @param request
      * @return
      */
-    @RequestMapping(value = Backend.URL.PAGE.FILEMANAGER)
+    @RequestMapping(value = Template.URL.PAGE.FILEMANAGER)
     public ModelAndView fileManagerView(HttpServletRequest request) {
-        ModelAndView modelAndView = new ModelAndView(Backend.PATH.PAGE.FILEMANAGER);
+        ModelAndView modelAndView = new ModelAndView(Template.PATH.PAGE.FILEMANAGER);
         return modelAndView;
     }
 
@@ -91,9 +91,9 @@ public class PageController {
      * @param request
      * @return
      */
-    @RequestMapping(value = Backend.URL.PAGE.PROFILE)
+    @RequestMapping(value = Template.URL.PAGE.PROFILE)
     public ModelAndView profileView(HttpServletRequest request) {
-        ModelAndView modelAndView = new ModelAndView(Backend.PATH.PAGE.PROFILE);
+        ModelAndView modelAndView = new ModelAndView(Template.PATH.PAGE.PROFILE);
         return modelAndView;
     }
 
@@ -103,9 +103,9 @@ public class PageController {
      * @param request
      * @return
      */
-    @RequestMapping(value = Backend.URL.PAGE.PROJECTDETAIL)
+    @RequestMapping(value = Template.URL.PAGE.PROJECTDETAIL)
     public ModelAndView projectDetailView(HttpServletRequest request) {
-        ModelAndView modelAndView = new ModelAndView(Backend.PATH.PAGE.PROJECTDETAIL);
+        ModelAndView modelAndView = new ModelAndView(Template.PATH.PAGE.PROJECTDETAIL);
         return modelAndView;
     }
 
@@ -115,9 +115,9 @@ public class PageController {
      * @param request
      * @return
      */
-    @RequestMapping(value = Backend.URL.PAGE.PROJECTS)
+    @RequestMapping(value = Template.URL.PAGE.PROJECTS)
     public ModelAndView projectsView(HttpServletRequest request) {
-        ModelAndView modelAndView = new ModelAndView(Backend.PATH.PAGE.PROJECTS);
+        ModelAndView modelAndView = new ModelAndView(Template.PATH.PAGE.PROJECTS);
         return modelAndView;
     }
 
@@ -127,9 +127,9 @@ public class PageController {
      * @param request
      * @return
      */
-    @RequestMapping(value = Backend.URL.PAGE.SOCIALFEED)
+    @RequestMapping(value = Template.URL.PAGE.SOCIALFEED)
     public ModelAndView socialFeedView(HttpServletRequest request) {
-        ModelAndView modelAndView = new ModelAndView(Backend.PATH.PAGE.SOCIALFEED);
+        ModelAndView modelAndView = new ModelAndView(Template.PATH.PAGE.SOCIALFEED);
         return modelAndView;
     }
 
@@ -139,9 +139,9 @@ public class PageController {
      * @param request
      * @return
      */
-    @RequestMapping(value = Backend.URL.PAGE.TEAMSBOARD)
+    @RequestMapping(value = Template.URL.PAGE.TEAMSBOARD)
     public ModelAndView teamsBoardView(HttpServletRequest request) {
-        ModelAndView modelAndView = new ModelAndView(Backend.PATH.PAGE.TEAMSBOARD);
+        ModelAndView modelAndView = new ModelAndView(Template.PATH.PAGE.TEAMSBOARD);
         return modelAndView;
     }
 
@@ -151,9 +151,9 @@ public class PageController {
      * @param request
      * @return
      */
-    @RequestMapping(value = Backend.URL.PAGE.FAQ)
+    @RequestMapping(value = Template.URL.PAGE.FAQ)
     public ModelAndView faqView(HttpServletRequest request) {
-        ModelAndView modelAndView = new ModelAndView(Backend.PATH.PAGE.FAQ);
+        ModelAndView modelAndView = new ModelAndView(Template.PATH.PAGE.FAQ);
         return modelAndView;
     }
 
@@ -163,9 +163,9 @@ public class PageController {
      * @param request
      * @return
      */
-    @RequestMapping(value = Backend.URL.PAGE.TIMELINE)
+    @RequestMapping(value = Template.URL.PAGE.TIMELINE)
     public ModelAndView timelineView(HttpServletRequest request) {
-        ModelAndView modelAndView = new ModelAndView(Backend.PATH.PAGE.TIMELINE);
+        ModelAndView modelAndView = new ModelAndView(Template.PATH.PAGE.TIMELINE);
         return modelAndView;
     }
 
@@ -175,9 +175,9 @@ public class PageController {
      * @param request
      * @return
      */
-    @RequestMapping(value = Backend.URL.PAGE.TIMELINE2)
+    @RequestMapping(value = Template.URL.PAGE.TIMELINE2)
     public ModelAndView timeline2View(HttpServletRequest request) {
-        ModelAndView modelAndView = new ModelAndView(Backend.PATH.PAGE.TIMELINE2);
+        ModelAndView modelAndView = new ModelAndView(Template.PATH.PAGE.TIMELINE2);
         return modelAndView;
     }
 
@@ -187,9 +187,9 @@ public class PageController {
      * @param request
      * @return
      */
-    @RequestMapping(value = Backend.URL.PAGE.PINBOARD)
+    @RequestMapping(value = Template.URL.PAGE.PINBOARD)
     public ModelAndView pinBoardView(HttpServletRequest request) {
-        ModelAndView modelAndView = new ModelAndView(Backend.PATH.PAGE.PINBOARD);
+        ModelAndView modelAndView = new ModelAndView(Template.PATH.PAGE.PINBOARD);
         return modelAndView;
     }
 
@@ -198,9 +198,9 @@ public class PageController {
      * @param request
      * @return
      */
-    @RequestMapping(value = Backend.URL.PAGE.INVOICE)
+    @RequestMapping(value = Template.URL.PAGE.INVOICE)
     public ModelAndView invoiceView(HttpServletRequest request) {
-        ModelAndView modelAndView = new ModelAndView(Backend.PATH.PAGE.INVOICE);
+        ModelAndView modelAndView = new ModelAndView(Template.PATH.PAGE.INVOICE);
         return modelAndView;
     }
 
@@ -210,9 +210,9 @@ public class PageController {
      * @param request
      * @return
      */
-    @RequestMapping(value = Backend.URL.PAGE.INVOICEPRINT)
+    @RequestMapping(value = Template.URL.PAGE.INVOICEPRINT)
     public ModelAndView invoicePrintView(HttpServletRequest request) {
-        ModelAndView modelAndView = new ModelAndView(Backend.PATH.PAGE.INVOICEPRINT);
+        ModelAndView modelAndView = new ModelAndView(Template.PATH.PAGE.INVOICEPRINT);
         return modelAndView;
     }
 
@@ -222,9 +222,9 @@ public class PageController {
      * @param request
      * @return
      */
-    @RequestMapping(value = Backend.URL.PAGE.SEARCHRESULTS)
+    @RequestMapping(value = Template.URL.PAGE.SEARCHRESULTS)
     public ModelAndView searchResultsView(HttpServletRequest request) {
-        ModelAndView modelAndView = new ModelAndView(Backend.PATH.PAGE.SEARCHRESULTS);
+        ModelAndView modelAndView = new ModelAndView(Template.PATH.PAGE.SEARCHRESULTS);
         return modelAndView;
     }
 
@@ -234,9 +234,9 @@ public class PageController {
      * @param request
      * @return
      */
-    @RequestMapping(value = Backend.URL.PAGE.FORUMMAIN)
+    @RequestMapping(value = Template.URL.PAGE.FORUMMAIN)
     public ModelAndView forumMainView(HttpServletRequest request) {
-        ModelAndView modelAndView = new ModelAndView(Backend.PATH.PAGE.FORUMMAIN);
+        ModelAndView modelAndView = new ModelAndView(Template.PATH.PAGE.FORUMMAIN);
         return modelAndView;
     }
 
@@ -246,9 +246,9 @@ public class PageController {
      * @param request
      * @return
      */
-    @RequestMapping(value = Backend.URL.PAGE.CHAT)
+    @RequestMapping(value = Template.URL.PAGE.CHAT)
     public ModelAndView chatView(HttpServletRequest request) {
-        ModelAndView modelAndView = new ModelAndView(Backend.PATH.PAGE.CHAT);
+        ModelAndView modelAndView = new ModelAndView(Template.PATH.PAGE.CHAT);
         return modelAndView;
     }
 
@@ -258,9 +258,9 @@ public class PageController {
      * @param request
      * @return
      */
-    @RequestMapping(value = Backend.URL.PAGE.WEBIM)
+    @RequestMapping(value = Template.URL.PAGE.WEBIM)
     public ModelAndView webimView(HttpServletRequest request) {
-        ModelAndView modelAndView = new ModelAndView(Backend.PATH.PAGE.WEBIM);
+        ModelAndView modelAndView = new ModelAndView(Template.PATH.PAGE.WEBIM);
         return modelAndView;
     }
 

@@ -1,6 +1,6 @@
-package com.shine.controller.backend;
+package com.shine.controller.backend.edit;
 
-import com.shine.constant.Backend;
+import com.shine.constant.Template;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
@@ -16,9 +16,9 @@ public class UIController {
      * 排版 typography
      * @return
      */
-    @RequestMapping(value = Backend.URL.UI.TYPOGRAPHY)
+    @RequestMapping(value = Template.URL.UI.TYPOGRAPHY)
     public ModelAndView typographyView(){
-        ModelAndView modelAndView=new ModelAndView(Backend.PATH.UI.TYPOGRAPHY);
+        ModelAndView modelAndView=new ModelAndView(Template.PATH.UI.TYPOGRAPHY);
         return modelAndView;
     }
 
@@ -26,9 +26,9 @@ public class UIController {
      * 字体图标 fontawesome
      * @return
      */
-    @RequestMapping(value = Backend.URL.UI.FONTAWESOME)
+    @RequestMapping(value = Template.URL.UI.FONTAWESOME)
     public ModelAndView fontawesomeView(){
-        ModelAndView modelAndView=new ModelAndView(Backend.PATH.UI.FONTAWESOME);
+        ModelAndView modelAndView=new ModelAndView(Template.PATH.UI.FONTAWESOME);
         return modelAndView;
     }
 
@@ -36,9 +36,9 @@ public class UIController {
      * 字形图标 glyphicons
      * @return
      */
-    @RequestMapping(value = Backend.URL.UI.GLYPHICONS)
+    @RequestMapping(value = Template.URL.UI.GLYPHICONS)
     public ModelAndView glyphiconsView(){
-        ModelAndView modelAndView=new ModelAndView(Backend.PATH.UI.GLYPHICONS);
+        ModelAndView modelAndView=new ModelAndView(Template.PATH.UI.GLYPHICONS);
         return modelAndView;
     }
 
@@ -46,9 +46,9 @@ public class UIController {
      * 阿里巴巴矢量图标库 iconfont
      * @return
      */
-    @RequestMapping(value = Backend.URL.UI.ICONFONT)
+    @RequestMapping(value = Template.URL.UI.ICONFONT)
     public ModelAndView iconfontView(){
-        ModelAndView modelAndView=new ModelAndView(Backend.PATH.UI.ICONFONT);
+        ModelAndView modelAndView=new ModelAndView(Template.PATH.UI.ICONFONT);
         return modelAndView;
     }
 
@@ -56,9 +56,9 @@ public class UIController {
      * 拖动面板 draggable_panels
      * @return
      */
-    @RequestMapping(value = Backend.URL.UI.DRAGGABLEPANELS)
+    @RequestMapping(value = Template.URL.UI.DRAGGABLEPANELS)
     public ModelAndView draggablePanelsView(){
-        ModelAndView modelAndView=new ModelAndView(Backend.PATH.UI.DRAGGABLEPANELS);
+        ModelAndView modelAndView=new ModelAndView(Template.PATH.UI.DRAGGABLEPANELS);
         return modelAndView;
     }
 
@@ -66,9 +66,9 @@ public class UIController {
      * 任务清单 agile_board
      * @return
      */
-    @RequestMapping(value = Backend.URL.UI.AGILEBOARD)
+    @RequestMapping(value = Template.URL.UI.AGILEBOARD)
     public ModelAndView agileBoardView(){
-        ModelAndView modelAndView=new ModelAndView(Backend.PATH.UI.AGILEBOARD);
+        ModelAndView modelAndView=new ModelAndView(Template.PATH.UI.AGILEBOARD);
         return modelAndView;
     }
 
@@ -76,9 +76,9 @@ public class UIController {
      * 按钮 buttons
      * @return
      */
-    @RequestMapping(value = Backend.URL.UI.BUTTONS)
+    @RequestMapping(value = Template.URL.UI.BUTTONS)
     public ModelAndView buttonsView(){
-        ModelAndView modelAndView=new ModelAndView(Backend.PATH.UI.BUTTONS);
+        ModelAndView modelAndView=new ModelAndView(Template.PATH.UI.BUTTONS);
         return modelAndView;
     }
 
@@ -86,9 +86,9 @@ public class UIController {
      * 选项卡 & 面板 tabs_panels
      * @return
      */
-    @RequestMapping(value = Backend.URL.UI.TABSPANELS)
+    @RequestMapping(value = Template.URL.UI.TABSPANELS)
     public ModelAndView tabsPanelsView(){
-        ModelAndView modelAndView=new ModelAndView(Backend.PATH.UI.TABSPANELS);
+        ModelAndView modelAndView=new ModelAndView(Template.PATH.UI.TABSPANELS);
         return modelAndView;
     }
 
@@ -96,9 +96,9 @@ public class UIController {
      * 通知 & 提示 notifications
      * @return
      */
-    @RequestMapping(value = Backend.URL.UI.NOTIFICATIONSS)
+    @RequestMapping(value = Template.URL.UI.NOTIFICATIONSS)
     public ModelAndView notificationsView(){
-        ModelAndView modelAndView=new ModelAndView(Backend.PATH.UI.NOTIFICATIONSS);
+        ModelAndView modelAndView=new ModelAndView(Template.PATH.UI.NOTIFICATIONSS);
         return modelAndView;
     }
 
@@ -106,9 +106,9 @@ public class UIController {
      * 徽章，标签，进度条 badges_labels
      * @return
      */
-    @RequestMapping(value = Backend.URL.UI.BADGESLABELS)
+    @RequestMapping(value = Template.URL.UI.BADGESLABELS)
     public ModelAndView badgesLabelsView(){
-        ModelAndView modelAndView=new ModelAndView(Backend.PATH.UI.BADGESLABELS);
+        ModelAndView modelAndView=new ModelAndView(Template.PATH.UI.BADGESLABELS);
         return modelAndView;
     }
 
@@ -116,9 +116,9 @@ public class UIController {
      * 栅格 grid_options
      * @return
      */
-    @RequestMapping(value = Backend.URL.UI.GRIDOPTIONS)
+    @RequestMapping(value = Template.URL.UI.GRIDOPTIONS)
     public ModelAndView gridOptionsView(){
-        ModelAndView modelAndView=new ModelAndView(Backend.PATH.UI.GRIDOPTIONS);
+        ModelAndView modelAndView=new ModelAndView(Template.PATH.UI.GRIDOPTIONS);
         return modelAndView;
     }
 
@@ -126,9 +126,9 @@ public class UIController {
      * 视频，音频 plyr
      * @return
      */
-    @RequestMapping(value = Backend.URL.UI.PLYR)
+    @RequestMapping(value = Template.URL.UI.PLYR)
     public ModelAndView plyrView(){
-        ModelAndView modelAndView=new ModelAndView(Backend.PATH.UI.PLYR);
+        ModelAndView modelAndView=new ModelAndView(Template.PATH.UI.PLYR);
         return modelAndView;
     }
 
@@ -136,9 +136,9 @@ public class UIController {
      * 弹框插件 sweetalert
      * @return
      */
-    @RequestMapping(value = Backend.URL.UI.SWEETALERT)
+    @RequestMapping(value = Template.URL.UI.SWEETALERT)
     public ModelAndView sweetAlertView(){
-        ModelAndView modelAndView=new ModelAndView(Backend.PATH.UI.SWEETALERT);
+        ModelAndView modelAndView=new ModelAndView(Template.PATH.UI.SWEETALERT);
         return modelAndView;
     }
 
@@ -146,9 +146,9 @@ public class UIController {
      * 树形视图  nestable
      * @return
      */
-    @RequestMapping(value = Backend.URL.UI.NESTABLE)
+    @RequestMapping(value = Template.URL.UI.NESTABLE)
     public ModelAndView nestableView(){
-        ModelAndView modelAndView=new ModelAndView(Backend.PATH.UI.NESTABLE);
+        ModelAndView modelAndView=new ModelAndView(Template.PATH.UI.NESTABLE);
         return modelAndView;
     }
 
@@ -156,9 +156,9 @@ public class UIController {
      *   Toastr通知
      * @return
      */
-    @RequestMapping(value = Backend.URL.UI.TOASTER)
+    @RequestMapping(value = Template.URL.UI.TOASTER)
     public ModelAndView toastrView(){
-        ModelAndView modelAndView=new ModelAndView(Backend.PATH.UI.TOASTER);
+        ModelAndView modelAndView=new ModelAndView(Template.PATH.UI.TOASTER);
         return modelAndView;
     }
 
@@ -166,9 +166,9 @@ public class UIController {
      *   diff 文本对比
      * @return
      */
-    @RequestMapping(value = Backend.URL.UI.DIFF)
+    @RequestMapping(value = Template.URL.UI.DIFF)
     public ModelAndView diffView(){
-        ModelAndView modelAndView=new ModelAndView(Backend.PATH.UI.DIFF);
+        ModelAndView modelAndView=new ModelAndView(Template.PATH.UI.DIFF);
         return modelAndView;
     }
 
@@ -176,9 +176,9 @@ public class UIController {
      *   spinners 加载动画
      * @return
      */
-    @RequestMapping(value = Backend.URL.UI.SPINNERS)
+    @RequestMapping(value = Template.URL.UI.SPINNERS)
     public ModelAndView spinnersView(){
-        ModelAndView modelAndView=new ModelAndView(Backend.PATH.UI.SPINNERS);
+        ModelAndView modelAndView=new ModelAndView(Template.PATH.UI.SPINNERS);
         return modelAndView;
     }
 
@@ -186,9 +186,9 @@ public class UIController {
      *   widgets 加载动画
      * @return
      */
-    @RequestMapping(value = Backend.URL.UI.WIDGETS)
+    @RequestMapping(value = Template.URL.UI.WIDGETS)
     public ModelAndView widgetsView(){
-        ModelAndView modelAndView=new ModelAndView(Backend.PATH.UI.WIDGETS);
+        ModelAndView modelAndView=new ModelAndView(Template.PATH.UI.WIDGETS);
         return modelAndView;
     }
 }

@@ -34,13 +34,13 @@
                                 </span>
                         </a>
                         <ul class="dropdown-menu animated fadeInRight m-t-xs">
-                            <li><a class="J_menuItem" href="form_avatar.html">修改头像</a>
+                            <li><a class="J_menuItem" href="/backend/template/form/avatar">修改头像</a>
                             </li>
-                            <li><a class="J_menuItem" href="profile.html">个人资料</a>
+                            <li><a class="J_menuItem" href="/backend/template/page/profile">个人资料</a>
                             </li>
-                            <li><a class="J_menuItem" href="contacts.html">联系我们</a>
+                            <li><a class="J_menuItem" href="/backend/template/page/contacts">联系我们</a>
                             </li>
-                            <li><a class="J_menuItem" href="mailbox.html">信箱</a>
+                            <li><a class="J_menuItem" href="/backend/template/mailBox">信箱</a>
                             </li>
                             <li class="divider"></li>
                             <li><a href="login.html">安全退出</a>
@@ -58,7 +58,7 @@
                     </a>
                     <ul class="nav nav-second-level">
                         <li>
-                            <a class="J_menuItem" href="/backend/index_v5" data-index="0">主页示例一</a>
+                            <a class="J_menuItem" href="/backend/template/index_v5" data-index="0">主页示例一</a>
                         </li>
                     <#--             <li>
                                      <a class="J_menuItem" href="backend/index_v2.html">主页示例二</a>
@@ -83,25 +83,25 @@
                     </a>
                     <ul class="nav nav-second-level">
                         <li>
-                            <a class="J_menuItem" href="/backend/graph/echarts">百度ECharts</a>
+                            <a class="J_menuItem" href="/backend/template/graph/echarts">百度ECharts</a>
                         </li>
                         <li>
-                            <a class="J_menuItem" href="/backend/graph/flot">Flot</a>
+                            <a class="J_menuItem" href="/backend/template/graph/flot">Flot</a>
                         </li>
                         <li>
-                            <a class="J_menuItem" href="/backend/graph/morris">Morris.js</a>
+                            <a class="J_menuItem" href="/backend/template/graph/morris">Morris.js</a>
                         </li>
                         <li>
-                            <a class="J_menuItem" href="/backend/graph/rickshaw">Rickshaw</a>
+                            <a class="J_menuItem" href="/backend/template/graph/rickshaw">Rickshaw</a>
                         </li>
                         <li>
-                            <a class="J_menuItem" href="/backend/graph/peity">Peity</a>
+                            <a class="J_menuItem" href="/backend/template/graph/peity">Peity</a>
                         </li>
                         <li>
-                            <a class="J_menuItem" href="/backend/graph/sparkline">Sparkline</a>
+                            <a class="J_menuItem" href="/backend/template/graph/sparkline">Sparkline</a>
                         </li>
                         <li>
-                            <a class="J_menuItem" href="/backend/graph/metrics">图表组合</a>
+                            <a class="J_menuItem" href="/backend/template/graph/metrics">图表组合</a>
                         </li>
                     </ul>
                 </li>
@@ -110,11 +110,11 @@
                     <a href="mailbox.html"><i class="fa fa-envelope"></i> <span class="nav-label">信箱 </span><span
                             class="label label-warning pull-right">16</span></a>
                     <ul class="nav nav-second-level">
-                        <li><a class="J_menuItem" href="/backend/mailBox">收件箱</a>
+                        <li><a class="J_menuItem" href="/backend/template/mailBox">收件箱</a>
                         </li>
-                        <li><a class="J_menuItem" href="/backend/mailDetail">查看邮件</a>
+                        <li><a class="J_menuItem" href="/backend/template/mailDetail">查看邮件</a>
                         </li>
-                        <li><a class="J_menuItem" href="/backend/mailCompose">写信</a>
+                        <li><a class="J_menuItem" href="/backend/template/mailCompose">写信</a>
                         </li>
                     </ul>
                 </li>
@@ -122,41 +122,41 @@
                     <a href="#"><i class="fa fa-edit"></i> <span class="nav-label">表单</span><span
                             class="fa arrow"></span></a>
                     <ul class="nav nav-second-level">
-                        <li><a class="J_menuItem" href="/backend/form/basic">基本表单</a>
+                        <li><a class="J_menuItem" href="/backend/template/form/basic">基本表单</a>
                         </li>
-                        <li><a class="J_menuItem" href="/backend/form/validate">表单验证</a>
+                        <li><a class="J_menuItem" href="/backend/template/form/validate">表单验证</a>
                         </li>
-                        <li><a class="J_menuItem" href="/backend/form/advanced">高级插件</a>
+                        <li><a class="J_menuItem" href="/backend/template/form/advanced">高级插件</a>
                         </li>
-                        <li><a class="J_menuItem" href="/backend/form/wizard">表单向导</a>
+                        <li><a class="J_menuItem" href="/backend/template/form/wizard">表单向导</a>
                         </li>
                         <li>
                             <a href="#">文件上传 <span class="fa arrow"></span></a>
                             <ul class="nav nav-third-level">
-                                <li><a class="J_menuItem" href="/backend/form/webuploader">百度WebUploader</a>
+                                <li><a class="J_menuItem" href="/backend/template/form/webuploader">百度WebUploader</a>
                                 </li>
-                                <li><a class="J_menuItem" href="/backend/form/fileUpload">DropzoneJS</a>
+                                <li><a class="J_menuItem" href="/backend/template/form/fileUpload">DropzoneJS</a>
                                 </li>
-                                <li><a class="J_menuItem" href="/backend/form/avatar">头像裁剪上传</a>
+                                <li><a class="J_menuItem" href="/backend/template/form/avatar">头像裁剪上传</a>
                                 </li>
                             </ul>
                         </li>
                         <li>
                             <a href="#">编辑器 <span class="fa arrow"></span></a>
                             <ul class="nav nav-third-level">
-                                <li><a class="J_menuItem" href="/backend/form/editors">富文本编辑器</a>
+                                <li><a class="J_menuItem" href="/backend/template/form/editors">富文本编辑器</a>
                                 </li>
-                                <li><a class="J_menuItem" href="/backend/form/simditor">simditor</a>
+                                <li><a class="J_menuItem" href="/backend/template/form/simditor">simditor</a>
                                 </li>
-                                <li><a class="J_menuItem" href="/backend/form/markdown">MarkDown编辑器</a>
+                                <li><a class="J_menuItem" href="/backend/template/form/markdown">MarkDown编辑器</a>
                                 </li>
-                                <li><a class="J_menuItem" href="/backend/form/editors">代码编辑器</a>
+                                <li><a class="J_menuItem" href="/backend/template/form/editors">代码编辑器</a>
                                 </li>
                             </ul>
                         </li>
-                        <li><a class="J_menuItem" href="/backend/form/suggest">搜索自动补全</a>
+                        <li><a class="J_menuItem" href="/backend/template/form/suggest">搜索自动补全</a>
                         </li>
-                        <li><a class="J_menuItem" href="/backend/form/layerdate">日期选择器layerDate</a>
+                        <li><a class="J_menuItem" href="/backend/template/form/layerdate">日期选择器layerDate</a>
                         </li>
                     </ul>
                 </li>
@@ -164,70 +164,70 @@
                     <a href="#"><i class="fa fa-desktop"></i> <span class="nav-label">页面</span><span
                             class="fa arrow"></span></a>
                     <ul class="nav nav-second-level">
-                        <li><a class="J_menuItem" href="/backend/page/contacts">联系人</a>
+                        <li><a class="J_menuItem" href="/backend/template/page/contacts">联系人</a>
                         </li>
-                        <li><a class="J_menuItem" href="/backend/page/profile">个人资料</a>
+                        <li><a class="J_menuItem" href="/backend/template/page/profile">个人资料</a>
                         </li>
                         <li>
                             <a href="#">项目管理 <span class="fa arrow"></span></a>
                             <ul class="nav nav-third-level">
-                                <li><a class="J_menuItem" href="/backend/page/projects">项目</a>
+                                <li><a class="J_menuItem" href="/backend/template/page/projects">项目</a>
                                 </li>
-                                <li><a class="J_menuItem" href="/backend/page/projectDetail">项目详情</a>
+                                <li><a class="J_menuItem" href="/backend/template/page/projectDetail">项目详情</a>
                                 </li>
                             </ul>
                         </li>
-                        <li><a class="J_menuItem" href="/backend/page/teamsBoard">团队管理</a>
+                        <li><a class="J_menuItem" href="/backend/template/page/teamsBoard">团队管理</a>
                         </li>
-                        <li><a class="J_menuItem" href="/backend/page/socialFeed">信息流</a>
+                        <li><a class="J_menuItem" href="/backend/template/page/socialFeed">信息流</a>
                         </li>
-                        <li><a class="J_menuItem" href="/backend/page/clients">客户管理</a>
+                        <li><a class="J_menuItem" href="/backend/template/page/clients">客户管理</a>
                         </li>
-                        <li><a class="J_menuItem" href="/backend/page/fileManager">文件管理器</a>
+                        <li><a class="J_menuItem" href="/backend/template/page/fileManager">文件管理器</a>
                         </li>
-                        <li><a class="J_menuItem" href="/backend/page/calendar">日历</a>
+                        <li><a class="J_menuItem" href="/backend/template/page/calendar">日历</a>
                         </li>
                         <li>
                             <a href="#">博客 <span class="fa arrow"></span></a>
                             <ul class="nav nav-third-level">
-                                <li><a class="J_menuItem" href="/backend/page/blog">文章列表</a>
+                                <li><a class="J_menuItem" href="/backend/template/page/blog">文章列表</a>
                                 </li>
-                                <li><a class="J_menuItem" href="/backend/page/article">文章详情</a>
+                                <li><a class="J_menuItem" href="/backend/template/page/article">文章详情</a>
                                 </li>
                             </ul>
                         </li>
-                        <li><a class="J_menuItem" href="/backend/page/faq">FAQ</a>
+                        <li><a class="J_menuItem" href="/backend/template/page/faq">FAQ</a>
                         </li>
                         <li>
                             <a href="#">时间轴 <span class="fa arrow"></span></a>
                             <ul class="nav nav-third-level">
-                                <li><a class="J_menuItem" href="/backend/page/timeline">时间轴</a>
+                                <li><a class="J_menuItem" href="/backend/template/page/timeline">时间轴</a>
                                 </li>
-                                <li><a class="J_menuItem" href="/backend/page/timeline_v2">时间轴v2</a>
+                                <li><a class="J_menuItem" href="/backend/template/page/timeline_v2">时间轴v2</a>
                                 </li>
                             </ul>
                         </li>
-                        <li><a class="J_menuItem" href="/backend/page/pinBoard">标签墙</a>
+                        <li><a class="J_menuItem" href="/backend/template/page/pinBoard">标签墙</a>
                         </li>
                         <li>
                             <a href="#">单据 <span class="fa arrow"></span></a>
                             <ul class="nav nav-third-level">
-                                <li><a class="J_menuItem" href="/backend/page/invoice">单据</a>
+                                <li><a class="J_menuItem" href="/backend/template/page/invoice">单据</a>
                                 </li>
-                                <li><a class="J_menuItem" href="/backend/page/invoicePrint">单据打印</a>
+                                <li><a class="J_menuItem" href="/backend/template/page/invoicePrint">单据打印</a>
                                 </li>
                             </ul>
                         </li>
-                        <li><a class="J_menuItem" href="/backend/page/searchResults">搜索结果</a>
+                        <li><a class="J_menuItem" href="/backend/template/page/searchResults">搜索结果</a>
                         </li>
-                        <li><a class="J_menuItem" href="/backend/page/forumMain">论坛</a>
+                        <li><a class="J_menuItem" href="/backend/template/page/forumMain">论坛</a>
                         </li>
                         <li>
                             <a href="#">即时通讯 <span class="fa arrow"></span></a>
                             <ul class="nav nav-third-level">
-                                <li><a class="J_menuItem" href="/backend/page/chat">聊天窗口</a>
+                                <li><a class="J_menuItem" href="/backend/template/page/chat">聊天窗口</a>
                                 </li>
-                                <li><a class="J_menuItem" href="/backend/page/webim">layIM</a>
+                                <li><a class="J_menuItem" href="/backend/template/page/webim">layIM</a>
                                 </li>
                             </ul>
                         </li>
@@ -244,54 +244,54 @@
                     <a href="#"><i class="fa fa-flask"></i> <span class="nav-label">UI元素</span><span
                             class="fa arrow"></span></a>
                     <ul class="nav nav-second-level">
-                        <li><a class="J_menuItem" href="/backend/ui/typography">排版</a>
+                        <li><a class="J_menuItem" href="/backend/template/ui/typography">排版</a>
                         </li>
                         <li>
                             <a href="#">字体图标 <span class="fa arrow"></span></a>
                             <ul class="nav nav-third-level">
                                 <li>
-                                    <a class="J_menuItem" href="/backend/ui/fontawesome">Font Awesome</a>
+                                    <a class="J_menuItem" href="/backend/template/ui/fontawesome">Font Awesome</a>
                                 </li>
                                 <li>
-                                    <a class="J_menuItem" href="/backend/ui/glyphicons">Glyphicon</a>
+                                    <a class="J_menuItem" href="/backend/template/ui/glyphicons">Glyphicon</a>
                                 </li>
                                 <li>
-                                    <a class="J_menuItem" href="/backend/ui/iconfont">阿里巴巴矢量图标库</a>
+                                    <a class="J_menuItem" href="/backend/template/ui/iconfont">阿里巴巴矢量图标库</a>
                                 </li>
                             </ul>
                         </li>
                         <li>
                             <a href="#">拖动排序 <span class="fa arrow"></span></a>
                             <ul class="nav nav-third-level">
-                                <li><a class="J_menuItem" href="/backend/ui/draggablePanels">拖动面板</a>
+                                <li><a class="J_menuItem" href="/backend/template/ui/draggablePanels">拖动面板</a>
                                 </li>
-                                <li><a class="J_menuItem" href="/backend/ui/agileBoard">任务清单</a>
+                                <li><a class="J_menuItem" href="/backend/template/ui/agileBoard">任务清单</a>
                                 </li>
                             </ul>
                         </li>
-                        <li><a class="J_menuItem" href="/backend/ui/buttons">按钮</a>
+                        <li><a class="J_menuItem" href="/backend/template/ui/buttons">按钮</a>
                         </li>
-                        <li><a class="J_menuItem" href="/backend/ui/tabsPanels">选项卡 &amp; 面板</a>
+                        <li><a class="J_menuItem" href="/backend/template/ui/tabsPanels">选项卡 &amp; 面板</a>
                         </li>
-                        <li><a class="J_menuItem" href="/backend/ui/notifications">通知 &amp; 提示</a>
+                        <li><a class="J_menuItem" href="/backend/template/ui/notifications">通知 &amp; 提示</a>
                         </li>
-                        <li><a class="J_menuItem" href="/backend/ui/badgesLabels">徽章，标签，进度条</a>
+                        <li><a class="J_menuItem" href="/backend/template/ui/badgesLabels">徽章，标签，进度条</a>
                         </li>
-                        <li><a class="J_menuItem" href="/backend/ui/gridOptions">栅格</a>
+                        <li><a class="J_menuItem" href="/backend/template/ui/gridOptions">栅格</a>
                         </li>
-                        <li><a class="J_menuItem" href="/backend/ui/plyr">视频、音频</a>
+                        <li><a class="J_menuItem" href="/backend/template/ui/plyr">视频、音频</a>
                         </li>
-                        <li><a class="J_menuItem" href="/backend/ui/sweetalert">弹窗SweetAlert</a>
+                        <li><a class="J_menuItem" href="/backend/template/ui/sweetalert">弹窗SweetAlert</a>
                         </li>
-                        <li><a class="J_menuItem" href="/backend/ui/nestable">树形视图nestable</a>
+                        <li><a class="J_menuItem" href="/backend/template/ui/nestable">树形视图nestable</a>
                         </li>
-                        <li><a class="J_menuItem" href="/backend/ui/toastr">Toastr通知</a>
+                        <li><a class="J_menuItem" href="/backend/template/ui/toastr">Toastr通知</a>
                         </li>
-                        <li><a class="J_menuItem" href="/backend/ui/diff">文本对比</a>
+                        <li><a class="J_menuItem" href="/backend/template/ui/diff">文本对比</a>
                         </li>
-                        <li><a class="J_menuItem" href="/backend/ui/spinners">加载动画</a>
+                        <li><a class="J_menuItem" href="/backend/template/ui/spinners">加载动画</a>
                         </li>
-                        <li><a class="J_menuItem" href="/backend/ui/widgets">小部件</a>
+                        <li><a class="J_menuItem" href="/backend/template/ui/widgets">小部件</a>
                         </li>
                     </ul>
                 </li>
@@ -299,15 +299,15 @@
                     <a href="#"><i class="fa fa-table"></i> <span class="nav-label">表格</span><span
                             class="fa arrow"></span></a>
                     <ul class="nav nav-second-level">
-                        <li><a class="J_menuItem" href="/backend/tableBasic">基本表格</a>
+                        <li><a class="J_menuItem" href="/backend/template/tableBasic">基本表格</a>
                         </li>
-                        <li><a class="J_menuItem" href="/backend/tableDate">DataTables</a>
+                        <li><a class="J_menuItem" href="/backend/template/tableDate">DataTables</a>
                         </li>
-                        <li><a class="J_menuItem" href="/backend/tableJqgrid">jqGrid</a>
+                        <li><a class="J_menuItem" href="/backend/template/tableJqgrid">jqGrid</a>
                         </li>
-                        <li><a class="J_menuItem" href="/backend/tableFoo">Foo Tables</a>
+                        <li><a class="J_menuItem" href="/backend/template/tableFoo">Foo Tables</a>
                         </li>
-                        <li><a class="J_menuItem" href="/backend/tableBootstrap">Bootstrap Table
+                        <li><a class="J_menuItem" href="/backend/template/tableBootstrap">Bootstrap Table
                             <span class="label label-danger pull-right">推荐</span></a>
                         </li>
                     </ul>
@@ -316,11 +316,11 @@
                     <a href="#"><i class="fa fa-picture-o"></i> <span class="nav-label">相册</span><span
                             class="fa arrow"></span></a>
                     <ul class="nav nav-second-level">
-                        <li><a class="J_menuItem" href="/backend/photo/basic">基本图库</a>
+                        <li><a class="J_menuItem" href="/backend/template/photo/basic">基本图库</a>
                         </li>
-                        <li><a class="J_menuItem" href="/backend/photo/carousel">图片切换</a>
+                        <li><a class="J_menuItem" href="/backend/template/photo/carousel">图片切换</a>
                         </li>
-                        <li><a class="J_menuItem" href="/backend/photo/blueimp">Blueimp相册</a>
+                        <li><a class="J_menuItem" href="/backend/template/photo/blueimp">Blueimp相册</a>
                         </li>
                     </ul>
                 </li>
@@ -329,10 +329,10 @@
                             class="fa arrow"></span></a>
                     <ul class="nav nav-second-level">
                         <li>
-                            <a class="J_menuItem" href="/backend/formBuilder">表单构建器</a>
+                            <a class="J_menuItem" href="/backend/template/formBuilder">表单构建器</a>
                         </li>
                         <li>
-                            <a class="J_menuItem" href="/backend/cssAnimation">
+                            <a class="J_menuItem" href="/backend/template/cssAnimation">
                                 <i class="fa fa-magic"></i>
                                 <span class="nav-label">CSS动画</span>
                             </a>
@@ -475,7 +475,7 @@
             <a href="login.html" class="roll-nav roll-right J_tabExit"><i class="fa fa fa-sign-out"></i> 退出</a>
         </div>
         <div class="row J_mainContent" id="content-main">
-            <iframe class="J_iframe" name="iframe0" width="100%" height="100%" src="/backend/index_v5" frameborder="0"
+            <iframe class="J_iframe" name="iframe0" width="100%" height="100%" src="/backend/template/index_v5" frameborder="0"
                     data-id="index_v1.html" seamless></iframe>
         </div>
         <div class="footer">
