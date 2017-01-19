@@ -140,7 +140,7 @@ public interface Backend {
         interface PAGE {
             String PAGE = BASE + "/page";
             String CONTACTS = PAGE + "/contacts";
-            String ATRICLE = PAGE + "/article";
+            String ARTICLE = PAGE + "/article";
             String BLOG = PAGE + "/blog";
             String CALENDAR = PAGE + "/calendar";
             String CLIENTS = PAGE + "/clients";
@@ -298,7 +298,7 @@ public interface Backend {
         interface PAGE {
             String PAGE = BASE + "/page";
             String CONTACTS = PAGE + "/contacts";
-            String ATRICLE = PAGE + "/article";
+            String ARTICLE = PAGE + "/article";
             String BLOG = PAGE + "/blog";
             String CALENDAR = PAGE + "/calendar";
             String CLIENTS = PAGE + "/clients";

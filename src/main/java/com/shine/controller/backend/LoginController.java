@@ -40,7 +40,7 @@ public class LoginController {
     }
 
     /**
-     * 登录页面2
+     * 登录超时
      *
      * @param request
      * @return
