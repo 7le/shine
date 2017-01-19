@@ -21,7 +21,7 @@ import java.io.IOException;
  * Created by hq on 2017/1/19.
  */
 @Controller
-public class CommonController {
+public class LoginController {
 
     /**
      * µÇÂ¼Ò³Ãæ
