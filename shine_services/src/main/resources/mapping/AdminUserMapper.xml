@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.shine.dao.AdminUserMapper" >
+  <resultMap id="BaseResultMap" type="com.shine.dao.model.AdminUser" >
+    <id column="id" property="id" jdbcType="BIGINT" />
+    <result column="loginName" property="loginname" jdbcType="VARCHAR" />
+    <result column="password" property="password" jdbcType="VARCHAR" />
+    <result column="email" property="email" jdbcType="VARCHAR" />
+    <result column="type" property="type" jdbcType="SMALLINT" />
+    <result column="status" property="status" jdbcType="SMALLINT" />
+    <result column="crTime" property="crtime" jdbcType="TIMESTAMP" />
+    <result column="lastTime" property="lasttime" jdbcType="TIMESTAMP" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, loginName, password, email, type, status, crTime, lastTime
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+    select 
+    <include refid="Base_Column_List" />
+    from admin_user
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+    delete from admin_user
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="com.shine.dao.model.AdminUser" >
+    <selectKey resultType="java.lang.Long" keyProperty="id" order="AFTER" >
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into admin_user (loginName, password, email, 
+      type, status, crTime, 
+      lastTime)
+    values (#{loginname,jdbcType=VARCHAR}, #{password,jdbcType=VARCHAR}, #{email,jdbcType=VARCHAR}, 
+      #{type,jdbcType=SMALLINT}, #{status,jdbcType=SMALLINT}, #{crtime,jdbcType=TIMESTAMP}, 
+      #{lasttime,jdbcType=TIMESTAMP})
+  </insert>
+  <insert id="insertSelective" parameterType="com.shine.dao.model.AdminUser" >
+    <selectKey resultType="java.lang.Long" keyProperty="id" order="AFTER" >
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into admin_user
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="loginname != null" >
+        loginName,
+      </if>
+      <if test="password != null" >
+        password,
+      </if>
+      <if test="email != null" >
+        email,
+      </if>
+      <if test="type != null" >
+        type,
+      </if>
+      <if test="status != null" >
+        status,
+      </if>
+      <if test="crtime != null" >
+        crTime,
+      </if>
+      <if test="lasttime != null" >
+        lastTime,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="loginname != null" >
+        #{loginname,jdbcType=VARCHAR},
+      </if>
+      <if test="password != null" >
+        #{password,jdbcType=VARCHAR},
+      </if>
+      <if test="email != null" >
+        #{email,jdbcType=VARCHAR},
+      </if>
+      <if test="type != null" >
+        #{type,jdbcType=SMALLINT},
+      </if>
+      <if test="status != null" >
+        #{status,jdbcType=SMALLINT},
+      </if>
+      <if test="crtime != null" >
+        #{crtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="lasttime != null" >
+        #{lasttime,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.shine.dao.model.AdminUser" >
+    update admin_user
+    <set >
+      <if test="loginname != null" >
+        loginName = #{loginname,jdbcType=VARCHAR},
+      </if>
+      <if test="password != null" >
+        password = #{password,jdbcType=VARCHAR},
+      </if>
+      <if test="email != null" >
+        email = #{email,jdbcType=VARCHAR},
+      </if>
+      <if test="type != null" >
+        type = #{type,jdbcType=SMALLINT},
+      </if>
+      <if test="status != null" >
+        status = #{status,jdbcType=SMALLINT},
+      </if>
+      <if test="crtime != null" >
+        crTime = #{crtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="lasttime != null" >
+        lastTime = #{lasttime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.shine.dao.model.AdminUser" >
+    update admin_user
+    set loginName = #{loginname,jdbcType=VARCHAR},
+      password = #{password,jdbcType=VARCHAR},
+      email = #{email,jdbcType=VARCHAR},
+      type = #{type,jdbcType=SMALLINT},
+      status = #{status,jdbcType=SMALLINT},
+      crTime = #{crtime,jdbcType=TIMESTAMP},
+      lastTime = #{lasttime,jdbcType=TIMESTAMP}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+</mapper>

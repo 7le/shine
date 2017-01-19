@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.shine.dao.AdminPermissionMapper" >
+  <resultMap id="BaseResultMap" type="com.shine.dao.model.AdminPermission" >
+    <id column="id" property="id" jdbcType="BIGINT" />
+    <result column="pid" property="pid" jdbcType="BIGINT" />
+    <result column="title" property="title" jdbcType="VARCHAR" />
+    <result column="type" property="type" jdbcType="SMALLINT" />
+    <result column="state" property="state" jdbcType="SMALLINT" />
+    <result column="sort" property="sort" jdbcType="INTEGER" />
+    <result column="url" property="url" jdbcType="VARCHAR" />
+    <result column="permCode" property="permcode" jdbcType="VARCHAR" />
+    <result column="icon" property="icon" jdbcType="VARCHAR" />
+    <result column="description" property="description" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, pid, title, type, state, sort, url, permCode, icon, description
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+    select 
+    <include refid="Base_Column_List" />
+    from admin_permission
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+    delete from admin_permission
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="com.shine.dao.model.AdminPermission" >
+    <selectKey resultType="java.lang.Long" keyProperty="id" order="AFTER" >
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into admin_permission (pid, title, type, 
+      state, sort, url, 
+      permCode, icon, description
+      )
+    values (#{pid,jdbcType=BIGINT}, #{title,jdbcType=VARCHAR}, #{type,jdbcType=SMALLINT}, 
+      #{state,jdbcType=SMALLINT}, #{sort,jdbcType=INTEGER}, #{url,jdbcType=VARCHAR}, 
+      #{permcode,jdbcType=VARCHAR}, #{icon,jdbcType=VARCHAR}, #{description,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.shine.dao.model.AdminPermission" >
+    <selectKey resultType="java.lang.Long" keyProperty="id" order="AFTER" >
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into admin_permission
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="pid != null" >
+        pid,
+      </if>
+      <if test="title != null" >
+        title,
+      </if>
+      <if test="type != null" >
+        type,
+      </if>
+      <if test="state != null" >
+        state,
+      </if>
+      <if test="sort != null" >
+        sort,
+      </if>
+      <if test="url != null" >
+        url,
+      </if>
+      <if test="permcode != null" >
+        permCode,
+      </if>
+      <if test="icon != null" >
+        icon,
+      </if>
+      <if test="description != null" >
+        description,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="pid != null" >
+        #{pid,jdbcType=BIGINT},
+      </if>
+      <if test="title != null" >
+        #{title,jdbcType=VARCHAR},
+      </if>
+      <if test="type != null" >
+        #{type,jdbcType=SMALLINT},
+      </if>
+      <if test="state != null" >
+        #{state,jdbcType=SMALLINT},
+      </if>
+      <if test="sort != null" >
+        #{sort,jdbcType=INTEGER},
+      </if>
+      <if test="url != null" >
+        #{url,jdbcType=VARCHAR},
+      </if>
+      <if test="permcode != null" >
+        #{permcode,jdbcType=VARCHAR},
+      </if>
+      <if test="icon != null" >
+        #{icon,jdbcType=VARCHAR},
+      </if>
+      <if test="description != null" >
+        #{description,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.shine.dao.model.AdminPermission" >
+    update admin_permission
+    <set >
+      <if test="pid != null" >
+        pid = #{pid,jdbcType=BIGINT},
+      </if>
+      <if test="title != null" >
+        title = #{title,jdbcType=VARCHAR},
+      </if>
+      <if test="type != null" >
+        type = #{type,jdbcType=SMALLINT},
+      </if>
+      <if test="state != null" >
+        state = #{state,jdbcType=SMALLINT},
+      </if>
+      <if test="sort != null" >
+        sort = #{sort,jdbcType=INTEGER},
+      </if>
+      <if test="url != null" >
+        url = #{url,jdbcType=VARCHAR},
+      </if>
+      <if test="permcode != null" >
+        permCode = #{permcode,jdbcType=VARCHAR},
+      </if>
+      <if test="icon != null" >
+        icon = #{icon,jdbcType=VARCHAR},
+      </if>
+      <if test="description != null" >
+        description = #{description,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.shine.dao.model.AdminPermission" >
+    update admin_permission
+    set pid = #{pid,jdbcType=BIGINT},
+      title = #{title,jdbcType=VARCHAR},
+      type = #{type,jdbcType=SMALLINT},
+      state = #{state,jdbcType=SMALLINT},
+      sort = #{sort,jdbcType=INTEGER},
+      url = #{url,jdbcType=VARCHAR},
+      permCode = #{permcode,jdbcType=VARCHAR},
+      icon = #{icon,jdbcType=VARCHAR},
+      description = #{description,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+</mapper>

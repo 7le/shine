@@ -39,7 +39,7 @@
         </javaClientGenerator>
 
 
-        <table tableName="dictionary" domainObjectName="Dictionary" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false"
+       <!-- <table tableName="dictionary" domainObjectName="Dictionary" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false"
                enableUpdateByExample="false">
             <generatedKey column="id" sqlStatement="MySql" identity="true"/>
         </table>
@@ -47,6 +47,31 @@
                enableUpdateByExample="false">
             <generatedKey column="id" sqlStatement="MySql" identity="true"/>
         </table>
+
+        <table tableName="admin_permission" domainObjectName="AdminPermission" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false"
+               enableUpdateByExample="false">
+            <generatedKey column="id" sqlStatement="MySql" identity="true"/>
+        </table>
+        <table tableName="admin_role" domainObjectName="AdminRole" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false"
+               enableUpdateByExample="false">
+            <generatedKey column="id" sqlStatement="MySql" identity="true"/>
+        </table>
+        <table tableName="admin_role_permission" domainObjectName="AdminRolePermission" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false"
+               enableUpdateByExample="false">
+            <generatedKey column="id" sqlStatement="MySql" identity="true"/>
+        </table>
+        <table tableName="admin_sys_log" domainObjectName="AdminSysLog" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false"
+               enableUpdateByExample="false">
+            <generatedKey column="id" sqlStatement="MySql" identity="true"/>
+        </table>
+        <table tableName="admin_user" domainObjectName="AdminUser" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false"
+               enableUpdateByExample="false">
+            <generatedKey column="id" sqlStatement="MySql" identity="true"/>
+        </table>
+        <table tableName="admin_user_role" domainObjectName="AdminUserRole" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false"
+               enableUpdateByExample="false">
+            <generatedKey column="id" sqlStatement="MySql" identity="true"/>
+        </table>-->
 
     </context>
 </generatorConfiguration>
