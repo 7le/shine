@@ -12,8 +12,7 @@ import javax.servlet.http.HttpServletRequest;
  * Created by hq on 2016/12/13.
  */
 @Controller
-@RequestMapping(value = Template.URL.LOGIN.LOGIN)
-public class LoginController {
+public class EditLoginController {
 
     /**
      * 登录页面
