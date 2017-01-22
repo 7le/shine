@@ -17,8 +17,7 @@ import javax.servlet.http.HttpServletRequest;
 public class LoginController {
 
     /**
-     *  µÇÂ¼Ò³Ãæ
-     *
+     * µÇÂ¼Ò³Ãæ
      * @param request
      * @return
      */
@@ -29,8 +28,7 @@ public class LoginController {
     }
 
     /**
-     *  µÇÂ¼Ò³Ãæ2
-     *
+     * µÇÂ¼Ò³Ãæ2
      * @param request
      * @return
      */
@@ -41,8 +39,7 @@ public class LoginController {
     }
 
     /**
-     *  µÇÂ½³¬Ê±
-     *
+     * µÇÂ¼³¬Ê±
      * @param request
      * @return
      */
