@@ -1,24 +1,21 @@
 package com.shine.controller.backend;
 
-
 import com.shine.constant.Backend;
-
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
+
 import javax.servlet.http.HttpServletRequest;
 
-
 /**
- * ³£ÓÃ·½·¨¿ØÖÆÆ÷
- * Created by hq on 2017/1/19.
+ * Created by hq on 2017/1/22.
  */
 @Controller
 public class LoginController {
 
     /**
-     * µÇÂ¼Ò³Ãæ
-     * µÇÂ¼Ò³Ãæ
+     * ç™»å½•é¡µé¢1
+     *
      * @param request
      * @return
      */
@@ -29,6 +26,7 @@ public class LoginController {
     }
 
     /**
+     * ç™»å½•é¡µé¢2
      *
      * @param request
      * @return
@@ -40,6 +38,7 @@ public class LoginController {
     }
 
     /**
+     * ç™»å½•è¶…æ—¶
      *
      * @param request
      * @return
