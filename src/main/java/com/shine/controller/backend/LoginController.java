@@ -41,7 +41,7 @@ public class LoginController {
     }
 
     /**
-     *  µÇÂ¼³¬Ê±
+     *  µÇÂ½³¬Ê±
      *
      * @param request
      * @return
