@@ -17,7 +17,7 @@ import javax.servlet.http.HttpServletRequest;
 public class LoginController {
 
     /**
-     *  µÇÂ½½çÃæ
+     * µÇÂ¼Ò³Ãæ
      * @param request
      * @return
      */
