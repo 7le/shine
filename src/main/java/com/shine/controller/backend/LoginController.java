@@ -14,10 +14,7 @@ import javax.servlet.http.HttpServletRequest;
 public class LoginController {
 
     /**
-     * 登录页面1
-     *
-     * @param request
-     * @return
+     * 登录界面1
      */
     @RequestMapping(value = Backend.URL.LOGIN.LOGINVIEW)
     public ModelAndView loginView(HttpServletRequest request) {
@@ -26,10 +23,7 @@ public class LoginController {
     }
 
     /**
-     * 登录页面2
-     *
-     * @param request
-     * @return
+     *登录界面2
      */
     @RequestMapping(value = Backend.URL.LOGIN.LOGINVIEWS)
     public ModelAndView loginVView(HttpServletRequest request) {
@@ -39,9 +33,6 @@ public class LoginController {
 
     /**
      * 登录超时
-     *
-     * @param request
-     * @return
      */
     @RequestMapping(value = Backend.URL.LOGIN.LOCKSCREEN)
     public ModelAndView lockscreenView(HttpServletRequest request) {
