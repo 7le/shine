@@ -42,15 +42,16 @@ public interface Backend {
          * 主页
          */
         interface INDEX {
-            String INDEXVIEW = BASE + "/index";
-            String INDEX_V5 = BASE + "/index_v5";
+            String INDEX = BASE;
+            String INDEXVIEW = INDEX + "/index";
+            String INDEX_V5 = INDEX + "/index_v5";
         }
 
         /**
          * 注册
          */
         interface REGISTER {
-            String REGISTER = BASE + "/common";
+            String REGISTER = BASE ;
             String REGISTERVIEW = REGISTER + "/register";
         }
 
@@ -58,7 +59,7 @@ public interface Backend {
          * 登陆
          */
         interface LOGIN {
-            String LOGIN = BASE + "/common";
+            String LOGIN = BASE ;
             String LOGINVIEW = LOGIN + "/login";
             String LOGINVIEWS = LOGIN + "/login_s";
             String LOCKSCREEN = LOGIN + "/lockscreen";

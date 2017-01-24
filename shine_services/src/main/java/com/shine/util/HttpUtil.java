@@ -12,7 +12,7 @@ import java.util.Map;
 public class HttpUtil {
 
     /**
-     * �û�����*
+     * 用户代理
      */
     protected static final String USER_AGENT = "User-Agent";
 
@@ -53,7 +53,7 @@ public class HttpUtil {
     }
 
     /**
-     * ��ȡip��ַ
+     * 得到IP地址
      *
      * @param request the current request
      * @return IP to application

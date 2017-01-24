@@ -1,7 +1,6 @@
-package com.shine.controller.backend.edit;
+package com.shine.controller.backend;
 
-import com.shine.constant.Template;
-import com.shine.controller.backend.BackendController;
+import com.shine.constant.Backend;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
@@ -17,9 +16,9 @@ public class IndexController extends BackendController {
     /**
      * 登录首页
      */
-    @RequestMapping(value = Template.URL.INDEX.INDEXVIEW)
+    @RequestMapping(value = Backend.URL.INDEX.INDEXVIEW)
     public ModelAndView index(HttpServletRequest request) {
-        ModelAndView modelAndView = new ModelAndView(Template.PATH.INDEX.INDEXVIEW);
+        ModelAndView modelAndView = new ModelAndView(Backend.PATH.INDEX.INDEXVIEW);
 
         return modelAndView;
     }
@@ -27,9 +26,9 @@ public class IndexController extends BackendController {
     /**
      * 主页部分
      */
-    @RequestMapping(value = Template.URL.INDEX.INDEX_V5)
+    @RequestMapping(value = Backend.URL.INDEX.INDEX_V5)
     public ModelAndView index_v5(HttpServletRequest request) {
-        ModelAndView modelAndView = new ModelAndView(Template.PATH.INDEX.INDEX_V5);
+        ModelAndView modelAndView = new ModelAndView(Backend.PATH.INDEX.INDEX_V5);
 
         return modelAndView;
     }

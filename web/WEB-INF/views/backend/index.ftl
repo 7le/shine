@@ -1,21 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="renderer" content="webkit">
-<#--    <meta http-equiv="Cache-Control" content="no-siteapp" />-->
-    <title>微光 后台 - 主页</title>
-    <!--[if lt IE 9]>
-    <meta http-equiv="refresh" content="0;ie.html"/>
-    <![endif]-->
-
-    <link rel="shortcut icon" href="favicon.ico">
-    <link href="/static/backend/css/bootstrap.min14ed.css?v=3.3.6" rel="stylesheet">
-    <link href="/static/backend/css/font-awesome.min93e3.css?v=4.4.0" rel="stylesheet">
-    <link href="/static/backend/css/animate.min.css" rel="stylesheet">
-    <link href="/static/backend/css/style.min862f.css?v=4.1.0" rel="stylesheet">
-</head>
+<#include "/backend/common/head.ftl">
 <body class="fixed-sidebar full-height-layout gray-bg" style="overflow:hidden">
 <div id="wrapper">
     <!--左侧导航开始-->
@@ -892,13 +875,4 @@
         </a>
     </div>
 </div>
-<script src="/static/backend/js/jquery.min.js?v=2.1.4"></script>
-<script src="/static/backend/js/bootstrap.min.js?v=3.3.6"></script>
-<script src="/static/backend/js/plugins/metisMenu/jquery.metisMenu.js"></script>
-<script src="/static/backend/js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
-<script src="/static/backend/js/plugins/layer/layer.min.js"></script>
-<script src="/static/backend/js/hplus.min.js?v=4.1.0"></script>
-<script type="text/javascript" src="/static/backend/js/contabs.min.js"></script>
-<script src="/static/backend/js/plugins/pace/pace.min.js"></script>
-</body>
-</html>
+<#include "/backend/common/foot.ftl">

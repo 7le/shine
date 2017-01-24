@@ -18,6 +18,12 @@
     <!--mvc拦截器配置-->
     <mvc:interceptors>
 
+        <!-- 全局变量 -->
+        <mvc:interceptor>
+            <mvc:mapping path="/**" />
+            <bean class="com.shine.interceptor.GlobalInterceptor"></bean>
+        </mvc:interceptor>
+
         <!--带有图形验证码的操作-->
         <mvc:interceptor>
             <mvc:mapping path="/member/login/doLogin"/>
