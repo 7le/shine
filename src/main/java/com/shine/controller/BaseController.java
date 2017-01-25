@@ -3,6 +3,7 @@ package com.shine.controller;
 import com.shine.j2cache.LoginAdminCache;
 import com.shine.j2cache.LoginMemberCache;
 import com.shine.j2cache.VerifyCodePhoneCache;
+import com.shine.service.LoginService;
 import com.shine.service.ResourcesService;
 import net.sf.json.JSONObject;
 import org.apache.log4j.Logger;
@@ -38,6 +39,8 @@ public class BaseController {
     @Autowired
     protected ResourcesService resourcesService;
 
+    @Autowired
+    protected LoginService loginService;
     //dao
 
     /** jq Grid **/

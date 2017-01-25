@@ -30,8 +30,8 @@ public interface Backend {
         interface LOGIN {
             String LOGIN = BASE;
             String LOGINVIEW = LOGIN + "/login";
-            String LOGINVIEWS = LOGIN + "/login_s";
             String LOCKSCREEN = LOGIN + "/lockscreen";
+            String DOLOGIN=LOGIN+"/doLogin";
         }
     }
 
@@ -61,7 +61,6 @@ public interface Backend {
         interface LOGIN {
             String LOGIN = BASE ;
             String LOGINVIEW = LOGIN + "/login";
-            String LOGINVIEWS = LOGIN + "/login_s";
             String LOCKSCREEN = LOGIN + "/lockscreen";
         }
     }

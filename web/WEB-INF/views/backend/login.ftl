@@ -48,8 +48,8 @@
                 <h4 class="no-margins">登录：</h4>
 
                 <p class="m-t-md">登录到Shine 后台</p>
-                <input type="text" class="form-control uname" placeholder="用户名"/>
-                <input type="password" class="form-control pword m-b" placeholder="密码"/>
+                <input type="text" class="form-control uname" placeholder="用户名" name="loginName"/>
+                <input type="password" class="form-control pword m-b" placeholder="密码" name="password"/>
                 <a href="#">忘记密码了？</a>
                 <button class="btn btn-success btn-block">登录</button>
             </form>

@@ -125,4 +125,12 @@
       lastTime = #{lasttime,jdbcType=TIMESTAMP}
     where id = #{id,jdbcType=BIGINT}
   </update>
+
+  <select id="selectByLoginName" resultMap="BaseResultMap">
+    SELECT
+    <include refid="Base_Column_List"/>
+    FROM admin_user
+    WHERE loginName = #{loginName}
+  </select>
+
 </mapper>

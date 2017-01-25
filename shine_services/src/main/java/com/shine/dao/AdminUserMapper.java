@@ -14,4 +14,9 @@ public interface AdminUserMapper {
     int updateByPrimaryKeySelective(AdminUser record);
 
     int updateByPrimaryKey(AdminUser record);
+
+    /**
+     * 根据用户名查找管理员
+     */
+    AdminUser selectByLoginName(String loginName);
 }

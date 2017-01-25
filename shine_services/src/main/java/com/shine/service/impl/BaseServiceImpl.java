@@ -3,6 +3,7 @@ package com.shine.service.impl;
 
 import com.shine.bean.rmi.SystemServiceFactory;
 
+import com.shine.dao.AdminUserMapper;
 import com.shine.j2cache.LoginAdminCache;
 import com.shine.j2cache.LoginAgentCache;
 import com.shine.j2cache.LoginMemberCache;
@@ -42,6 +43,9 @@ public class BaseServiceImpl {
     /**
      * mybatis dao接口
      */
+    @Autowired
+    protected AdminUserMapper adminUserMapper;
+
 
 /*
     @Autowired
