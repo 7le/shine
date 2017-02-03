@@ -13,7 +13,9 @@
     <link href="/static/backend/css/plugins/iCheck/custom.css" rel="stylesheet">
     <link href="/static/backend/css/animate.min.css" rel="stylesheet">
     <link href="/static/backend/css/style.min862f.css?v=4.1.0" rel="stylesheet">
-    <script>if(window.top !== window.self){ window.top.location = window.location;}</script>
+    <script>if (window.top !== window.self) {
+        window.top.location = window.location;
+    }</script>
 
 </head>
 
@@ -27,7 +29,9 @@
 
         </div>
         <h3>欢迎注册 Shine</h3>
+
         <p>创建一个Shine新账户</p>
+
         <form class="m-t" role="form" action="">
             <div class="form-group">
                 <input type="text" class="form-control" placeholder="请输入用户名" required="">
@@ -46,7 +50,9 @@
             </div>
             <button type="submit" class="btn btn-primary block full-width m-b">注 册</button>
 
-            <p class="text-muted text-center"><small>已经有账户了？</small><a href="/backend/login">点此登录</a>
+            <p class="text-muted text-center">
+                <small>已经有账户了？</small>
+                <a href="/backend/login">点此登录</a>
             </p>
 
         </form>
@@ -56,7 +62,9 @@
 <script src="/static/backend/js/bootstrap.min.js?v=3.3.6"></script>
 <script src="/static/backend/js/plugins/iCheck/icheck.min.js"></script>
 <script>
-    $(document).ready(function(){$(".i-checks").iCheck({checkboxClass:"icheckbox_square-green",radioClass:"iradio_square-green",})});
+    $(document).ready(function () {
+        $(".i-checks").iCheck({checkboxClass: "icheckbox_square-green", radioClass: "iradio_square-green",})
+    });
 </script>
 <script type="text/javascript" src="http://tajs.qq.com/stats?sId=9051096" charset="UTF-8"></script>
 </body>

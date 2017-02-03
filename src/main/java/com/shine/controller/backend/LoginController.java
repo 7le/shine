@@ -3,6 +3,7 @@ package com.shine.controller.backend;
 import com.shine.bean.ResultBean;
 import com.shine.constant.Backend;
 import com.shine.controller.BaseController;
+import com.shine.dao.model.AdminUser;
 import com.shine.util.HttpUtil;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -41,11 +42,35 @@ public class LoginController extends BaseController{
     @RequestMapping(value = Backend.URL.LOGIN.DOLOGIN)
     public ResultBean doLogin(HttpServletRequest request,String userName,String password){
         //执行登录
-        String errorReport = loginService.doAdminLogin(userName, password, request);
+        String errorReport = adminService.doAdminLogin(userName, password, request);
         if (errorReport != null) {
             return new ResultBean(false, errorReport);
         } else {
             return new ResultBean(true, "登录成功");
+        }
+    }
+
+    /**
+     * 注册页面
+     * @param request
+     * @return
+     */
+    @RequestMapping(value = Backend.URL.REGISTER.REGISTERVIEW)
+    public String registerView(HttpServletRequest request) {
+        return Backend.PATH.REGISTER.REGISTERVIEW;
+    }
+
+    /**
+     * 帐号密码登录
+     */
+    @RequestMapping(value = Backend.URL.LOGIN.DOLOGIN)
+    public ResultBean doRegister(HttpServletRequest request,AdminUser adminUser){
+        //执行登录
+        String errorReport = adminService.doAdminRegister(adminUser);
+        if (errorReport != null) {
+            return new ResultBean(false, errorReport);
+        } else {
+            return new ResultBean(true, "注册成功");
         }
     }
 
