@@ -4,7 +4,6 @@ import com.shine.bean.ResultBean;
 import com.shine.constant.Backend;
 import com.shine.controller.BaseController;
 import com.shine.dao.model.AdminUser;
-import com.shine.util.HttpUtil;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
@@ -61,9 +60,9 @@ public class LoginController extends BaseController{
     }
 
     /**
-     * 帐号密码登录
+     * 注册帐号密码登录
      */
-    @RequestMapping(value = Backend.URL.LOGIN.DOLOGIN)
+    @RequestMapping(value = Backend.URL.REGISTER.DOREGISTERVIEW)
     public ResultBean doRegister(HttpServletRequest request,AdminUser adminUser){
         //执行登录
         String errorReport = adminService.doAdminRegister(adminUser);

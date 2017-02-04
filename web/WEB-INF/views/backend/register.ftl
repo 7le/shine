@@ -32,7 +32,7 @@
 
         <p>创建一个Shine新账户</p>
 
-        <form class="m-t" role="form" action="">
+        <form class="m-t" role="form" action="/backend/register">
             <div class="form-group">
                 <input type="text" class="form-control" placeholder="请输入用户名" required="">
             </div>

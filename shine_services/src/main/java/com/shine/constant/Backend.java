@@ -22,6 +22,7 @@ public interface Backend {
         interface REGISTER {
             String REGISTER = BASE;
             String REGISTERVIEW = REGISTER + "/register";
+            String DOREGISTERVIEW=REGISTER+"/doRegister";
         }
 
         /**
