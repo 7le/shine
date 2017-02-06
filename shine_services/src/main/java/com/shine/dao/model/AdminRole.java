@@ -5,7 +5,7 @@ public class AdminRole {
 
     private String name;
 
-    private Short sort;
+    private Integer sort;
 
     private String description;
 
@@ -25,11 +25,11 @@ public class AdminRole {
         this.name = name == null ? null : name.trim();
     }
 
-    public Short getSort() {
+    public Integer getSort() {
         return sort;
     }
 
-    public void setSort(Short sort) {
+    public void setSort(Integer sort) {
         this.sort = sort;
     }
 

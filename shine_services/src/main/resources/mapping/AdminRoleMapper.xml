@@ -4,7 +4,7 @@
   <resultMap id="BaseResultMap" type="com.shine.dao.model.AdminRole" >
     <id column="id" property="id" jdbcType="BIGINT" />
     <result column="name" property="name" jdbcType="VARCHAR" />
-    <result column="sort" property="sort" jdbcType="SMALLINT" />
+    <result column="sort" property="sort" jdbcType="INTEGER" />
     <result column="description" property="description" jdbcType="VARCHAR" />
   </resultMap>
   <sql id="Base_Column_List" >
@@ -26,7 +26,7 @@
     </selectKey>
     insert into admin_role (name, sort, description
       )
-    values (#{name,jdbcType=VARCHAR}, #{sort,jdbcType=SMALLINT}, #{description,jdbcType=VARCHAR}
+    values (#{name,jdbcType=VARCHAR}, #{sort,jdbcType=INTEGER}, #{description,jdbcType=VARCHAR}
       )
   </insert>
   <insert id="insertSelective" parameterType="com.shine.dao.model.AdminRole" >
@@ -50,7 +50,7 @@
         #{name,jdbcType=VARCHAR},
       </if>
       <if test="sort != null" >
-        #{sort,jdbcType=SMALLINT},
+        #{sort,jdbcType=INTEGER},
       </if>
       <if test="description != null" >
         #{description,jdbcType=VARCHAR},
@@ -64,7 +64,7 @@
         name = #{name,jdbcType=VARCHAR},
       </if>
       <if test="sort != null" >
-        sort = #{sort,jdbcType=SMALLINT},
+        sort = #{sort,jdbcType=INTEGER},
       </if>
       <if test="description != null" >
         description = #{description,jdbcType=VARCHAR},
@@ -75,7 +75,7 @@
   <update id="updateByPrimaryKey" parameterType="com.shine.dao.model.AdminRole" >
     update admin_role
     set name = #{name,jdbcType=VARCHAR},
-      sort = #{sort,jdbcType=SMALLINT},
+      sort = #{sort,jdbcType=INTEGER},
       description = #{description,jdbcType=VARCHAR}
     where id = #{id,jdbcType=BIGINT}
   </update>

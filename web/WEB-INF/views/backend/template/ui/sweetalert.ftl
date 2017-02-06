@@ -33,8 +33,10 @@
                     <strong>可以替换JavaScript中alert的插件</strong>
 
                     <p>
-                        Sweet Alert 是一个替代传统的 JavaScript Alert 的漂亮提示效果。SweetAlert 自动居中对齐在页面中央，不管您使用的是台式电脑，手机或平板电脑看起来效果都很棒。另外提供了丰富的自定义配置选择，可以灵活控制。项目主页：
-                        <a href="http://t4t5.github.io/sweetalert/" target="_blank">http://t4t5.github.io/sweetalert/</a>
+                        Sweet Alert 是一个替代传统的 JavaScript Alert 的漂亮提示效果。SweetAlert
+                        自动居中对齐在页面中央，不管您使用的是台式电脑，手机或平板电脑看起来效果都很棒。另外提供了丰富的自定义配置选择，可以灵活控制。项目主页：
+                        <a href="http://t4t5.github.io/sweetalert/"
+                           target="_blank">http://t4t5.github.io/sweetalert/</a>
 
                     </p>
 
@@ -56,9 +58,6 @@
                             <p>通过传参可以自定义取消按钮 </p>
                             <button class="btn btn-danger btn-sm demo4">打开示例</button>
                         </div>
-
-
-
 
 
                     </div>
@@ -92,7 +91,46 @@ $('.demo3').click(function () {
 <script src="/static/backend/js/content.min.js?v=1.0.0"></script>
 <script src="/static/backend/js/plugins/sweetalert/sweetalert.min.js"></script>
 <script>
-    $(document).ready(function(){$(".demo1").click(function(){swal({title:"欢迎使用SweetAlert",text:"Sweet Alert 是一个替代传统的 JavaScript Alert 的漂亮提示效果。"})});$(".demo2").click(function(){swal({title:"太帅了",text:"小手一抖就打开了一个框",type:"success"})});$(".demo3").click(function(){swal({title:"您确定要删除这条信息吗",text:"删除后将无法恢复，请谨慎操作！",type:"warning",showCancelButton:true,confirmButtonColor:"#DD6B55",confirmButtonText:"删除",closeOnConfirm:false},function(){swal("删除成功！","您已经永久删除了这条信息。","success")})});$(".demo4").click(function(){swal({title:"您确定要删除这条信息吗",text:"删除后将无法恢复，请谨慎操作！",type:"warning",showCancelButton:true,confirmButtonColor:"#DD6B55",confirmButtonText:"是的，我要删除！",cancelButtonText:"让我再考虑一下…",closeOnConfirm:false,closeOnCancel:false},function(isConfirm){if(isConfirm){swal("删除成功！","您已经永久删除了这条信息。","success")}else{swal("已取消","您取消了删除操作！","error")}})})});
+    $(document).ready(function () {
+        $(".demo1").click(function () {
+            swal({title: "欢迎使用SweetAlert", text: "Sweet Alert 是一个替代传统的 JavaScript Alert 的漂亮提示效果。"})
+        });
+        $(".demo2").click(function () {
+            swal({title: "太帅了", text: "小手一抖就打开了一个框", type: "success"})
+        });
+        $(".demo3").click(function () {
+            swal({
+                title: "您确定要删除这条信息吗",
+                text: "删除后将无法恢复，请谨慎操作！",
+                type: "warning",
+                showCancelButton: true,
+                confirmButtonColor: "#DD6B55",
+                confirmButtonText: "删除",
+                closeOnConfirm: false
+            }, function () {
+                swal("删除成功！", "您已经永久删除了这条信息。", "success")
+            })
+        });
+        $(".demo4").click(function () {
+            swal({
+                title: "您确定要删除这条信息吗",
+                text: "删除后将无法恢复，请谨慎操作！",
+                type: "warning",
+                showCancelButton: true,
+                confirmButtonColor: "#DD6B55",
+                confirmButtonText: "是的，我要删除！",
+                cancelButtonText: "让我再考虑一下…",
+                closeOnConfirm: false,
+                closeOnCancel: false
+            }, function (isConfirm) {
+                if (isConfirm) {
+                    swal("删除成功！", "您已经永久删除了这条信息。", "success")
+                } else {
+                    swal("已取消", "您取消了删除操作！", "error")
+                }
+            })
+        })
+    });
 </script>
 <script type="text/javascript" src="http://tajs.qq.com/stats?sId=9051096" charset="UTF-8"></script>
 </body>

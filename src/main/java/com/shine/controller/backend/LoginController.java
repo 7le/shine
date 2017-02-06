@@ -2,13 +2,18 @@ package com.shine.controller.backend;
 
 import com.shine.bean.ResultBean;
 import com.shine.constant.Backend;
+import com.shine.constant.enums.UserType;
 import com.shine.controller.BaseController;
 import com.shine.dao.model.AdminUser;
+import com.shine.util.MD5Util;
+import com.shine.util.TimeUtil;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
+import java.util.Date;
 
 /**
  * Created by hq on 2017/1/22.
@@ -39,9 +44,10 @@ public class LoginController extends BaseController{
      * 帐号密码登录
      */
     @RequestMapping(value = Backend.URL.LOGIN.DOLOGIN)
-    public ResultBean doLogin(HttpServletRequest request,String userName,String password){
+    @ResponseBody
+    public ResultBean doLogin(HttpServletRequest request,String loginName,String password){
         //执行登录
-        String errorReport = adminService.doAdminLogin(userName, password, request);
+        String errorReport = adminService.doAdminLogin(loginName, password, request);
         if (errorReport != null) {
             return new ResultBean(false, errorReport);
         } else {
@@ -60,10 +66,19 @@ public class LoginController extends BaseController{
     }
 
     /**
-     * 注册帐号密码登录
+     * 注册帐号密码
      */
     @RequestMapping(value = Backend.URL.REGISTER.DOREGISTERVIEW)
-    public ResultBean doRegister(HttpServletRequest request,AdminUser adminUser){
+    @ResponseBody
+    public ResultBean doRegister(String loginName,String password){
+
+        AdminUser adminUser=new AdminUser();
+        adminUser.setLoginName(loginName);
+        adminUser.setPassword(MD5Util.doImaoMd5(loginName,password));
+        adminUser.setType(UserType.MEMBER.key());
+        adminUser.setCrTime(System.currentTimeMillis());
+        adminUser.setLastTime(adminUser.getCrTime());
+
         //执行登录
         String errorReport = adminService.doAdminRegister(adminUser);
         if (errorReport != null) {

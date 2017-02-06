@@ -1,23 +1,21 @@
 package com.shine.dao.model;
 
-import java.util.Date;
-
 public class AdminUser {
     private Long id;
 
-    private String loginname;
+    private String loginName;
 
     private String password;
 
     private String email;
 
-    private Short type;
+    private Integer type;
 
-    private Short status;
+    private Integer status;
 
-    private Date crtime;
+    private Long crTime;
 
-    private Date lasttime;
+    private Long lastTime;
 
     public Long getId() {
         return id;
@@ -27,12 +25,12 @@ public class AdminUser {
         this.id = id;
     }
 
-    public String getLoginname() {
-        return loginname;
+    public String getLoginName() {
+        return loginName;
     }
 
-    public void setLoginname(String loginname) {
-        this.loginname = loginname == null ? null : loginname.trim();
+    public void setLoginName(String loginName) {
+        this.loginName = loginName == null ? null : loginName.trim();
     }
 
     public String getPassword() {
@@ -51,35 +49,35 @@ public class AdminUser {
         this.email = email == null ? null : email.trim();
     }
 
-    public Short getType() {
+    public Integer getType() {
         return type;
     }
 
-    public void setType(Short type) {
+    public void setType(Integer type) {
         this.type = type;
     }
 
-    public Short getStatus() {
+    public Integer getStatus() {
         return status;
     }
 
-    public void setStatus(Short status) {
+    public void setStatus(Integer status) {
         this.status = status;
     }
 
-    public Date getCrtime() {
-        return crtime;
+    public Long getCrTime() {
+        return crTime;
     }
 
-    public void setCrtime(Date crtime) {
-        this.crtime = crtime;
+    public void setCrTime(Long crTime) {
+        this.crTime = crTime;
     }
 
-    public Date getLasttime() {
-        return lasttime;
+    public Long getLastTime() {
+        return lastTime;
     }
 
-    public void setLasttime(Date lasttime) {
-        this.lasttime = lasttime;
+    public void setLastTime(Long lastTime) {
+        this.lastTime = lastTime;
     }
 }

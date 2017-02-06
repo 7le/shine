@@ -11,7 +11,7 @@ public class AdminSysLog {
 
     private String operation;
 
-    private Date crtime;
+    private Long crtime;
 
     public Long getId() {
         return id;
@@ -45,11 +45,11 @@ public class AdminSysLog {
         this.operation = operation == null ? null : operation.trim();
     }
 
-    public Date getCrtime() {
+    public Long getCrtime() {
         return crtime;
     }
 
-    public void setCrtime(Date crtime) {
+    public void setCrtime(Long crtime) {
         this.crtime = crtime;
     }
 }

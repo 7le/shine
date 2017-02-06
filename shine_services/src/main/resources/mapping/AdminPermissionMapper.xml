@@ -5,8 +5,8 @@
     <id column="id" property="id" jdbcType="BIGINT" />
     <result column="pid" property="pid" jdbcType="BIGINT" />
     <result column="title" property="title" jdbcType="VARCHAR" />
-    <result column="type" property="type" jdbcType="SMALLINT" />
-    <result column="state" property="state" jdbcType="SMALLINT" />
+    <result column="type" property="type" jdbcType="INTEGER" />
+    <result column="state" property="state" jdbcType="INTEGER" />
     <result column="sort" property="sort" jdbcType="INTEGER" />
     <result column="url" property="url" jdbcType="VARCHAR" />
     <result column="permCode" property="permcode" jdbcType="VARCHAR" />
@@ -34,8 +34,8 @@
       state, sort, url, 
       permCode, icon, description
       )
-    values (#{pid,jdbcType=BIGINT}, #{title,jdbcType=VARCHAR}, #{type,jdbcType=SMALLINT}, 
-      #{state,jdbcType=SMALLINT}, #{sort,jdbcType=INTEGER}, #{url,jdbcType=VARCHAR}, 
+    values (#{pid,jdbcType=BIGINT}, #{title,jdbcType=VARCHAR}, #{type,jdbcType=INTEGER},
+      #{state,jdbcType=INTEGER}, #{sort,jdbcType=INTEGER}, #{url,jdbcType=VARCHAR},
       #{permcode,jdbcType=VARCHAR}, #{icon,jdbcType=VARCHAR}, #{description,jdbcType=VARCHAR}
       )
   </insert>
@@ -81,10 +81,10 @@
         #{title,jdbcType=VARCHAR},
       </if>
       <if test="type != null" >
-        #{type,jdbcType=SMALLINT},
+        #{type,jdbcType=INTEGER},
       </if>
       <if test="state != null" >
-        #{state,jdbcType=SMALLINT},
+        #{state,jdbcType=INTEGER},
       </if>
       <if test="sort != null" >
         #{sort,jdbcType=INTEGER},
@@ -113,10 +113,10 @@
         title = #{title,jdbcType=VARCHAR},
       </if>
       <if test="type != null" >
-        type = #{type,jdbcType=SMALLINT},
+        type = #{type,jdbcType=INTEGER},
       </if>
       <if test="state != null" >
-        state = #{state,jdbcType=SMALLINT},
+        state = #{state,jdbcType=INTEGER},
       </if>
       <if test="sort != null" >
         sort = #{sort,jdbcType=INTEGER},
@@ -140,8 +140,8 @@
     update admin_permission
     set pid = #{pid,jdbcType=BIGINT},
       title = #{title,jdbcType=VARCHAR},
-      type = #{type,jdbcType=SMALLINT},
-      state = #{state,jdbcType=SMALLINT},
+      type = #{type,jdbcType=INTEGER},
+      state = #{state,jdbcType=INTEGER},
       sort = #{sort,jdbcType=INTEGER},
       url = #{url,jdbcType=VARCHAR},
       permCode = #{permcode,jdbcType=VARCHAR},

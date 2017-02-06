@@ -7,9 +7,9 @@ public class AdminPermission {
 
     private String title;
 
-    private Short type;
+    private Integer type;
 
-    private Short state;
+    private Integer state;
 
     private Integer sort;
 
@@ -45,19 +45,19 @@ public class AdminPermission {
         this.title = title == null ? null : title.trim();
     }
 
-    public Short getType() {
+    public Integer getType() {
         return type;
     }
 
-    public void setType(Short type) {
+    public void setType(Integer type) {
         this.type = type;
     }
 
-    public Short getState() {
+    public Integer getState() {
         return state;
     }
 
-    public void setState(Short state) {
+    public void setState(Integer state) {
         this.state = state;
     }
 
