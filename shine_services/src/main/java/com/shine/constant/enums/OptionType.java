@@ -2,9 +2,9 @@ package com.shine.constant.enums;
 
 public enum OptionType {
 
-    OP_INSERT(1, "²åÈë"),
+    OP_INSERT(1, "æ’å…¥"),
 
-    OP_EDIT(2, "¸üĞÂ");
+    OP_EDIT(2, "æ›´æ–°");
 
     private final int op;
 
