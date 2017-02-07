@@ -4,7 +4,7 @@ package com.shine.constant.enums;
 import com.shine.constant.IEnum;
 
 public enum PermissionType implements IEnum {
-	MENU(0, "普通用户"), OPERATION(1, "管理员");
+	MENU(0, "菜单"), OPERATION(1, "功能");
 
 	private final int key;
 	private final String desc;
