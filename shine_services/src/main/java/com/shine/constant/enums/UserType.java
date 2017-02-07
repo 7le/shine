@@ -4,7 +4,7 @@ package com.shine.constant.enums;
 import com.shine.constant.IEnum;
 
 public enum UserType implements IEnum {
-	MEMBER(0, "ÆÕÍ¨ÓÃ»§"), ADMIN(1, "¹ÜÀíÔ±"), ;
+	MEMBER(0, "æ™®é€šç”¨æˆ·"), ADMIN(1, "ç®¡ç†å‘˜"), ;
 
 	private final int key;
 	private final String desc;
