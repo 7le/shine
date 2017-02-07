@@ -25,17 +25,18 @@
         </mvc:interceptor>
 
         <!--带有图形验证码的操作-->
-        <mvc:interceptor>
+<!--        <mvc:interceptor>
             <mvc:mapping path="/member/login/doLogin"/>
             <bean class="com.shine.interceptor.ImgVerifyCodeInterceptor"/>
-        </mvc:interceptor>
+        </mvc:interceptor>-->
 
         <!--防盗链 -->
-<!--        <mvc:interceptor>
+        <mvc:interceptor>
             <mvc:mapping path="/**"/>
-            <mvc:exclude-mapping path="/admin/timeSend"/>
+            <mvc:exclude-mapping path="/backend/register" />
+            <mvc:exclude-mapping path="/backend/login" />
             <bean class="com.shine.interceptor.RefererInterceptor"/>
-        </mvc:interceptor>-->
+        </mvc:interceptor>
     </mvc:interceptors>
 
 

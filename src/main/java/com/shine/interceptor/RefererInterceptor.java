@@ -25,7 +25,7 @@ public class RefererInterceptor extends BaseInterceptor {
         if (ok) {
             return true;
         } else {
-            String url = HttpUtil.getBasePath(request, false) + "/member/login";
+            String url = HttpUtil.getBasePath(request, false) + "/backend/login";
             response.sendRedirect(url);
             return false;
         }

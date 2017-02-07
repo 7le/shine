@@ -78,6 +78,11 @@
         <listener-class>com.shine.init.ServletContextListener</listener-class>
     </listener>
 
+    <!--设置session超时时间-->
+    <session-config>
+        <session-timeout>10</session-timeout>
+    </session-config>
+
     <error-page>
         <error-code>404</error-code>
         <location>/WEB-INF/views/404.html</location>
