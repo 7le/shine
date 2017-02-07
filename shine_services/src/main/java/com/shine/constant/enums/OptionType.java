@@ -2,6 +2,7 @@ package com.shine.constant.enums;
 
 public enum OptionType {
 
+
     OP_INSERT(1, "插入"),
 
     OP_EDIT(2, "更新");
