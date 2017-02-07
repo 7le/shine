@@ -4,6 +4,7 @@ package com.shine.constant.enums;
 import com.shine.constant.IEnum;
 
 public enum UserType implements IEnum {
+
     MEMBER(0, "普通用户"), ADMIN(1, "管理员"), ;
 
     private final int key;
