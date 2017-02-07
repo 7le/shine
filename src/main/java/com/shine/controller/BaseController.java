@@ -1,5 +1,6 @@
 package com.shine.controller;
 
+import com.shine.dao.AdminPermissionMapper;
 import com.shine.j2cache.LoginAdminCache;
 import com.shine.j2cache.LoginMemberCache;
 import com.shine.j2cache.VerifyCodePhoneCache;
@@ -41,7 +42,11 @@ public class BaseController {
 
     @Autowired
     protected AdminService adminService;
+
     //dao
+    @Autowired
+    protected AdminPermissionMapper adminPermissionMapper;
+
 
     /** jq Grid **/
     /**

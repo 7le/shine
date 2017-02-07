@@ -2,6 +2,7 @@ package com.shine.dao;
 
 import com.shine.dao.model.AdminPermission;
 
+
 public interface AdminPermissionMapper {
     int deleteByPrimaryKey(Long id);
 
@@ -14,4 +15,5 @@ public interface AdminPermissionMapper {
     int updateByPrimaryKeySelective(AdminPermission record);
 
     int updateByPrimaryKey(AdminPermission record);
+
 }

@@ -22,7 +22,7 @@ public interface Backend {
         interface REGISTER {
             String REGISTER = BASE;
             String REGISTERVIEW = REGISTER + "/register";
-            String DOREGISTERVIEW=REGISTER+"/doRegister";
+            String DOREGISTERVIEW = REGISTER + "/doRegister";
         }
 
         /**
@@ -32,7 +32,15 @@ public interface Backend {
             String LOGIN = BASE;
             String LOGINVIEW = LOGIN + "/login";
             String LOCKSCREEN = LOGIN + "/lockscreen";
-            String DOLOGIN=LOGIN+"/doLogin";
+            String DOLOGIN = LOGIN + "/doLogin";
+        }
+
+        /**
+         * 权限
+         */
+        interface ROLE {
+            String ROLE = BASE + "/role";
+            String ROLETREE = ROLE + "/tree";
         }
     }
 
@@ -52,7 +60,7 @@ public interface Backend {
          * 注册
          */
         interface REGISTER {
-            String REGISTER = BASE ;
+            String REGISTER = BASE;
             String REGISTERVIEW = REGISTER + "/register";
         }
 
@@ -60,7 +68,7 @@ public interface Backend {
          * 登陆
          */
         interface LOGIN {
-            String LOGIN = BASE ;
+            String LOGIN = BASE;
             String LOGINVIEW = LOGIN + "/login";
             String LOCKSCREEN = LOGIN + "/lockscreen";
         }
