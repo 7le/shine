@@ -4,24 +4,24 @@ package com.shine.constant.enums;
 import com.shine.constant.IEnum;
 
 public enum UserType implements IEnum {
-	MEMBER(0, "ÆÕÍ¨ÓÃ»§"), ADMIN(1, "¹ÜÀíÔ±"), ;
+    MEMBER(0, "æ™®é€šç”¨æˆ·"), ADMIN(1, "ç®¡ç†å‘˜"), ;
 
-	private final int key;
-	private final String desc;
+    private final int key;
+    private final String desc;
 
-	UserType(final int key, final String desc) {
-		this.key = key;
-		this.desc = desc;
-	}
+    UserType(final int key, final String desc) {
+        this.key = key;
+        this.desc = desc;
+    }
 
-	@Override
-	public int key() {
-		return this.key;
-	}
+    @Override
+    public int key() {
+        return this.key;
+    }
 
-	@Override
-	public String desc() {
-		return this.desc;
-	}
+    @Override
+    public String desc() {
+        return this.desc;
+    }
 
 }

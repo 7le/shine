@@ -6,14 +6,12 @@ import com.shine.constant.enums.UserType;
 import com.shine.controller.BaseController;
 import com.shine.dao.model.AdminUser;
 import com.shine.util.MD5Util;
-import com.shine.util.TimeUtil;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
-import java.util.Date;
 
 /**
  * Created by hq on 2017/1/22.
