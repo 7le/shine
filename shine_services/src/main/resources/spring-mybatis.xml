@@ -79,6 +79,15 @@
                     <property name="dialectType" value="mysql" />
                 </bean>
                 <!-- 如需要开启其他插件，可配置于此 -->
+
+                <!--mybaits 性能拦截器-->
+                <bean class="com.shine.interceptor.PerformanceInterceptor">
+                    <property name="properties">
+                        <value>
+                            dialect=mysql reasonable=true
+                        </value>
+                    </property>
+                </bean>
             </array>
         </property>
 
@@ -93,7 +102,7 @@
             ID_WORKER->`2`("全局唯一ID")
             UUID->`3`("全局唯一ID")
         -->
-        <property name="idType" value="2" />
+        <property name="idType" value="0" />
         <!--
             MYSQL->`mysql`
             ORACLE->`oracle`
