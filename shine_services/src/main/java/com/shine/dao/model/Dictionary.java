@@ -1,5 +1,8 @@
 package com.shine.dao.model;
 
+import com.baomidou.mybatisplus.annotations.TableName;
+
+@TableName("dictionary")
 public class Dictionary {
     private Integer id;
 

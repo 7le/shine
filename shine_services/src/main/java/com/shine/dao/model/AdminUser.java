@@ -1,6 +1,10 @@
 package com.shine.dao.model;
 
-public class AdminUser {
+import com.baomidou.mybatisplus.annotations.TableName;
+import java.io.Serializable;
+
+@TableName("admin_user")
+public class AdminUser implements Serializable{
     private Long id;
 
     private String loginName;

@@ -1,6 +1,11 @@
 package com.shine.dao.model;
 
-public class AdminPermission {
+import com.baomidou.mybatisplus.annotations.TableName;
+
+import java.io.Serializable;
+
+@TableName("admin_permission")
+public class AdminPermission implements Serializable {
     private Long id;
 
     private Long pid;

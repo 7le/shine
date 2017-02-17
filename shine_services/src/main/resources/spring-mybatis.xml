@@ -33,11 +33,12 @@
         <!--<property name="removeAbandonedTimeout" value="1"/>-->
 
     </bean>
+<!--
 
-    <!-- spring和MyBatis完美整合，不需要mybatis的配置映射文件 -->
+    &lt;!&ndash; spring和MyBatis完美整合，不需要mybatis的配置映射文件 &ndash;&gt;
     <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
         <property name="dataSource" ref="dataSource" />
-        <!-- 自动扫描mapping.xml文件 -->
+        &lt;!&ndash; 自动扫描mapping.xml文件 &ndash;&gt;
         <property name="mapperLocations" value="classpath*:mapping/*.xml"/>
         <property name="plugins">
             <array>
@@ -51,12 +52,71 @@
             </array>
         </property>
     </bean>
-
+-->
     <!-- DAO接口所在包名，Spring会自动查找其下的类 ,并生成Mappper接口的实现类的Bean-->
-    <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-        <property name="basePackage" value="com.shine.dao" />
-        <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"/>
+<!--        <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+            <property name="basePackage" value="com.shine.dao" />
+            <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"/>
+        </bean>-->
+
+    <!-- MyBatis SqlSessionFactoryBean 配置 -->
+    <bean id="sqlSessionFactory" class="com.baomidou.mybatisplus.spring.MybatisSqlSessionFactoryBean">
+        <!-- 配置数据源 -->
+        <property name="dataSource" ref="dataSource" />
+        <!-- 配置 Mybatis 配置文件（可无） -->
+        <property name="configLocation" value="classpath:mybatis-config.xml" />
+        <!-- 配置包别名 -->
+        <property name="typeAliasesPackage" value="com.shine.dao.model" />
+        <!-- 自动扫描 Xml 文件位置 -->
+        <property name="mapperLocations" value="classpath*:mapping/*.xml" />
+
+        <!-- 以上配置和传统 Mybatis 一致 -->
+        <property name="plugins">
+            <array>
+                <!-- 分页插件配置 -->
+                <bean id="paginationInterceptor" class="com.baomidou.mybatisplus.plugins.PaginationInterceptor">
+                    <!-- 指定数据库方言 -->
+                    <property name="dialectType" value="mysql" />
+                </bean>
+                <!-- 如需要开启其他插件，可配置于此 -->
+            </array>
+        </property>
+
+        <!-- MP 全局配置注入 -->
+        <property name="globalConfig" ref="globalConfig" />
     </bean>
+
+    <bean id="globalConfig" class="com.baomidou.mybatisplus.entity.GlobalConfiguration">
+        <!-- MP 主键策略配置
+            AUTO->`0`("数据库ID自增")
+            INPUT->`1`(用户输入ID")
+            ID_WORKER->`2`("全局唯一ID")
+            UUID->`3`("全局唯一ID")
+        -->
+        <property name="idType" value="2" />
+        <!--
+            MYSQL->`mysql`
+            ORACLE->`oracle`
+            DB2->`db2`
+            H2->`h2`
+            HSQL->`hsql`
+            SQLITE->`sqlite`
+            POSTGRE->`postgresql`
+            SQLSERVER2005->`sqlserver2005`
+            SQLSERVER->`sqlserver`
+        -->
+        <!-- Oracle需要添加该项 -->
+        <!-- <property name="dbType" value="oracle" /> -->
+        <!-- 全局表为下划线命名设置 true -->
+        <!-- <property name="dbColumnUnderline" value="true" /> -->
+    </bean>
+
+    <!-- 加载 mapper.xml 接口 配置文件 -->
+    <bean id="mapperScannerConfigurer" class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+        <property name="basePackage" value="com.shine.dao" />
+    </bean>
+
+
 
     <!-- 自动扫描 service层 -->
     <context:component-scan base-package="com.shine.service.impl" />

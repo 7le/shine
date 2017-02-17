@@ -24,7 +24,7 @@
     delete from admin_user
     where id = #{id,jdbcType=BIGINT}
   </delete>
-  <insert id="insert" parameterType="com.shine.dao.model.AdminUser" >
+<!--  <insert id="insert" parameterType="com.shine.dao.model.AdminUser" >
     <selectKey resultType="java.lang.Long" keyProperty="id" order="AFTER" >
       SELECT LAST_INSERT_ID()
     </selectKey>
@@ -34,7 +34,7 @@
     values (#{loginName,jdbcType=VARCHAR}, #{password,jdbcType=VARCHAR}, #{email,jdbcType=VARCHAR}, 
       #{type,jdbcType=INTEGER}, #{status,jdbcType=INTEGER}, #{crTime,jdbcType=BIGINT}, 
       #{lastTime,jdbcType=BIGINT})
-  </insert>
+  </insert>-->
   <insert id="insertSelective" parameterType="com.shine.dao.model.AdminUser" >
     <selectKey resultType="java.lang.Long" keyProperty="id" order="AFTER" >
       SELECT LAST_INSERT_ID()

@@ -22,7 +22,7 @@ public class RoleController extends BackendController{
     @RequestMapping(value = Backend.URL.ROLE.ROLETREE)
     @ResponseBody
     public String tree(){
-        //List<AdminPermission> list = adminPermissionMapper.selectList(null);
+        List<AdminPermission> list = adminPermissionMapper.selectList(null);
         return "";
     }
 }

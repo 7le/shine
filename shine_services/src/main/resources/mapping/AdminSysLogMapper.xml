@@ -21,7 +21,7 @@
     delete from admin_sys_log
     where id = #{id,jdbcType=BIGINT}
   </delete>
-  <insert id="insert" parameterType="com.shine.dao.model.AdminSysLog" >
+  <!--<insert id="insert" parameterType="com.shine.dao.model.AdminSysLog" >
     <selectKey resultType="java.lang.Long" keyProperty="id" order="AFTER" >
       SELECT LAST_INSERT_ID()
     </selectKey>
@@ -29,7 +29,7 @@
       crTime)
     values (#{uid,jdbcType=BIGINT}, #{content,jdbcType=VARCHAR}, #{operation,jdbcType=VARCHAR}, 
       #{crtime,jdbcType=BIGINT})
-  </insert>
+  </insert>-->
   <insert id="insertSelective" parameterType="com.shine.dao.model.AdminSysLog" >
     <selectKey resultType="java.lang.Long" keyProperty="id" order="AFTER" >
       SELECT LAST_INSERT_ID()

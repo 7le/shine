@@ -1,5 +1,8 @@
 package com.shine.dao.model;
 
+import com.baomidou.mybatisplus.annotations.TableName;
+
+@TableName("dict_category")
 public class DictCategory {
     private Integer id;
 

@@ -1,5 +1,8 @@
 package com.shine.dao.model;
 
+import com.baomidou.mybatisplus.annotations.TableName;
+
+@TableName("admin_role_permission")
 public class AdminRolePermission {
     private Long id;
 

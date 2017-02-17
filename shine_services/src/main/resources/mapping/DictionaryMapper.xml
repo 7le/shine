@@ -20,7 +20,7 @@
     delete from dictionary
     where id = #{id,jdbcType=INTEGER}
   </delete>
-  <insert id="insert" parameterType="com.shine.dao.model.Dictionary" >
+<!--  <insert id="insert" parameterType="com.shine.dao.model.Dictionary" >
     <selectKey resultType="java.lang.Integer" keyProperty="id" order="AFTER" >
       SELECT LAST_INSERT_ID()
     </selectKey>
@@ -28,7 +28,7 @@
       )
     values (#{categoryId,jdbcType=INTEGER}, #{code,jdbcType=VARCHAR}, #{dictDesc,jdbcType=VARCHAR}
       )
-  </insert>
+  </insert>-->
   <insert id="insertSelective" parameterType="com.shine.dao.model.Dictionary" >
     <selectKey resultType="java.lang.Integer" keyProperty="id" order="AFTER" >
       SELECT LAST_INSERT_ID()

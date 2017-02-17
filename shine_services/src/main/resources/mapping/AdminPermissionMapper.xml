@@ -26,7 +26,7 @@
     delete from admin_permission
     where id = #{id,jdbcType=BIGINT}
   </delete>
-  <insert id="insert" parameterType="com.shine.dao.model.AdminPermission" >
+<!--  <insert id="insert" parameterType="com.shine.dao.model.AdminPermission" >
     <selectKey resultType="java.lang.Long" keyProperty="id" order="AFTER" >
       SELECT LAST_INSERT_ID()
     </selectKey>
@@ -38,7 +38,7 @@
       #{state,jdbcType=INTEGER}, #{sort,jdbcType=INTEGER}, #{url,jdbcType=VARCHAR},
       #{permcode,jdbcType=VARCHAR}, #{icon,jdbcType=VARCHAR}, #{description,jdbcType=VARCHAR}
       )
-  </insert>
+  </insert>-->
   <insert id="insertSelective" parameterType="com.shine.dao.model.AdminPermission" >
     <selectKey resultType="java.lang.Long" keyProperty="id" order="AFTER" >
       SELECT LAST_INSERT_ID()

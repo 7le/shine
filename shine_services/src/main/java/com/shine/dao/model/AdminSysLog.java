@@ -1,7 +1,10 @@
 package com.shine.dao.model;
 
+import com.baomidou.mybatisplus.annotations.TableName;
+
 import java.util.Date;
 
+@TableName("admin_sys_log")
 public class AdminSysLog {
     private Long id;
 

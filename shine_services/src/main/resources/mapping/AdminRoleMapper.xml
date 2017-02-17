@@ -20,7 +20,7 @@
     delete from admin_role
     where id = #{id,jdbcType=BIGINT}
   </delete>
-  <insert id="insert" parameterType="com.shine.dao.model.AdminRole" >
+<!--  <insert id="insert" parameterType="com.shine.dao.model.AdminRole" >
     <selectKey resultType="java.lang.Long" keyProperty="id" order="AFTER" >
       SELECT LAST_INSERT_ID()
     </selectKey>
@@ -28,7 +28,7 @@
       )
     values (#{name,jdbcType=VARCHAR}, #{sort,jdbcType=INTEGER}, #{description,jdbcType=VARCHAR}
       )
-  </insert>
+  </insert>-->
   <insert id="insertSelective" parameterType="com.shine.dao.model.AdminRole" >
     <selectKey resultType="java.lang.Long" keyProperty="id" order="AFTER" >
       SELECT LAST_INSERT_ID()

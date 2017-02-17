@@ -1,12 +1,13 @@
 package com.shine.dao;
 
+import com.baomidou.mybatisplus.mapper.BaseMapper;
 import com.shine.dao.model.AdminUser;
 import org.apache.ibatis.annotations.Param;
 
-public interface AdminUserMapper {
+public interface AdminUserMapper extends BaseMapper<AdminUser> {
     int deleteByPrimaryKey(Long id);
 
-    int insert(AdminUser record);
+/*    int insert(AdminUser record);*/
 
     int insertSelective(AdminUser record);
 

@@ -1,11 +1,12 @@
 package com.shine.dao;
 
+import com.baomidou.mybatisplus.mapper.BaseMapper;
 import com.shine.dao.model.AdminRole;
 
-public interface AdminRoleMapper {
+public interface AdminRoleMapper extends BaseMapper<AdminRole> {
     int deleteByPrimaryKey(Long id);
 
-    int insert(AdminRole record);
+ /*   int insert(AdminRole record);*/
 
     int insertSelective(AdminRole record);
 

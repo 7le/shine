@@ -19,13 +19,13 @@
     delete from admin_role_permission
     where id = #{id,jdbcType=BIGINT}
   </delete>
-  <insert id="insert" parameterType="com.shine.dao.model.AdminRolePermission" >
+<!--  <insert id="insert" parameterType="com.shine.dao.model.AdminRolePermission" >
     <selectKey resultType="java.lang.Long" keyProperty="id" order="AFTER" >
       SELECT LAST_INSERT_ID()
     </selectKey>
     insert into admin_role_permission (rid, pid)
     values (#{rid,jdbcType=BIGINT}, #{pid,jdbcType=BIGINT})
-  </insert>
+  </insert>-->
   <insert id="insertSelective" parameterType="com.shine.dao.model.AdminRolePermission" >
     <selectKey resultType="java.lang.Long" keyProperty="id" order="AFTER" >
       SELECT LAST_INSERT_ID()

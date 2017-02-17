@@ -19,13 +19,13 @@
     delete from dict_category
     where id = #{id,jdbcType=INTEGER}
   </delete>
-  <insert id="insert" parameterType="com.shine.dao.model.DictCategory" >
+<!--  <insert id="insert" parameterType="com.shine.dao.model.DictCategory" >
     <selectKey resultType="java.lang.Integer" keyProperty="id" order="AFTER" >
       SELECT LAST_INSERT_ID()
     </selectKey>
     insert into dict_category (dict_name, is_config)
     values (#{dictName,jdbcType=VARCHAR}, #{isConfig,jdbcType=TINYINT})
-  </insert>
+  </insert>-->
   <insert id="insertSelective" parameterType="com.shine.dao.model.DictCategory" >
     <selectKey resultType="java.lang.Integer" keyProperty="id" order="AFTER" >
       SELECT LAST_INSERT_ID()
