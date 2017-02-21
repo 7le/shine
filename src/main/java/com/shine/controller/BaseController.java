@@ -4,6 +4,7 @@ import com.shine.dao.AdminPermissionMapper;
 import com.shine.j2cache.LoginAdminCache;
 import com.shine.j2cache.LoginMemberCache;
 import com.shine.j2cache.VerifyCodePhoneCache;
+import com.shine.service.AdminRolePermissonService;
 import com.shine.service.AdminService;
 import com.shine.service.ResourcesService;
 import net.sf.json.JSONObject;
@@ -42,6 +43,9 @@ public class BaseController {
 
     @Autowired
     protected AdminService adminService;
+
+    @Autowired
+    protected AdminRolePermissonService adminRolePermissonService;
 
     //dao
     @Autowired

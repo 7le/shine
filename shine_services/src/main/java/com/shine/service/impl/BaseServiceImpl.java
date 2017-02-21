@@ -3,6 +3,7 @@ package com.shine.service.impl;
 
 import com.shine.bean.rmi.SystemServiceFactory;
 
+import com.shine.dao.AdminRolePermissionMapper;
 import com.shine.dao.AdminUserMapper;
 import com.shine.j2cache.LoginAdminCache;
 import com.shine.j2cache.LoginAgentCache;
@@ -46,6 +47,8 @@ public class BaseServiceImpl {
     @Autowired
     protected AdminUserMapper adminUserMapper;
 
+    @Autowired
+    protected AdminRolePermissionMapper adminRolePermissionMapper;
 
 /*
     @Autowired
