@@ -28,7 +28,7 @@
 
     <import resource="classpath*:spring-mybatis.xml"/>
     <!--j2cache两级缓存spring配置-->
-<!--    <import resource="spring-j2cache.xml"/>-->
+    <import resource="spring-j2cache.xml"/>
     <!--redis spring配置-->
     <import resource="spring-redis.xml"/>
     <!-- quartz-->
