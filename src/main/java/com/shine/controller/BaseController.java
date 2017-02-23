@@ -4,6 +4,7 @@ import com.shine.dao.AdminPermissionMapper;
 import com.shine.j2cache.LoginAdminCache;
 import com.shine.j2cache.LoginMemberCache;
 import com.shine.j2cache.VerifyCodePhoneCache;
+import com.shine.service.AdminPermissionService;
 import com.shine.service.AdminRolePermissonService;
 import com.shine.service.AdminService;
 import com.shine.service.ResourcesService;
@@ -28,12 +29,12 @@ public class BaseController {
     /**
      * 缓存器
      */
-//    @Autowired
-//    protected VerifyCodePhoneCache verifyCodePhoneCache;
-//    @Autowired
-//    protected LoginMemberCache loginMemberCache;
-//    @Autowired
-//    protected LoginAdminCache loginAdminCache;
+    @Autowired
+    protected VerifyCodePhoneCache verifyCodePhoneCache;
+    @Autowired
+    protected LoginMemberCache loginMemberCache;
+    @Autowired
+    protected LoginAdminCache loginAdminCache;
 
     /**
      * 业务层
@@ -46,6 +47,9 @@ public class BaseController {
 
     @Autowired
     protected AdminRolePermissonService adminRolePermissonService;
+
+    @Autowired
+    protected AdminPermissionService adminPermissionService;
 
     //dao
     @Autowired

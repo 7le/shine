@@ -22,6 +22,9 @@ public class AdminServiceImpl extends BaseServiceImpl implements AdminService {
             return "用户名或密码错误";
         }
 
+        //将管理员信息放入缓存
+        loginAdminCache.setLoginAdmin(request, adminUser);
+
         return null;
     }
 

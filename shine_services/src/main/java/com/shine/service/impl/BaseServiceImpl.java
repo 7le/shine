@@ -3,6 +3,7 @@ package com.shine.service.impl;
 
 import com.shine.bean.rmi.SystemServiceFactory;
 
+import com.shine.dao.AdminPermissionMapper;
 import com.shine.dao.AdminRolePermissionMapper;
 import com.shine.dao.AdminUserMapper;
 import com.shine.j2cache.LoginAdminCache;
@@ -31,14 +32,14 @@ public class BaseServiceImpl {
     /**
      * 缓存器
      */
-/*    @Autowired
+    @Autowired
+    protected LoginAdminCache loginAdminCache;
+    @Autowired
     protected VerifyCodePhoneCache verifyCodePhoneCache;
     @Autowired
     protected LoginMemberCache loginMemberCache;
     @Autowired
-    protected LoginAdminCache loginAdminCache;
-    @Autowired
-    protected LoginAgentCache loginAgentCache;*/
+    protected LoginAgentCache loginAgentCache;
     @Autowired
     protected ConnectDataSource connectDataSource;
     /**
@@ -46,9 +47,11 @@ public class BaseServiceImpl {
      */
     @Autowired
     protected AdminUserMapper adminUserMapper;
-
     @Autowired
     protected AdminRolePermissionMapper adminRolePermissionMapper;
+    @Autowired
+    protected AdminPermissionMapper adminPermissionMapper;
+
 
 /*
     @Autowired

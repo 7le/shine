@@ -149,4 +149,16 @@
       description = #{description,jdbcType=VARCHAR}
     where id = #{id,jdbcType=BIGINT}
   </update>
+  <select id="selectMenuByUserId" resultType="com.shine.bean.ShineMenu">
+    SELECT id, title, url, permCode, icon FROM admin_permission p RIGHT JOIN
+    (SELECT DISTINCT r.pid FROM admin_role_permission r WHERE EXISTS (
+    SELECT 1 FROM admin_user_role u WHERE u.uid=#{userId} AND r.rid=u.rid )) a ON p.id=a.pid
+    WHERE p.pid = #{pid} AND type=0 ORDER BY sort
+  </select>
+
+  <select id="selectAllByUserId" resultType="com.shine.dao.model.AdminPermission">
+    SELECT id, title, url, permCode, icon FROM admin_permission p RIGHT JOIN
+    (SELECT DISTINCT r.pid FROM admin_role_permission r WHERE EXISTS (
+    SELECT 1 FROM admin_user_role u WHERE u.uid=#{userId} AND r.rid=u.rid )) a ON p.id=a.pid
+  </select>
 </mapper>
