@@ -20,8 +20,16 @@
 
         <!-- 全局变量 -->
         <mvc:interceptor>
-            <mvc:mapping path="/**" />
+            <mvc:mapping path="/backend/**" />
             <bean class="com.shine.interceptor.GlobalInterceptor"></bean>
+        </mvc:interceptor>
+
+        <!--后台权限拦截器-->
+        <mvc:interceptor>
+            <mvc:mapping path="/backend/**" />
+            <mvc:exclude-mapping path="/backend/register" />
+            <mvc:exclude-mapping path="/backend/login" />
+            <bean class="com.shine.controller.backend.BackendController" />
         </mvc:interceptor>
 
         <!--带有图形验证码的操作-->

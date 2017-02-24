@@ -38,7 +38,7 @@ public class BackendController extends BaseController implements HandlerIntercep
 		 */
         if (isLegalView(modelAndView)) {
         //    modelAndView.addObject("currentUser", userService.selectById(getCurrentUserId()));
-            modelAndView.addObject("menuList", adminPermissionService.selectMenuByUserId(19L));
+            modelAndView.addObject("menuList", adminPermissionService.selectMenuByUserId(1L));
         }
     }
 
