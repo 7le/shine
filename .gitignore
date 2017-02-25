@@ -1,5 +1,5 @@
 .idea
-.properties
+*.properties
 out
 
 target
