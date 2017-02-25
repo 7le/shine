@@ -1,6 +1,10 @@
 .idea
 *.properties
-out
+!freemarker.properties
+!log4j.properties
+!j2cache.properties
+!quartz.properties
 
+out
 target
 *.iml

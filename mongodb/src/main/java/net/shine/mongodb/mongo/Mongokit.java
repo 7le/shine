@@ -222,7 +222,7 @@ public class Mongokit {
         }
         if (datebase.equals(defaultDb.getName())) {
             switch (datebase){
-                //短信
+
                 case DatabaseConfig.DATABASE_SHINE:
 
 

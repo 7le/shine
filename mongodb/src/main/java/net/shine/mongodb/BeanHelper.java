@@ -17,7 +17,7 @@ import java.util.List;
 public class BeanHelper {
 
     /**
-     * 将查询出来的文档转化为短信记录对象
+     * 将查询出来的文档转化为对象
      *
      * @param documents
      * @return
