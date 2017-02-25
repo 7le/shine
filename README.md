@@ -7,13 +7,12 @@
 ```
 1、rabbitmq
 2、mybatis-plus （mybatis 自动 crud 功能）
-3、mail（收发邮件）
-4、freemarker （继承模板支持、环境控制）
-5、redis
-6、j2cache
-7、mongodb
-8、quartz (定时任务)
-9、H+（界面）
+3、freemarker
+4、redis
+5、j2cache
+6、mongodb
+7、quartz (定时任务)
+8、H+（界面）
 等...
 ```
 
