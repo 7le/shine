@@ -4,7 +4,7 @@
 > 简单介绍
 
 已集成组件：
-
+```
 1、rabbitmq
 2、mybatis-plus （mybatis 自动 crud 功能）
 3、mail（收发邮件）
@@ -15,6 +15,7 @@
 8、quartz (定时任务)
 9、H+（界面）
 等...
+```
 
 > 配置的添加
 
