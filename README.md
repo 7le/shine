@@ -33,16 +33,36 @@ mongo_psw=XXX
 创建一个resources文件夹存放配置文件
 jdbc.properties
 ```
-driver=xxxx
 url=xxxx
-username=xxxx
-password=xxxx
+driverClassName: com.mysql.jdbc.Driver
+username: root
+password: root
+filters: stat
+maxActive: 20
+initialSize: 1
+maxWait: 60000
+minIdle: 10
+maxIdle: 15
+timeBetweenEvictionRunsMillis: 60000
+minEvictableIdleTimeMillis: 300000
+validationQuery: SELECT 'x'
+testWhileIdle: true
+testOnBorrow: false
+testOnReturn: false
+maxOpenPreparedStatements: 20
+removeAbandoned: true
+removeAbandonedTimeout: 1800
+logAbandoned: true
 initialSize=0
 maxActive=20
 maxIdle=20
 minIdle=1
 maxWait=60000
 ```
+```
+监控界面 http://ip:port/projectName/druid/index.html
+```
+
 
 在src的 properties文件下
 创建一个resources文件夹存放配置文件
