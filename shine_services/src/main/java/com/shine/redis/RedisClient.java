@@ -5,6 +5,10 @@ import redis.clients.jedis.Jedis;
 import redis.clients.jedis.JedisPool;
 import redis.clients.jedis.JedisPoolConfig;
 
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+
 /**
  * redis访问
  *
@@ -123,7 +127,7 @@ public class RedisClient {
      * @param value       值
      * @param liveSeconds 生命周期
      */
-    protected void setObjectValue(String key, Object value, int liveSeconds) {
+    protected void setStringObjectValue(String key, Object value, int liveSeconds) {
         Jedis jedis1 = null;
         try {
 
@@ -157,7 +161,7 @@ public class RedisClient {
      * @param key
      * @return
      */
-    protected Object getObjectValue(String key) {
+    protected Object getStringObjectValue(String key) {
         Jedis jedis1 = null;
         try {
 
@@ -199,11 +203,183 @@ public class RedisClient {
         }
     }
 
+    /**
+     * 设置Hash
+     */
+    public static void setHash(String key, Map<String,String> hash) {
+        Jedis jedis1 = null;
+        try {
+
+            //获得客户端
+            jedis1 = jedisPool.getResource();
+            if (hash == null) {
+                return;
+            }
+
+            jedis1.hmset(key, hash);
+        }finally {
+            if(jedis1 != null)
+                jedis1.close();
+        }
+    }
+
+    /**
+     * 获取hash中全部的域和值,以Map<String, String> 的形式返回
+     */
+    public static Map getHashALL(String key) {
+        Jedis jedis1 = null;
+        try {
+
+            //获得客户端
+            jedis1 = jedisPool.getResource();
+
+            return jedis1.hgetAll(key);
+        }finally {
+            if(jedis1 != null)
+                jedis1.close();
+        }
+    }
+
+    /**
+     * 获取hash的所有元素(key值)
+     */
+    public static Set<String> getHashAllKey(String key) {
+        Jedis jedis1 = null;
+        try {
+            //获得客户端
+            jedis1 = jedisPool.getResource();
+            return jedis1.hkeys(key);
+        }finally {
+            if(jedis1 != null)
+                jedis1.close();
+        }
+    }
+
+    /**
+     * 获取hash中所有的key对应的value值
+     */
+    public static List<String> getHashAllValue(String key) {
+        Jedis jedis1 = null;
+        try {
+            //获得客户端
+            jedis1 = jedisPool.getResource();
+            return jedis1.hvals(key);
+        }finally {
+            if(jedis1 != null)
+                jedis1.close();
+        }
+    }
+
+    /**
+     * 获取hash里所有元素的数量
+     */
+    public static Long getHashNum(String key) {
+        Jedis jedis1 = null;
+        try {
+            //获得客户端
+            jedis1 = jedisPool.getResource();
+            return jedis1.hlen(key);
+        }finally {
+            if(jedis1 != null)
+                jedis1.close();
+        }
+    }
+
+    /**
+     * 判断给定key值是否存在于哈希集中
+     */
+    public static Boolean hexists(String key,String value) {
+        Jedis jedis1 = null;
+        try {
+            //获得客户端
+            jedis1 = jedisPool.getResource();
+            return jedis1.hexists(key,value);
+        }finally {
+            if(jedis1 != null)
+                jedis1.close();
+        }
+    }
+
+    /**
+     * 获取hash里面指定字段对应的值
+     */
+    public static List<String> hmget(String key,String... value ) {
+        Jedis jedis1 = null;
+        try {
+            //获得客户端
+            jedis1 = jedisPool.getResource();
+            return jedis1.hmget(key,value);
+        }finally {
+            if(jedis1 != null)
+                jedis1.close();
+        }
+    }
+
+    /**
+     * 获取hash里面指定字段对应的值
+     */
+    public static String getHashValue(String key,String value) {
+        Jedis jedis1 = null;
+        try {
+            //获得客户端
+            jedis1 = jedisPool.getResource();
+            return jedis1.hget(key,value);
+        }finally {
+            if(jedis1 != null)
+                jedis1.close();
+        }
+    }
+
+    /**
+     * 删除指定的值
+     */
+    public static Long delHashValue(String key,String... value) {
+        Jedis jedis1 = null;
+        try {
+            //获得客户端
+            jedis1 = jedisPool.getResource();
+            return jedis1.hdel(key, value);
+        }finally {
+            if(jedis1 != null)
+                jedis1.close();
+        }
+    }
+
+    /**
+     * 为key中的域 field 的值加上增量 increment value为String的时候不适用
+     */
+    public static Long setHashValueLive(String key,String field,long increment) {
+        Jedis jedis1 = null;
+        try {
+            //获得客户端
+            jedis1 = jedisPool.getResource();
+            return jedis1.hincrBy(key,field,increment);
+        }finally {
+            if(jedis1 != null)
+                jedis1.close();
+        }
+    }
+
+    /**
+     * 为key设置过期时间
+     */
+    public static Long expire(String key,Integer liveSeconds) {
+        Jedis jedis1 = null;
+        try {
+            //获得客户端
+            jedis1 = jedisPool.getResource();
+            return jedis1.expire(key, liveSeconds);
+        }finally {
+            if(jedis1 != null)
+                jedis1.close();
+        }
+    }
+
 
     /**
      * 清空数据库
      */
-    protected void clearDatabase() {
+    public void clearDatabase() {
         Jedis jedis1 = null;
         try {
 
