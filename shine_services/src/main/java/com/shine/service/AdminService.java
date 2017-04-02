@@ -21,7 +21,7 @@ public interface AdminService {
     String doAdminLogin(String loginName, String password, HttpServletRequest request);
 
     /**
-     * 执行管理员登录
+     * 管理员注册
      *
      * @param adminUser
      * @return 成功返回null, 失败返回原因

@@ -39,7 +39,7 @@
         </javaClientGenerator>
 
 
-       <!-- <table tableName="dictionary" domainObjectName="Dictionary" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false"
+        <table tableName="dictionary" domainObjectName="Dictionary" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false"
                enableUpdateByExample="false">
             <generatedKey column="id" sqlStatement="MySql" identity="true"/>
         </table>
@@ -71,7 +71,7 @@
         <table tableName="admin_user_role" domainObjectName="AdminUserRole" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false"
                enableUpdateByExample="false">
             <generatedKey column="id" sqlStatement="MySql" identity="true"/>
-        </table>-->
+        </table>
 
     </context>
 </generatorConfiguration>

@@ -77,7 +77,7 @@ public class LoginController extends BackendController{
         adminUser.setCrTime(System.currentTimeMillis());
         adminUser.setLastTime(adminUser.getCrTime());
 
-        //执行登录
+        //注册
         String errorReport = adminService.doAdminRegister(adminUser);
         if (errorReport != null) {
             return new ResultBean(false, errorReport);
