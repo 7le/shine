@@ -2,6 +2,7 @@ package com.shine.controller.backend;
 
 import com.shine.bean.ResultBean;
 import net.shine.mongodb.entity.Account;
+import org.bson.types.ObjectId;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -15,10 +16,16 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @Controller
 public class AccountController extends BackendController{
 
-/*    @RequestMapping(value = "/account/{id}", method = RequestMethod.GET)
-    public ResultBean getAccount(@PathVariable Integer id){
+    @RequestMapping(value = "/account/{sid}", method = RequestMethod.GET)
+    public ResultBean getAccount(@PathVariable String sid){
+        Account account=accountService.getAccount(sid);
 
-    }*/
+        if(account==null){
+            return new ResultBean(false,"展示失败",null);
+        }else {
+            return new ResultBean(true,"展示成功",account);
+        }
+    }
 
     @RequestMapping(value = "/account", method = RequestMethod.POST)
     public ResultBean getAccount(@RequestBody Account account){

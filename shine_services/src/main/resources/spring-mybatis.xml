@@ -193,7 +193,7 @@
 	
 	<aop:config>
 		<aop:pointcut id="transactionPointcut" expression="execution(* com.shine.service.impl.*Impl.*(..))
-		and !execution(* com.shine.service.impl.ResourcesServiceImpl.*(..)) "/>
+		and !execution(* com.shine.service.impl.ResourcesServiceImpl.*(..)) and !execution(* com.shine.service.impl.AccountServiceImpl.*(..)) "/>
 		<aop:advisor pointcut-ref="transactionPointcut" advice-ref="transactionInterceptor" /> 
 	</aop:config>
 

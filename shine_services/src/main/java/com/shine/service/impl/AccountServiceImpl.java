@@ -1,5 +1,6 @@
 package com.shine.service.impl;
 
+import com.mongodb.BasicDBObject;
 import com.shine.service.AccountService;
 import net.shine.mongodb.BeanHelper;
 import net.shine.mongodb.config.DatabaseConfig;
@@ -29,5 +30,17 @@ public class AccountServiceImpl extends BaseServiceImpl implements AccountServic
             }
         }
         return 0;
+    }
+
+    @Override
+    public Account getAccount(String sid) {
+        //获取该用户集合
+        String collectName = DatabaseConfig.DATABASE.COLLECTION_ACCOUNT;
+        //筛选参数
+        BasicDBObject condition = new BasicDBObject();
+
+        Document document = mongokit.findOne(collectName, condition, null);
+
+        return BeanHelper.documentToBean(document, Account.class);
     }
 }
