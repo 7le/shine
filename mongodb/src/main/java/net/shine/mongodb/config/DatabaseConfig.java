@@ -2,6 +2,7 @@ package net.shine.mongodb.config;
 
 /**
  * Created by hq
+ * 接口中变量默认为static final
  */
 public interface DatabaseConfig {
 
@@ -28,5 +29,7 @@ public interface DatabaseConfig {
          * 集合
          */
         String COLLECTION_RES = "Resources";
+
+        String COLLECTION_ACCOUNT = "Account";
     }
 }

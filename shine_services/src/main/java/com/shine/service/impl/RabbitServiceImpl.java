@@ -28,8 +28,8 @@ public class RabbitServiceImpl extends BaseServiceImpl implements RabbitService 
             RabbitUtil.sendOnly(connectDataSource.getConn().createChannel(), "ly", "yoyo");
         } catch (IOException e) {
             rabbitmq.error("发送失败",e);
-            return new ResultBean(false,"失败");
+            return new ResultBean(false,"失败",null);
         }
-        return new ResultBean(true,"成功");
+        return new ResultBean(true,"成功",null);
     }
 }

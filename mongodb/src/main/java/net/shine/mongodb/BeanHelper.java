@@ -83,31 +83,6 @@ public class BeanHelper {
         return null;
     }
 
-    public static <T> Document deliverMsgToDocument(T t) {
-        try {
-            Document document = new Document();
-            Class c = t.getClass();
-            Field[] fields = c.getDeclaredFields();
-            for (Field field : fields) {
-                field.setAccessible(true);
-                String type = field.getType().getName();
-                Object value = field.get(t);
-
-                if (type.equals(ObjectId.class.getName())) {
-                    if (value != null) {
-                        document.put("_id", new ObjectId(value.toString()));
-                    }
-                } else {
-                    document.put(field.getName(), value);
-                }
-            }
-            return document;
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        return null;
-    }
-
     public static <T> Document bean2Document(T t) {
         try {
             Document document = new Document();

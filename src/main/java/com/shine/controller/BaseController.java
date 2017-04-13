@@ -4,10 +4,7 @@ import com.shine.dao.AdminPermissionMapper;
 import com.shine.j2cache.LoginAdminCache;
 import com.shine.j2cache.LoginMemberCache;
 import com.shine.j2cache.VerifyCodePhoneCache;
-import com.shine.service.AdminPermissionService;
-import com.shine.service.AdminRolePermissonService;
-import com.shine.service.AdminService;
-import com.shine.service.ResourcesService;
+import com.shine.service.*;
 import net.sf.json.JSONObject;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -50,6 +47,9 @@ public class BaseController {
 
     @Autowired
     protected AdminPermissionService adminPermissionService;
+
+    @Autowired
+    protected AccountService accountService;
 
     //dao
     @Autowired

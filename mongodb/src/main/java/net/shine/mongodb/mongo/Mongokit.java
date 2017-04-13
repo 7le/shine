@@ -30,14 +30,14 @@ public class Mongokit {
      * 获取统计数据
      * 临时用
      */
-    public List<StatisticMsg> getMsgStatistic(String collectionName,BasicDBObject query){
+    public List<StatisticMsg> getMsgStatistic(String collectionName, BasicDBObject query) {
         //获取集合
         DBCollection userCollection = myMongo.getCollection(collectionName);
         String map = " function(){emit(this.signature,this.msgNum)}";
         String reduce = " function(key,values){return Array.sum(values)}";
 
 
-        MapReduceCommand command = new MapReduceCommand(userCollection,map,reduce,null, MapReduceCommand.OutputType.INLINE, query);
+        MapReduceCommand command = new MapReduceCommand(userCollection, map, reduce, null, MapReduceCommand.OutputType.INLINE, query);
         MapReduceOutput out = userCollection.mapReduce(command);
 
 
@@ -45,7 +45,7 @@ public class Mongokit {
         try {
             for (DBObject o : out.results()) {
                 StatisticMsg statisticMsg = new StatisticMsg();
-                statisticMsg.setSignature( o.get("_id").toString());
+                statisticMsg.setSignature(o.get("_id").toString());
                 statisticMsg.setCount(((Double) o.get("value")).intValue());
                 list.add(statisticMsg);
             }
@@ -55,35 +55,17 @@ public class Mongokit {
         return list;
     }
 
-    /**
-     * 默认主机为本地
-     */
-    private static final String DEFAULT_HOST = "127.0.0.1";
-
-    /**
-     * 默认端口
-     */
-    private static final int DEFAULT_PORT = 27017;
-    /**
-     * 默认数据库
-     */
-    private static final String DEFAULT_DATABASE = "shine";
-
-    private static final String DEFAULT_User = "hq_readwrite";
-
-    private static final String DEFAULT_PSW = "5894";
-
     private MongoClient client;
     private MongoDatabase defaultDb;
 
 //    private static Mongokit instance;
 
-    private String host = DEFAULT_HOST;
-    private Integer port = DEFAULT_PORT;
+    private String host;
+    private Integer port;
 
-    private String user=DEFAULT_User;
-    private String psw=DEFAULT_PSW;
-    private String databaseName = DEFAULT_DATABASE;
+    private String user;
+    private String psw;
+    private String databaseName;
 
     public Mongokit() {
         try {
@@ -108,7 +90,7 @@ public class Mongokit {
 
         } catch (IllegalArgumentException e1) {
             if (e1.getMessage().indexOf("Properties file not found") != -1) {
-                init(DEFAULT_HOST, DEFAULT_PORT, DatabaseConfig.DATABASE_SHINE);
+                init(host, port, DatabaseConfig.DATABASE_SHINE);
             }
         } catch (Exception e) {
             e.printStackTrace();
@@ -140,12 +122,11 @@ public class Mongokit {
      * @param defaultDatabase
      */
     public void init(String host, String defaultDatabase) {
-        this.init(host, DEFAULT_PORT, defaultDatabase);
+        this.init(host, port, defaultDatabase);
     }
 
     /**
      * 初始化
-     *
      */
     public void init(String host, int port, String defaultDatabase) {
         ServerAddress serverAddress = new ServerAddress(host, port);
@@ -153,9 +134,9 @@ public class Mongokit {
         defaultDb = this.client.getDatabase(defaultDatabase);
         try {
             //用于统计查询
-            mongo = new com.mongodb.Mongo(host,port);
+            mongo = new com.mongodb.Mongo(host, port);
             myMongo = mongo.getDB(DatabaseConfig.DATABASE_SHINE);
-        }catch (Exception e){
+        } catch (Exception e) {
             System.out.println("我报异常了哈哈哈");
             e.printStackTrace();
         }
@@ -163,7 +144,6 @@ public class Mongokit {
 
     /**
      * 初始化
-     *
      */
     public void init() {
         ServerAddress serverAddress = new ServerAddress(host, port);
@@ -171,7 +151,7 @@ public class Mongokit {
         MongoCredential credentials = MongoCredential.createScramSha1Credential(user, "admin", psw.toCharArray());
         credentialsList.add(credentials);
         try {
-            this.client = new MongoClient(serverAddress,credentialsList,new MongoClientOptions.Builder()
+            this.client = new MongoClient(serverAddress, credentialsList, new MongoClientOptions.Builder()
                     .socketKeepAlive(true) // 是否保持长链接
                     .connectionsPerHost(200) // 最大连接数
                     .minConnectionsPerHost(20)// 最小连接数
@@ -180,7 +160,7 @@ public class Mongokit {
             //用于统计查询
             mongo = new com.mongodb.Mongo(serverAddress);
             myMongo = mongo.getDB(databaseName);
-        }catch (Exception e){
+        } catch (Exception e) {
             System.out.println("我报异常了哈哈哈");
             e.printStackTrace();
         }
@@ -196,7 +176,7 @@ public class Mongokit {
         return getCollection(defaultDb.getName(), collectionName);
     }
 
-    private Map<String,MongoCollection<Document>> cache = new HashMap<>();
+    private Map<String, MongoCollection<Document>> cache = new HashMap<>();
 
     /**
      * 获得集合
@@ -208,7 +188,7 @@ public class Mongokit {
     public MongoCollection<Document> getCollection(String datebase, String collectionName) {
         MongoCollection<Document> collection;
         collection = cache.get(datebase + "_" + collectionName);
-        if(collection != null){
+        if (collection != null) {
             return collection;
         }
         if (client == null) {
@@ -221,7 +201,7 @@ public class Mongokit {
             collection = client.getDatabase(datebase).getCollection(collectionName);
         }
         if (datebase.equals(defaultDb.getName())) {
-            switch (datebase){
+            switch (datebase) {
 
                 case DatabaseConfig.DATABASE_SHINE:
 
@@ -251,7 +231,7 @@ public class Mongokit {
                     break;
             }
         }
-        cache.put(datebase + "_" + collectionName,collection);
+        cache.put(datebase + "_" + collectionName, collection);
         return collection;
     }
 
@@ -679,15 +659,16 @@ public class Mongokit {
 
     /**
      * 删除一条数据
+     *
      * @param database
      * @param collectionName
      * @param
      */
-    public boolean deleteOne(String database, String collectionName, BasicDBObject condition){
+    public boolean deleteOne(String database, String collectionName, BasicDBObject condition) {
         if (client == null) {
             throw new MongoException("MongoClient Not Initialized");
         }
-        DeleteResult result=getCollection(database,collectionName).deleteOne(condition);
+        DeleteResult result = getCollection(database, collectionName).deleteOne(condition);
         return result.wasAcknowledged();
     }
 

@@ -6,14 +6,15 @@ package com.shine.bean;
 public class ResultBean {
     protected boolean success;
     protected String message;
-
+    protected Object data;
 
     public ResultBean() {
     }
 
-    public ResultBean(boolean success, String message) {
+    public ResultBean(boolean success, String message, Object data) {
         this.success = success;
         this.message = message;
+        this.data = data;
     }
 
     public boolean isSuccess() {
@@ -30,5 +31,13 @@ public class ResultBean {
 
     public void setMessage(String message) {
         this.message = message;
+    }
+
+    public Object getData() {
+        return data;
+    }
+
+    public void setData(Object data) {
+        this.data = data;
     }
 }
