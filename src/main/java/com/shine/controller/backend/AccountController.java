@@ -2,12 +2,12 @@ package com.shine.controller.backend;
 
 import com.shine.bean.ResultBean;
 import net.shine.mongodb.entity.Account;
-import org.bson.types.ObjectId;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.servlet.ModelAndView;
 
 /**
  * @author 7le
@@ -16,7 +16,17 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @Controller
 public class AccountController extends BackendController{
 
-    @RequestMapping(value = "/account/{sid}", method = RequestMethod.GET)
+    @RequestMapping(value = "/backend/account/list",method = RequestMethod.GET)
+    public ModelAndView getList(){
+        return new ModelAndView("/backend/account/accountList");
+    }
+
+    @RequestMapping(value = "/backend/account/add",method = RequestMethod.GET)
+    public ModelAndView add(){
+        return new ModelAndView("/backend/account/accountAdd");
+    }
+
+    @RequestMapping(value = "/backend/account/{sid}", method = RequestMethod.GET)
     public ResultBean getAccount(@PathVariable String sid){
         Account account=accountService.getAccount(sid);
 
@@ -27,7 +37,7 @@ public class AccountController extends BackendController{
         }
     }
 
-    @RequestMapping(value = "/account", method = RequestMethod.POST)
+    @RequestMapping(value = "/backend/account", method = RequestMethod.POST)
     public ResultBean getAccount(@RequestBody Account account){
         Integer flag=accountService.saveAccount(account);
 
@@ -38,13 +48,13 @@ public class AccountController extends BackendController{
         }
     }
 /*
-    @RequestMapping(value = "/account/{id}", method = RequestMethod.PUT)
+    @RequestMapping(value = "/backend/account/{id}", method = RequestMethod.PUT)
     public ResultBean getAccount(@PathVariable Integer id,
                                  @RequestBody Account account){
 
     }
 
-    @RequestMapping(value = "/account/{batch}", method = RequestMethod.DELETE)
+    @RequestMapping(value = "/backend/account/{batch}", method = RequestMethod.DELETE)
     public ResultBean getAccount(){
 
     }*/

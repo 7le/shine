@@ -47,9 +47,9 @@ public class LoginController extends BackendController{
         //执行登录
         String errorReport = adminService.doAdminLogin(loginName, password, request);
         if (errorReport != null) {
-            return new ResultBean(false, errorReport);
+            return new ResultBean(false, errorReport,null);
         } else {
-            return new ResultBean(true, "登录成功");
+            return new ResultBean(true, "登录成功",null);
         }
     }
 
@@ -80,9 +80,9 @@ public class LoginController extends BackendController{
         //注册
         String errorReport = adminService.doAdminRegister(adminUser);
         if (errorReport != null) {
-            return new ResultBean(false, errorReport);
+            return new ResultBean(false, errorReport,null);
         } else {
-            return new ResultBean(true, "注册成功");
+            return new ResultBean(true, "注册成功",null);
         }
     }
 

@@ -32,7 +32,7 @@ public class SpiderServiceImpl extends BaseServiceImpl implements SpiderService 
                 continue;
             }
         }
-        return new ResultBean(true,"爬数据完毕");
+        return new ResultBean(true,"爬数据完毕",null);
     }
 
 }

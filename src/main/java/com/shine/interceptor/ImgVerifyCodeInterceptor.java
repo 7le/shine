@@ -23,7 +23,7 @@ public class ImgVerifyCodeInterceptor extends BaseInterceptor {
         if (httpSession.getAttribute(HttpSessionAttrNameConst.VERIFYCODE_IMG_GET_FLAG) == null ||
                 !(Boolean) httpSession.getAttribute(HttpSessionAttrNameConst.VERIFYCODE_IMG_GET_FLAG)) {
 
-            doResponse(response, new ResultBean(false, "图形验证码错误"));
+            doResponse(response, new ResultBean(false, "图形验证码错误",null));
 
             return false;
         }
@@ -36,7 +36,7 @@ public class ImgVerifyCodeInterceptor extends BaseInterceptor {
         //请求中参数不为空检查
         if (varifyCode_img_param == null || varifyCode_img_param == "") {
 
-            doResponse(response, new ResultBean(false, "图形验证码错误"));
+            doResponse(response, new ResultBean(false, "图形验证码错误",null));
 
             return false;
         }
@@ -44,7 +44,7 @@ public class ImgVerifyCodeInterceptor extends BaseInterceptor {
         //session中数据不为空检查
         if (httpSession.getAttribute(HttpSessionAttrNameConst.VERIFYCODE_IMG) == null) {
 
-            doResponse(response, new ResultBean(false, "图形验证码超时,请重新刷新获取"));
+            doResponse(response, new ResultBean(false, "图形验证码超时,请重新刷新获取",null));
 
             return false;
         }
@@ -55,7 +55,7 @@ public class ImgVerifyCodeInterceptor extends BaseInterceptor {
         //不区分大小写比较
         if (!varifyCode_img_data.toLowerCase().equals(varifyCode_img_param.toLowerCase())) {
 
-            doResponse(response, new ResultBean(false, "图形验证码错误"));
+            doResponse(response, new ResultBean(false, "图形验证码错误",null));
 
             //同时移除验证码
             httpSession.removeAttribute(HttpSessionAttrNameConst.VERIFYCODE_IMG);

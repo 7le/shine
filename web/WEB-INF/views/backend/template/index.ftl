@@ -479,7 +479,7 @@
                     data-id="index_v1.html" seamless></iframe>
         </div>
         <div class="footer">
-            <div class="pull-right">&copy; 2016 <a href="http://www.zi-han.net/" target="_blank">shine</a>
+            <div class="pull-right">&copy; 2017 <a href="http://www.zi-han.net/" target="_blank">shine</a>
             </div>
         </div>
     </div>
