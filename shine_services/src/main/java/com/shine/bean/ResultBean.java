@@ -5,15 +5,15 @@ package com.shine.bean;
  */
 public class ResultBean {
     protected boolean success;
-    protected String message;
+    protected String msg;
     protected Object data;
 
     public ResultBean() {
     }
 
-    public ResultBean(boolean success, String message, Object data) {
+    public ResultBean(boolean success, String msg, Object data) {
         this.success = success;
-        this.message = message;
+        this.msg = msg;
         this.data = data;
     }
 
@@ -25,12 +25,12 @@ public class ResultBean {
         this.success = success;
     }
 
-    public String getMessage() {
-        return message;
+    public String getMsg() {
+        return msg;
     }
 
-    public void setMessage(String message) {
-        this.message = message;
+    public void setMsg(String msg) {
+        this.msg = msg;
     }
 
     public Object getData() {

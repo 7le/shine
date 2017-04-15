@@ -31,8 +31,29 @@
             </form>
         </div>
     </div>
+    <button class="btn btn-primary" type="submit" onclick="PostData()">保存内容</button>
     <script src="/static/backend/js/jquery.min.js?v=2.1.4"></script>
     <script src="/static/backend/js/bootstrap.min.js?v=3.3.6"></script>
     <script type="text/javascript" src="http://tajs.qq.com/stats?sId=9051096" charset="UTF-8"></script>
+
+    <script>
+        function PostData() {
+            $.ajax({
+                type: "POST",
+                url: "/backend/account",
+                data : {
+                    name:'a'
+                },
+                success: function(data) {
+                    alert('正确');
+                    console.log(data.msg);
+                    window.location.href='http://localhost:7777/backend/account/list';
+                },
+                error: function(data) {
+                    alert('错误');
+                }
+            });
+        }
+    </script>
 </body>
 </html>

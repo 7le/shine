@@ -56,7 +56,7 @@
     </div>
     <div class="signup-footer">
         <div class="pull-left">
-            &copy; 2016 All Rights Reserved. Shine
+            &copy; 2017 All Rights Reserved. Shine
         </div>
     </div>
 </div>

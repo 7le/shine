@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shine - Bootstrap Table</title>
+    <title>Shine记账</title>
     <link rel="shortcut icon" href="favicon.ico">
     <link href="/static/backend/css/bootstrap.min14ed.css?v=3.3.6" rel="stylesheet">
     <link href="/static/backend/css/font-awesome.min93e3.css?v=4.4.0" rel="stylesheet">
@@ -58,11 +58,13 @@
                         <table id="exampleTableToolbar" data-mobile-responsive="true">
                             <thead>
                             <tr>
-                                <th data-field="name">名称</th>
-                                <th data-field="star">Star</th>
-                                <th data-field="license">许可</th>
-                                <th data-field="description">描述</th>
-                                <th data-field="url">地址</th>
+                                <th data-field="name">项目名</th>
+                                <th data-field="totalAmount">总金额</th>
+                                <th data-field="cost">成本</th>
+                                <th data-field="profit">利润</th>
+                                <th data-field="profit_silk">利润-stone</th>
+                                <th data-field="profit_stone">利润-silk</th>
+                                <th data-field="remark">备注</th>
                             </tr>
                             </thead>
                         </table>
