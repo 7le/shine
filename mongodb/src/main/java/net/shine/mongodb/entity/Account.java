@@ -19,9 +19,9 @@ public class Account implements Serializable{
     private Integer profit_silk;
     private Integer profit_stone;
     private Date createDate;     //创建时间
-    private Integer createPerson; //创建人
+    private Long createPerson; //创建人
     private Date updateDate;  //修改时间
-    private Integer updatePerson; //修改人
+    private Long updatePerson; //修改人
     private Integer isDelete;  //逻辑删除  0为删除
     private String remark;   //备注
 
@@ -89,11 +89,11 @@ public class Account implements Serializable{
         this.createDate = createDate;
     }
 
-    public Integer getCreatePerson() {
+    public Long getCreatePerson() {
         return createPerson;
     }
 
-    public void setCreatePerson(Integer createPerson) {
+    public void setCreatePerson(Long createPerson) {
         this.createPerson = createPerson;
     }
 
@@ -105,11 +105,11 @@ public class Account implements Serializable{
         this.updateDate = updateDate;
     }
 
-    public Integer getUpdatePerson() {
+    public Long getUpdatePerson() {
         return updatePerson;
     }
 
-    public void setUpdatePerson(Integer updatePerson) {
+    public void setUpdatePerson(Long updatePerson) {
         this.updatePerson = updatePerson;
     }
 

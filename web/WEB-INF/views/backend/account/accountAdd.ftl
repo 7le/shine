@@ -123,9 +123,7 @@
         $.ajax({
             type: "POST",
             url: "/backend/account",
-            data: {
-                name: 'a'
-            },
+            data: ('#accAdd').serialize(),
             success: function (data) {
                 alert('正确');
                 console.log(data.msg);

@@ -330,11 +330,23 @@ public class Mongokit {
      * 更新
      *
      * @param collectionName
-     * @param _id
+     * @param _id String
      * @param update
      * @return
      */
     public long update(String collectionName, String _id, Document update) {
+        return update(defaultDb.getName(), collectionName, _id, update);
+    }
+
+    /**
+     * 更新
+     *
+     * @param collectionName
+     * @param _id ObjectId
+     * @param update
+     * @return
+     */
+    public long update(String collectionName, ObjectId _id, Document update) {
         return update(defaultDb.getName(), collectionName, _id, update);
     }
 
@@ -344,13 +356,28 @@ public class Mongokit {
      *
      * @param database
      * @param collectionName
-     * @param _id
+     * @param _id String
      * @param update
      * @return
      */
     public long update(String database, String collectionName, String _id, Document update) {
         Document filter = new Document();
         filter.put("_id", new ObjectId(_id));
+        return update(database, collectionName, filter, update);
+    }
+
+    /**
+     * 更新
+     *
+     * @param database
+     * @param collectionName
+     * @param _id  ObjectId
+     * @param update
+     * @return
+     */
+    public long update(String database, String collectionName, ObjectId _id, Document update) {
+        Document filter = new Document();
+        filter.put("_id", _id);
         return update(database, collectionName, filter, update);
     }
 
