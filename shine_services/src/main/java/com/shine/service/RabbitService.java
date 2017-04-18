@@ -13,5 +13,8 @@ public interface RabbitService {
      */
      ResultBean producer();
 
-
+    /**
+     * 死信
+     */
+    ResultBean DLXProducer();
 }

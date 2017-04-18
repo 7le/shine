@@ -33,4 +33,11 @@ public class RabbitController {
         ResultBean resultBean=rabbitService.producer();
         return resultBean;
     }
+
+    @RequestMapping(value ="/mqProducer")
+    @ResponseBody
+    public ResultBean DLXProducer(){
+        ResultBean resultBean=rabbitService.DLXProducer();
+        return resultBean;
+    }
 }

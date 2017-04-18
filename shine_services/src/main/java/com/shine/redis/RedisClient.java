@@ -288,12 +288,12 @@ public class RedisClient {
     /**
      * 判断给定key值是否存在于哈希集中
      */
-    public static Boolean hexists(String key,String value) {
+    public static Boolean hexists(String key,String field) {
         Jedis jedis1 = null;
         try {
             //获得客户端
             jedis1 = jedisPool.getResource();
-            return jedis1.hexists(key,value);
+            return jedis1.hexists(key,field);
         }finally {
             if(jedis1 != null)
                 jedis1.close();
@@ -303,12 +303,12 @@ public class RedisClient {
     /**
      * 获取hash里面指定字段对应的值
      */
-    public static List<String> hmget(String key,String... value ) {
+    public static List<String> hmget(String key,String... field ) {
         Jedis jedis1 = null;
         try {
             //获得客户端
             jedis1 = jedisPool.getResource();
-            return jedis1.hmget(key,value);
+            return jedis1.hmget(key,field);
         }finally {
             if(jedis1 != null)
                 jedis1.close();
@@ -318,12 +318,12 @@ public class RedisClient {
     /**
      * 获取hash里面指定字段对应的值
      */
-    public static String getHashValue(String key,String value) {
+    public static String getHashValue(String key,String field) {
         Jedis jedis1 = null;
         try {
             //获得客户端
             jedis1 = jedisPool.getResource();
-            return jedis1.hget(key,value);
+            return jedis1.hget(key,field);
         }finally {
             if(jedis1 != null)
                 jedis1.close();
