@@ -9,12 +9,18 @@ public interface RabbitService {
 
     /**
      * 生产者 生存消息
+     *
      * @return
      */
-     ResultBean producer();
+    ResultBean producer();
 
     /**
      * 死信
      */
     ResultBean DLXProducer();
+
+    /**
+     * 消费者
+     */
+    ResultBean consumer();
 }
