@@ -43,8 +43,7 @@ public class RabbitController {
 
     @RequestMapping(value ="/consumer")
     @ResponseBody
-    public ResultBean consumer(){
-        ResultBean resultBean=rabbitService.consumer();
-        return resultBean;
+    public void consumer() throws Exception {
+        rabbitService.consumer();
     }
 }

@@ -22,5 +22,5 @@ public interface RabbitService {
     /**
      * 消费者
      */
-    ResultBean consumer();
+    void consumer() throws Exception ;
 }
