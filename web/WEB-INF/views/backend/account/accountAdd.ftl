@@ -10,6 +10,7 @@
     <link href="/static/backend/css/plugins/iCheck/custom.css" rel="stylesheet">
     <link href="/static/backend/css/animate.min.css" rel="stylesheet">
     <link href="/static/backend/css/style.min862f.css?v=4.1.0" rel="stylesheet">
+    <link href="/static/backend/css/plugins/sweetalert/sweetalert.css" rel="stylesheet">
 </head>
 
 <body class="gray-bg">
@@ -77,7 +78,7 @@
                             <label class="col-sm-2 control-label">利润-stone</label>
 
                             <div class="col-sm-10" style="width:60%">
-                                <input type="text" class="form-control" name="profit_stone">
+                                <input type="text" class="form-control" name="profitStone">
                             </div>
                         </div>
 
@@ -85,7 +86,7 @@
                             <label class="col-sm-2 control-label">利润-silk</label>
 
                             <div class="col-sm-10" style="width:60%">
-                                <input type="text" class="form-control" name="profit_silk">
+                                <input type="text" class="form-control" name="profitSilk">
                             </div>
                         </div>
 
@@ -123,18 +124,25 @@
         $.ajax({
             type: "POST",
             url: "/backend/account",
-            data: ('#accAdd').serialize(),
+            data: $('#accAdd').serialize(),
             success: function (data) {
-                alert('正确');
                 console.log(data.msg);
-                window.location.href = '/backend/account/list';
+                swal({title: "你的小账本~", text: "添加成功", type: "success"}, function(){
+                    //跳转至用户中心界面
+                    location.href = "/backend/account/list";
+                });
+                //window.location.href = '/backend/account/list';
             },
             error: function (data) {
-                alert('错误');
+                swal({title: "你的小账本~", text: "不小心，失败了", type: "false"}, function(){
+                    //跳转至用户中心界面
+                    location.href = "/backend/account/add";
+                });
             }
         });
     }
 </script>
 <script type="text/javascript" src="http://tajs.qq.com/stats?sId=9051096" charset="UTF-8"></script>
+<script src="/static/backend/js/plugins/sweetalert/sweetalert.min.js"></script>
 </body>
 </html>

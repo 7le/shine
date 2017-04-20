@@ -19,8 +19,15 @@ import javax.servlet.http.HttpServletResponse;
 public class AccountController extends BackendController {
 
     @RequestMapping(value = "/backend/account/list", method = RequestMethod.GET)
-    public ModelAndView listView() {
-        return new ModelAndView("/backend/account/accountList");
+    public ModelAndView listView(@RequestParam(defaultValue = "1", value = "page") Integer pageNum,
+                                 @RequestParam(defaultValue = "10", value = "rows") Integer pageSize) {
+        ModelAndView model=new ModelAndView("/backend/account/accountList");
+        Page2 page2 = accountService.page(pageNum - 1, pageSize);
+        if (page2 == null) {
+            page2 = new Page2(null, 0, 0, 0);
+        }
+        model.addObject("accountList",page2);
+         return model;
     }
 
     @RequestMapping(value = "/backend/account/add", method = RequestMethod.GET)

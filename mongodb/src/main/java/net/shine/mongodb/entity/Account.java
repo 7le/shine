@@ -16,8 +16,8 @@ public class Account implements Serializable{
     private Integer totalAmount;  //总金额
     private Integer cost;         //成本
     private Integer profit;       //利润
-    private Integer profit_silk;
-    private Integer profit_stone;
+    private Integer profitSilk;
+    private Integer profitStone;
     private Date createDate;     //创建时间
     private Long createPerson; //创建人
     private Date updateDate;  //修改时间
@@ -65,20 +65,20 @@ public class Account implements Serializable{
         this.profit = profit;
     }
 
-    public Integer getProfit_silk() {
-        return profit_silk;
+    public Integer getProfitSilk() {
+        return profitSilk;
     }
 
-    public void setProfit_silk(Integer profit_silk) {
-        this.profit_silk = profit_silk;
+    public void setProfitSilk(Integer profitSilk) {
+        this.profitSilk = profitSilk;
     }
 
-    public Integer getProfit_stone() {
-        return profit_stone;
+    public Integer getProfitStone() {
+        return profitStone;
     }
 
-    public void setProfit_stone(Integer profit_stone) {
-        this.profit_stone = profit_stone;
+    public void setProfitStone(Integer profitStone) {
+        this.profitStone = profitStone;
     }
 
     public Date getCreateDate() {

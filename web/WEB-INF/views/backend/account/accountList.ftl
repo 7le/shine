@@ -67,6 +67,19 @@
                                 <th data-field="remark">备注</th>
                             </tr>
                             </thead>
+                            <tbody>
+                            <#list accountList.rows as item>
+                                <tr>
+                                    <td>${(item.name)!''}</td>
+                                    <td>${(item.totalAmount)!''}</td>
+                                    <td>${(item.cost)!''}</td>
+                                    <td>${(item.profit)!''}</td>
+                                    <td>${(item.profitStone)!''}</td>
+                                    <td>${(item.profitSilk)!''}</td>
+                                    <td>${(item.remark)!''}</td>
+                                </tr>
+                            </#list>
+                            </tbody>
                         </table>
                     </div>
                 </div>
