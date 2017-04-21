@@ -24,11 +24,11 @@ function submit() {
     var $password = $("#login-password");
 
     if ($loginName.val() == "") {
-        swal({title: "欢迎使用Shine", text: "请输入用户名"});
+        swal("欢迎使用Shine", "请输入用户名","error");
         return;
     }
     if ($password.val() == "") {
-        swal({title: "欢迎使用Shine", text: "请输入密码"});
+        swal("欢迎使用Shine", "请输入密码","error");
         return;
     }
 
@@ -47,7 +47,7 @@ function submit() {
             else {
                 //重新获取验证码
                 /*  $("#verifyCode-img").click();*/
-                swal({title: "欢迎使用Shine", text: result.message});
+                swal("欢迎使用Shine", result.message,"error");
             }
         }
     );

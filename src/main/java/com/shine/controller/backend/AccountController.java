@@ -27,7 +27,7 @@ public class AccountController extends BackendController {
             page2 = new Page2(null, 0, 0, 0);
         }
         model.addObject("accountList",page2);
-         return model;
+        return model;
     }
 
     @RequestMapping(value = "/backend/account/add", method = RequestMethod.GET)
@@ -35,21 +35,13 @@ public class AccountController extends BackendController {
         return new ModelAndView("/backend/account/accountAdd");
     }
 
-    @RequestMapping(value = "/backend/account/update", method = RequestMethod.GET)
-    public ModelAndView updateView() {
-        return new ModelAndView("/backend/account/accountUpdate");
-    }
-
     @RequestMapping(value = "/backend/account/{sid}", method = RequestMethod.GET)
     @ResponseBody
-    public ResultBean getAccount(@PathVariable String sid) {
+    public ModelAndView getAccount(@PathVariable String sid) {
+        ModelAndView model=new ModelAndView("/backend/account/accountEdit");
         Account account = accountService.getAccount(sid);
-
-        if (account == null) {
-            return new ResultBean(false, "展示失败", null);
-        } else {
-            return new ResultBean(true, "展示成功", account);
-        }
+        model.addObject("account",account);
+        return model;
     }
 
     @RequestMapping(value = "/backend/account", method = RequestMethod.GET)
@@ -72,21 +64,21 @@ public class AccountController extends BackendController {
         Integer flag = accountService.saveAccount(request, account);
 
         if (flag != 1) {
-            return new ResultBean(false, "添加失败", null);
+            return new ResultBean(false, "不小心,失败了~", null);
         } else {
-            return new ResultBean(true, "添加成功", null);
+            return new ResultBean(true, "哦耶,成功啦~", null);
         }
     }
 
     @RequestMapping(value = "/backend/account", method = RequestMethod.PUT)
     @ResponseBody
-    public ResultBean updateAccount(HttpServletRequest request,Account account){
+    public ResultBean updateAccount(HttpServletRequest request,@RequestBody Account account){
         Long flag = accountService.updateAccount(request, account);
 
         if (flag != 1) {
-            return new ResultBean(false, "更新失败", null);
+            return new ResultBean(false, "不小心,失败了~", null);
         } else {
-            return new ResultBean(true, "更新成功", null);
+            return new ResultBean(true, "哦耶,成功啦~", null);
         }
     }
 
@@ -99,9 +91,9 @@ public class AccountController extends BackendController {
                 for (int i = 0; i <batch.length ; i++) {
                     accountService.deleteAccount(batch[i]);
                 }
-                return new ResultBean(true,"删除成功",null);
+                return new ResultBean(true,"哦耶,成功啦~",null);
             } catch (ServiceHandleException e) {
-                return new ResultBean(false,"删除失败",null);
+                return new ResultBean(false,"不小心,失败了~",null);
             }
         }else {
             return new ResultBean(false,"请选择要删除的记录",null);

@@ -36,6 +36,7 @@ public class AccountServiceImpl extends BaseServiceImpl implements AccountServic
 
         accout.setCreatePerson(adminUser.getId());
         accout.setCreateDate(TimeUtil.getNowTimeDate());
+        accout.setIsDelete(1);
 
         Document document = BeanHelper.bean2Document(accout);
 

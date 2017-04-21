@@ -48,16 +48,24 @@
                             <a class="btn btn-outline btn-default J_menuItem" href="/backend/account/add" >
                                 <i class="glyphicon glyphicon-plus" aria-hidden="true"></i>
                             </a>
-                            <button type="button" class="btn btn-outline btn-default">
+                            <a class="btn btn-outline btn-default J_menuItem" >
                                 <i class="glyphicon glyphicon-heart" aria-hidden="true"></i>
-                            </button>
-                            <button type="button" class="btn btn-outline btn-default">
+                            </a>
+                            <a class="btn btn-outline btn-default J_menuItem" href="/backend/account/58f8b70ad7207c583855e927">
+                                <i class="glyphicon glyphicon-pencil" aria-hidden="true"></i>
+                            </a>
+                            <a  class="btn btn-outline btn-default">
                                 <i class="glyphicon glyphicon-trash" aria-hidden="true"></i>
-                            </button>
+                            </a>
                         </div>
                         <table id="exampleTableToolbar" data-mobile-responsive="true">
                             <thead>
                             <tr>
+                                <th class="check-header hidden-xs">
+                                    <label>
+                                        <input id="checkAll" name="checkAll" type="checkbox" readonly>
+                                    </label>
+                                </th>
                                 <th data-field="name">项目名</th>
                                 <th data-field="totalAmount">总金额</th>
                                 <th data-field="cost">成本</th>
@@ -69,7 +77,9 @@
                             </thead>
                             <tbody>
                             <#list accountList.rows as item>
+                            <input type="text" style="display:none" value="${(item.sid)!''}" />
                                 <tr>
+                                    <td><input type="checkbox" value="${(item.sid)!''}"></td>
                                     <td>${(item.name)!''}</td>
                                     <td>${(item.totalAmount)!''}</td>
                                     <td>${(item.cost)!''}</td>

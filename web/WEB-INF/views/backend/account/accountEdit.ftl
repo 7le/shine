@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>小账本 添加</title>
+    <title>小账本 修改</title>
     <link rel="shortcut icon" href="favicon.ico">
     <link href="/static/backend/css/bootstrap.min14ed.css?v=3.3.6" rel="stylesheet">
     <link href="/static/backend/css/font-awesome.min93e3.css?v=4.4.0" rel="stylesheet">
@@ -20,7 +20,7 @@
             <div class="ibox float-e-margins">
                 <div class="ibox-title">
                     <h5>小账本
-                        <small>添加</small>
+                        <small>修改</small>
                     </h5>
                     <div class="ibox-tools">
                         <a class="collapse-link">
@@ -41,12 +41,12 @@
                     </div>
                 </div>
                 <div class="ibox-content">
-                    <form id="accAdd" class="form-horizontal">
+                    <form id="accEdit" class="form-horizontal">
                         <div class="form-group">
                             <label class="col-sm-2 control-label">项目名</label>
 
                             <div class="col-sm-10" style="width:60%">
-                                <input type="text" class="form-control" name="name">
+                                <input type="text" class="form-control" id="name" name="name" value="${account.name}">
                             </div>
                         </div>
 
@@ -54,7 +54,8 @@
                             <label class="col-sm-2 control-label">总金额</label>
 
                             <div class="col-sm-10" style="width:60%">
-                                <input type="text" class="form-control" name="totalAmount">
+                                <input type="text" class="form-control" id="totalAmount" name="totalAmount"
+                                       value="${account.totalAmount}">
                             </div>
                         </div>
 
@@ -62,7 +63,7 @@
                             <label class="col-sm-2 control-label">成本</label>
 
                             <div class="col-sm-10" style="width:60%">
-                                <input type="text" class="form-control" name="cost">
+                                <input type="text" class="form-control" id="cost" name="cost" value="${account.cost}">
                             </div>
                         </div>
 
@@ -70,7 +71,8 @@
                             <label class="col-sm-2 control-label">利润</label>
 
                             <div class="col-sm-10" style="width:60%">
-                                <input type="text" class="form-control" name="profit">
+                                <input type="text" class="form-control" id="profit" name="profit"
+                                       value="${account.profit}">
                             </div>
                         </div>
 
@@ -78,7 +80,8 @@
                             <label class="col-sm-2 control-label">利润-stone</label>
 
                             <div class="col-sm-10" style="width:60%">
-                                <input type="text" class="form-control" name="profitStone">
+                                <input type="text" class="form-control" id="profitStone" name="profitStone"
+                                       value="${account.profitStone}">
                             </div>
                         </div>
 
@@ -86,7 +89,8 @@
                             <label class="col-sm-2 control-label">利润-silk</label>
 
                             <div class="col-sm-10" style="width:60%">
-                                <input type="text" class="form-control" name="profitSilk">
+                                <input type="text" class="form-control" id="profitSilk" name="profitSilk"
+                                       value="${account.profitSilk}">
                             </div>
                         </div>
 
@@ -94,14 +98,15 @@
                             <label class="col-sm-2 control-label">备注</label>
 
                             <div class="col-sm-10" style="width:60%">
-                                <input type="text" class="form-control" name="remark">
+                                <input type="text" class="form-control" id="remark" name="remark"
+                                       value="${account.remark}">
                             </div>
                         </div>
 
                         <div class="hr-line-dashed"></div>
                         <div class="form-group">
                             <div class="col-sm-4 col-sm-offset-2">
-                                <a class="btn btn-primary"  onclick="submitAcc()">保存内容</a>
+                                <a class="btn btn-primary" onclick="submitAcc()">保存内容</a>
                                 <a class="btn btn-white">取消</a>
                             </div>
                         </div>
@@ -119,27 +124,40 @@
     $(document).ready(function () {
         $(".i-checks").iCheck({checkboxClass: "icheckbox_square-green", radioClass: "iradio_square-green",})
     });
-
     function submitAcc() {
+
+        var accData = {
+            sid: '${account.sid}',
+            name: $('#name').val(),
+            totalAmount: $('#totalAmount').val(),
+            cost: $('#cost').val(),
+            profit: $('#profit').val(),
+            profitSilk: $('#profitSilk').val(),
+            profitStone: $('#profitStone').val(),
+            remark: $('#remark').val()
+        };
+        console.log(accData);
         $.ajax({
-            type: "POST",
+            type: "put",
             url: "/backend/account",
-            data: $('#accAdd').serialize(),
+            data: JSON.stringify(accData),
+            contentType: "application/json",  //发送至服务器的类型
+            dataType: "json",     //预期服务器返回类型
             success: function (data) {
-                if(data.success==true){
-                    swal({title: "你的小账本~", text: data.msg, type: "success"}, function(){
+                if (data.success == true) {
+                    swal({title: "你的小账本~", text: data.msg, type: "success"}, function () {
                         //跳转至列表界面
                         location.href = "/backend/account/list";
                     });
-                }else {
-                    swal({title: "你的小账本~", text: data.msg, type: "error"}, function(){
+                } else {
+                    swal({title: "你的小账本~", text: data.msg, type: "error"}, function () {
                         //刷新
                         location.reload();
                     });
                 }
             },
             error: function (data) {
-                swal({title: "你的小账本~", text: data.msg, type: "error"}, function(){
+                swal({title: "你的小账本~", text: data.msg, type: "error"}, function () {
                     //刷新
                     location.reload();
                 });
