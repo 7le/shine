@@ -12,23 +12,23 @@ public class Page2<T> implements Serializable {
     private List<T> rows;
     private int page;//当前页面数
 //    private int pageSize;//一个页面几天记录
-    private int total;//总页面数
-    private int records;//总记录数
-
+    private int pageTotal;//总页数
+    private int total;//总记录数
     public Page2(){};
 
     /**
      *
      * @param rows
      * @param page 第几页
-     * @param total 总页面数
-     * @param records 总条数
+     * @param total 总记录数
+     * @param pageTotal 总页数
      */
-    public Page2(List<T> rows, int page, int total, int records) {
+    public Page2(List<T> rows, int page,int pageTotal,int total) {
         this.rows = rows;
         this.page = page;
+        this.pageTotal = pageTotal;
         this.total = total;
-        this.records = records;
+
     }
 
     public List<T> getRows() {
@@ -55,11 +55,11 @@ public class Page2<T> implements Serializable {
         this.total = total;
     }
 
-    public int getRecords() {
-        return records;
+    public int getPageTotal() {
+        return pageTotal;
     }
 
-    public void setRecords(int records) {
-        this.records = records;
+    public void setPageTotal(int pageTotal) {
+        this.pageTotal = pageTotal;
     }
 }

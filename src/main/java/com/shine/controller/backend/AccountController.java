@@ -46,10 +46,10 @@ public class AccountController extends BackendController {
 
     @RequestMapping(value = "/backend/account", method = RequestMethod.GET)
     @ResponseBody
-    public Page2 getAllAccount(@RequestParam(defaultValue = "1", value = "page") Integer pageNum,
-                               @RequestParam(defaultValue = "10", value = "rows") Integer pageSize) {
+    public Page2 getAllAccount(@RequestParam(defaultValue = "1", value = "offset") Integer offset,
+                               @RequestParam(defaultValue = "10", value = "pageSize") Integer pageSize) {
 
-        Page2 page2 = accountService.page(pageNum - 1, pageSize);
+        Page2 page2 = accountService.page(offset/pageSize, pageSize);
 
         if (page2 == null) {
             page2 = new Page2(null, 0, 0, 0);
