@@ -25,8 +25,8 @@ public class Account implements Serializable{
     private Integer isDelete;  //逻辑删除  0为删除
     private String remark;   //备注
 
-    public ObjectId getSid() {
-        return sid;
+    public String getSid() {
+        return sid.toString();
     }
 
     public void setSid(ObjectId sid) {

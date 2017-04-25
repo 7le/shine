@@ -41,19 +41,18 @@
         <div class="ibox-content">
             <div class="row row-lg">
                 <!-- Example Toolbar -->
-                <div class="example-wrap">
+                <div class="example-wrap" >
                     <h4 class="example-title">小账本</h4>
 
-                    <div class="example">
-                        <div class="btn-group hidden-xs" id="exampleToolbar" role="group">
+                    <div class="example" style="position: relative">
+                        <div class="btn-group hidden-xs" id="exampleToolbar" role="group" style="position: absolute;top:2%;">
                             <a class="btn btn-outline btn-default J_menuItem" href="/backend/account/add">
                                 <i class="glyphicon glyphicon-plus" aria-hidden="true"></i>
                             </a>
                             <a class="btn btn-outline btn-default J_menuItem">
                                 <i class="glyphicon glyphicon-heart" aria-hidden="true"></i>
                             </a>
-                            <a class="btn btn-outline btn-default J_menuItem"
-                               href="/backend/account/58f8b70ad7207c583855e927">
+                            <a class="btn btn-outline btn-default J_menuItem" id="edit">
                                 <i class="glyphicon glyphicon-pencil" aria-hidden="true"></i>
                             </a>
                             <a class="btn btn-outline btn-default">
@@ -120,6 +119,10 @@
                     valign: "middle"//垂直
                 },
                 {
+                    title: "sid",//标题
+                    field: "sid"//键名
+                },
+                {
                     title: "项目名",//标题
                     field: "name",//键名
                     sortable: true,//是否可排序
@@ -143,12 +146,12 @@
                 },
                 {
                     title: "利润-stone",
-                    field: "profit_stone",
+                    field: "profitStone",
                     sortable: true
                 },
                 {
                     title: "利润_silk",
-                    field: "profit-silk",
+                    field: "profitSilk",
                     sortable: true
                 },
                 {
@@ -164,7 +167,11 @@
             ],
             onClickRow: function(row, $element) {
                 //$element是当前tr的jquery对象
-                $element.css("background-color", "green");
+                //$element.css("background-color", "#c2c2c2");
+                $("#edit").removeAttr("href");
+                $("#edit").attr("href","/backend/account/"+row.sid);
+                console.log(row.sid);
+
             },//单击row事件
             locale: "zh-CN",//中文支持
             detailView: false, //是否显示详情折叠
@@ -179,7 +186,10 @@
         $("#addRecord").click(function(){
             alert("name:" + $("#name").val() + " age:" +$("#age").val());
         });
+        //隐藏列
+        $('#myTab').bootstrapTable('hideColumn', 'sid');
     });
+
 
     function tableHeight() {
         return $(window).height() - 50;

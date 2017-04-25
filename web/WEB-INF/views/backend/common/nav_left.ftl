@@ -43,7 +43,6 @@
                 </a>
                 <ul class="nav nav-second-level">
                     <li>
-                        <a class="J_menuItem" href="/backend/template/index_v5" data-index="0">主页示例一</a>
                         <a class="J_menuItem" href="/backend/account/list" data-index="0">小账本</a>
                     </li>
                 </ul>
