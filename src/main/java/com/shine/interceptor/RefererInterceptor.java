@@ -8,7 +8,7 @@ import javax.servlet.http.HttpServletResponse;
 
 public class RefererInterceptor extends BaseInterceptor {
 
-    public static final String[] HOST = new String[]{"localhost", "127.0.0.1",};
+    public static final String[] HOST = new String[]{"localhost", "127.0.0.1","114.215.122.158","7le.online"};
 
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
