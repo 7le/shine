@@ -143,21 +143,21 @@
             data: JSON.stringify(accData),
             contentType: "application/json",  //发送至服务器的类型
             dataType: "json",     //预期服务器返回类型
-            success: function (data) {
-                if (data.success == true) {
-                    swal({title: "你的小账本~", text: data.msg, type: "success"}, function () {
+            success: function (result) {
+                if (result.success == true) {
+                    swal({title: "你的小账本~", text: result.msg, type: "success"}, function () {
                         //跳转至列表界面
                         location.href = "/backend/account/list";
                     });
                 } else {
-                    swal({title: "你的小账本~", text: data.msg, type: "error"}, function () {
+                    swal({title: "你的小账本~", text: result.msg, type: "error"}, function () {
                         //刷新
                         location.reload();
                     });
                 }
             },
-            error: function (data) {
-                swal({title: "你的小账本~", text: data.msg, type: "error"}, function () {
+            error: function (result) {
+                swal({title: "你的小账本~", text: result.msg, type: "error"}, function () {
                     //刷新
                     location.reload();
                 });

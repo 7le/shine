@@ -73,7 +73,7 @@
                         else {
                             //重新获取验证码
                             /*  $("#verifyCode-img").click();*/
-                            swal({title: "欢迎使用Shine", text: result.message});
+                            swal({title: "欢迎使用Shine", text: result.msg});
                         }
                     }
             );

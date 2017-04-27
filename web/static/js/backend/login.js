@@ -47,7 +47,7 @@ function submit() {
             else {
                 //重新获取验证码
                 /*  $("#verifyCode-img").click();*/
-                swal("欢迎使用Shine", result.message,"error");
+                swal("欢迎使用Shine", result.msg,"error");
             }
         }
     );

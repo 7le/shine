@@ -77,7 +77,7 @@ function reg_submit() {
                  }*/
 
                 //其他原因
-                swal("欢迎使用Shine", result.message, "error");
+                swal("欢迎使用Shine", result.msg, "error");
             }
         }
     );
