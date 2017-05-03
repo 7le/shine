@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 
 /**
  * @author 7le
@@ -64,9 +63,9 @@ public class AccountController extends BackendController {
         Integer flag = accountService.saveAccount(request, account);
 
         if (flag != 1) {
-            return new ResultBean(false, "不小心,失败了~", null);
+            return ResultBean.error("不小心,失败了~");
         } else {
-            return new ResultBean(true, "哦耶,成功啦~", null);
+            return ResultBean.success("哦耶,成功啦~");
         }
     }
 
@@ -76,9 +75,9 @@ public class AccountController extends BackendController {
         Long flag = accountService.updateAccount(request, account);
 
         if (flag != 1) {
-            return new ResultBean(false, "不小心,失败了~", null);
+            return ResultBean.error("不小心,失败了~");
         } else {
-            return new ResultBean(true, "哦耶,成功啦~", null);
+            return ResultBean.success("哦耶,成功啦~");
         }
     }
 
@@ -91,14 +90,13 @@ public class AccountController extends BackendController {
                 for (int i = 0; i <batch.length ; i++) {
                     accountService.deleteAccount(batch[i]);
                 }
-                return new ResultBean(true,"哦耶,成功啦~",null);
+                return ResultBean.success("哦耶,成功啦~");
             } catch (ServiceHandleException e) {
-                return new ResultBean(false,"不小心,失败了~",null);
+                return ResultBean.error("不小心,失败了~");
             }
         }else {
-            return new ResultBean(false,"请选择要删除的记录",null);
+            return ResultBean.error("请选择要删除的记录");
         }
-
     }
 
 }

@@ -2,7 +2,6 @@ package com.shine.controller.frontend;
 
 import com.shine.bean.AjaxJson;
 import com.shine.controller.BaseController;
-import net.shine.mongodb.entity.InfoBean;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
@@ -43,9 +42,7 @@ public class ResourcesController extends BaseController{
     @RequestMapping(value="/info/{sid}",method= RequestMethod.GET)
     @ResponseBody
     public AjaxJson getProducts(@PathVariable String sid,HttpServletRequest request,HttpServletResponse response) throws Exception {
-        AjaxJson ajaxJson=new AjaxJson();
-        ajaxJson.setData(resourcesService.getResOne(sid));
-        return ajaxJson;
+        return AjaxJson.success(resourcesService.getResOne(sid));
     }
 /*
 

@@ -5,22 +5,25 @@ package com.shine.bean;
  * Created by hq on 2016/11/04
  */
 public class ReturnBean {
+
+    final public static ReturnBean SUCCESS = new ReturnBean(true, "success");
+    final public static ReturnBean ERROR = new ReturnBean(false, "error");
+
     private boolean success;
-    private String message;
+    private String msg;
     private String url;
 
 
     public ReturnBean() {
     }
 
-    public ReturnBean(boolean success, String message) {
-        this.success = success;
-        this.message = message;
+    private ReturnBean(boolean success, String msg) {
+        this(success, msg, null);
     }
 
-    public ReturnBean(boolean success, String message, String url) {
+    public ReturnBean(boolean success, String msg, String url) {
         this.success = success;
-        this.message = message;
+        this.msg = msg;
         this.url = url;
     }
 
@@ -32,12 +35,12 @@ public class ReturnBean {
         this.success = success;
     }
 
-    public String getMessage() {
-        return message;
+    public String getMsg() {
+        return msg;
     }
 
-    public void setMessage(String message) {
-        this.message = message;
+    public void setMsg(String msg) {
+        this.msg = msg;
     }
 
     public String getUrl() {
@@ -46,6 +49,20 @@ public class ReturnBean {
 
     public void setUrl(String url) {
         this.url = url;
+    }
+
+    private ReturnBean copyThis() {
+        return new ReturnBean(success, msg, null);
+    }
+
+    public static ReturnBean error(String error) {
+        return new ReturnBean(ERROR.success, error);
+    }
+
+    public static ReturnBean success(String object) {
+        ReturnBean r = ReturnBean.SUCCESS.copyThis();
+        r.setUrl(object);
+        return r;
     }
 
 }
