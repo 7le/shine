@@ -75,6 +75,14 @@
                         </div>
 
                         <div class="form-group">
+                            <label class="col-sm-2 control-label">顾客账户</label>
+
+                            <div class="col-sm-10" style="width:60%">
+                                <input type="text" class="form-control" name="customer">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
                             <label class="col-sm-2 control-label">利润-stone</label>
 
                             <div class="col-sm-10" style="width:60%">

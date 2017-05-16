@@ -16,6 +16,7 @@ public class Account implements Serializable{
     private Integer totalAmount;  //总金额
     private Integer cost;         //成本
     private Integer profit;       //利润
+    private String customer;     //顾客名字
     private Integer profitSilk;
     private Integer profitStone;
     private Date createDate;     //创建时间
@@ -24,6 +25,15 @@ public class Account implements Serializable{
     private Long updatePerson; //修改人
     private Integer isDelete;  //逻辑删除  0为删除
     private String remark;   //备注
+
+
+    public String getCustomer() {
+        return customer;
+    }
+
+    public void setCustomer(String customer) {
+        this.customer = customer;
+    }
 
     public String getSid() {
         return sid.toString();

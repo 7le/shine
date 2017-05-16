@@ -145,6 +145,11 @@
                     sortable: true
                 },
                 {
+                    title: "顾客账户",
+                    field: "customer",
+                    sortable: true
+                },
+                {
                     title: "利润-stone",
                     field: "profitStone",
                     sortable: true
