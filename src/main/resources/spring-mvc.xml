@@ -40,7 +40,7 @@
 
         <!--防盗链 -->
         <mvc:interceptor>
-            <mvc:mapping path="/**"/>
+            <mvc:mapping path="/backend/**"/>
             <mvc:exclude-mapping path="/backend/register" />
             <mvc:exclude-mapping path="/backend/login" />
             <mvc:exclude-mapping path="/backend/role/tree" />

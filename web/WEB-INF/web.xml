@@ -9,7 +9,7 @@
     <display-name>shine</display-name>
 
     <servlet-mapping>
-        <!--对客户端请求的静态资源如图片、JS文件等的请求交由默认的servlet卧槽，千万别把jsp放到这里否则java代码不会被执行，他只会把他看作静态的，按理说jsp应该被执行jsp的servlet所拦截
+        <!--对客户端请求的静态资源如图片、JS文件等的请求交由默认的servlet，千万别把jsp放到这里否则java代码不会被执行，他只会把他看作静态的，按理说jsp应该被执行jsp的servlet所拦截
         而默认的执行jsp的servlet是不需要我们配置的-->
         <servlet-name>default</servlet-name>
         <url-pattern>*.png</url-pattern>
@@ -25,6 +25,7 @@
         <url-pattern>*.swf</url-pattern>
         <url-pattern>*.xls</url-pattern>
         <url-pattern>*.json</url-pattern>
+        <url-pattern>*.mp4</url-pattern>
     </servlet-mapping>
 
     <!-- 连接池 启用 Web 监控统计功能    start-->
