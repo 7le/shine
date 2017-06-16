@@ -13,12 +13,12 @@ public class Account implements Serializable{
 
     private ObjectId sid;
     private String name;          //项目名
-    private Integer totalAmount;  //总金额
-    private Integer cost;         //成本
-    private Integer profit;       //利润
+    private Double totalAmount;  //总金额
+    private Double cost;         //成本
+    private Double profit;       //利润
     private String customer;     //顾客名字
-    private Integer profitSilk;
-    private Integer profitStone;
+    private Double profitSilk;
+    private Double profitStone;
     private Date createDate;     //创建时间
     private Long createPerson; //创建人
     private Date updateDate;  //修改时间
@@ -49,46 +49,6 @@ public class Account implements Serializable{
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public Integer getTotalAmount() {
-        return totalAmount;
-    }
-
-    public void setTotalAmount(Integer totalAmount) {
-        this.totalAmount = totalAmount;
-    }
-
-    public Integer getCost() {
-        return cost;
-    }
-
-    public void setCost(Integer cost) {
-        this.cost = cost;
-    }
-
-    public Integer getProfit() {
-        return profit;
-    }
-
-    public void setProfit(Integer profit) {
-        this.profit = profit;
-    }
-
-    public Integer getProfitSilk() {
-        return profitSilk;
-    }
-
-    public void setProfitSilk(Integer profitSilk) {
-        this.profitSilk = profitSilk;
-    }
-
-    public Integer getProfitStone() {
-        return profitStone;
-    }
-
-    public void setProfitStone(Integer profitStone) {
-        this.profitStone = profitStone;
     }
 
     public Date getCreateDate() {
@@ -137,6 +97,46 @@ public class Account implements Serializable{
 
     public void setRemark(String remark) {
         this.remark = remark;
+    }
+
+    public Double getTotalAmount() {
+        return totalAmount;
+    }
+
+    public void setTotalAmount(Double totalAmount) {
+        this.totalAmount = totalAmount;
+    }
+
+    public Double getCost() {
+        return cost;
+    }
+
+    public void setCost(Double cost) {
+        this.cost = cost;
+    }
+
+    public Double getProfit() {
+        return profit;
+    }
+
+    public void setProfit(Double profit) {
+        this.profit = profit;
+    }
+
+    public Double getProfitSilk() {
+        return profitSilk;
+    }
+
+    public void setProfitSilk(Double profitSilk) {
+        this.profitSilk = profitSilk;
+    }
+
+    public Double getProfitStone() {
+        return profitStone;
+    }
+
+    public void setProfitStone(Double profitStone) {
+        this.profitStone = profitStone;
     }
 
 }
