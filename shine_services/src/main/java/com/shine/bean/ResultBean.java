@@ -3,14 +3,14 @@ package com.shine.bean;
 /**
  * 结果bean
  */
-public class ResultBean {
+public class ResultBean<T> {
 
     final public static ResultBean SUCCESS = new ResultBean(true, "success");
     final public static ResultBean ERROR = new ResultBean(false, "error");
 
     protected boolean success;
     protected String msg;
-    protected Object data;
+    protected T data;
 
     public ResultBean() {
     }
@@ -19,7 +19,7 @@ public class ResultBean {
         this(success, msg, null);
     }
 
-    public ResultBean(boolean success, String msg, Object data) {
+    public ResultBean(boolean success, String msg, T data) {
         this.success = success;
         this.msg = msg;
         this.data = data;
@@ -41,11 +41,11 @@ public class ResultBean {
         this.msg = msg;
     }
 
-    public Object getData() {
+    public T getData() {
         return data;
     }
 
-    public void setData(Object data) {
+    public void setData(T data) {
         this.data = data;
     }
 
