@@ -6,7 +6,7 @@
 
     <groupId>com.shine</groupId>
     <artifactId>shine_services</artifactId>
-    <packaging>pom</packaging>
+    <packaging>jar</packaging>
     <version>1.0-SNAPSHOT</version>
 
     <!-- 属性设置 -->
