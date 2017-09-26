@@ -51,9 +51,7 @@ public class DictionaryServiceImpl implements DictionaryService {
 		}
 		
 		List<Dictionary> list;
-		// 前后加逗号，取消空格，方便替换
 		String sKey = "," + key.replace(" ", "") + ",";
-		// 可能需要取多个数据字典
 		String[] sCodes = code.split(",");
 		for (String sCode : sCodes) {
 			if (DataSource.dictionaries.get(sCode) != null) {
@@ -63,7 +61,6 @@ public class DictionaryServiceImpl implements DictionaryService {
 				DataSource.dictionaries.put(sCode, list);
 			}
 			for (Dictionary dicData : list) {
-				// 找到对应的字典值后进行替换
 				sKey = sKey.replace("," + dicData.getCode() + ",",
 						"," + dicData.getDictDesc() + ",");
 			}
