@@ -328,6 +328,13 @@
             <version>1.1.5</version>
         </dependency>
 
+        <!-- https://mvnrepository.com/artifact/org.owasp.antisamy/antisamy -->
+        <dependency>
+            <groupId>org.owasp.antisamy</groupId>
+            <artifactId>antisamy</artifactId>
+            <version>1.5.3</version>
+        </dependency>
+
         <dependency>
             <groupId>net.pusuo</groupId>
             <artifactId>patchca</artifactId>
