@@ -1,15 +1,6 @@
 package com.shine.util;
 
 
-import org.apache.http.HttpResponse;
-import org.apache.http.client.entity.UrlEncodedFormEntity;
-import org.apache.http.client.methods.HttpPost;
-import org.apache.http.entity.StringEntity;
-import org.apache.http.impl.client.CloseableHttpClient;
-import org.apache.http.impl.client.HttpClients;
-import org.apache.http.util.EntityUtils;
-
-import java.nio.charset.Charset;
 import java.security.MessageDigest;
 
 public class MD5Util {
@@ -73,50 +64,4 @@ public class MD5Util {
 			return null;
 		}
 	}
-	public static void main(String[] args) {
-
-//		String a2 = "app_key=qflql2c2tdv519btm98fhl4c5yhh4uf8&batch_num=ces0012222a&content=【创力股份】尊敬的用户，本次验证码为12345\r\n" +
-//				"6，请勿泄>露！&dest_id=15058306581&mission_num=test001&nonce_str=5iliulang&sms_type=verify_code&time_stamp=20160728145500&app_secret=66b5b9d2245acbf22012de18418aeac13312";
-//		String bb = MD5(a2);
-//		System.out.println(bb);
-//		System.out.println(a2);
-		String a = "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n" +
-				"<xml>\n" +
-				"\t<head>\n" +
-				"\t\t<app_key>80ybyph1e7hfnrs24msiwcxidnj1d97k</app_key>\n" +
-				"\t\t<time_stamp>20160729140702</time_stamp>\n" +
-				"\t\t<nonce_str>aobenjy</nonce_str>\n" +
-				"\t\t<sign>90af0abd08133be081db0de65204fef5</sign>\n" +
-				"\t</head>\n" +
-				"\t<body>\n" +
-				"\t\t<dests>\n" +
-				"\t\t\t<dest>\n" +
-				"\t\t\t\t<mission_num>aobentest1841</mission_num>\n" +
-				"\t\t\t\t<dest_id>13587682771</dest_id>\n" +
-				"\t\t\t</dest>\n" +
-				"\t\t</dests>\n" +
-				"\t\t<batch_num>aobentest1841</batch_num>\n" +
-				"\t\t<sms_type>verify_code</sms_type>\n" +
-				"\t\t<content>【奥奔酒业】验证码：471031，您正在进行找回密码，如非本人操作请忽略。</content>\n" +
-				"\t\t<app_secret>22fdf3f284289d59e67cdead78b070082714</app_secret>\n" +
-				"\t</body>\n" +
-				"</xml>";
-		String url = "http://localhost:15666/api/v1/manySend";
-		CloseableHttpClient httpclient = null;
-		//进行HTTP回调
-		try {
-			httpclient = HttpClients.createDefault();
-			//发送
-			HttpPost httpPost = new HttpPost(url);
-			httpPost.setEntity(new StringEntity(a, Charset.forName("UTF-8")));
-
-			//发送
-			HttpResponse response = httpclient.execute(httpPost);
-			String strResult = EntityUtils.toString(response.getEntity(), Charset.forName("utf-8"));
-			System.out.println(strResult);
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-	}
-
 }
