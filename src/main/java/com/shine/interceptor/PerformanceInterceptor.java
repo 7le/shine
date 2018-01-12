@@ -17,6 +17,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 import java.util.Properties;
+import java.util.regex.Matcher;
 
 /**
  * MyBatis 性能拦截器，用于输出每条 SQL 语句及其执行时间
@@ -109,6 +110,6 @@ public class PerformanceInterceptor implements Interceptor {
         } else {
             result = "null";
         }
-        return sql.replaceFirst("\\?", result);
+        return sql.replaceFirst("\\?", Matcher.quoteReplacement(result));
     }
 }
